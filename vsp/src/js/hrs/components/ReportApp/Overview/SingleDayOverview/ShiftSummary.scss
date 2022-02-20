@@ -1,0 +1,25 @@
+@import "coreVariables";
+
+.block__title {
+  color: $color-boulder;
+  font-weight: bold;
+}
+
+.block__number {
+  font-size: 3rem;
+  color: $color-midnight;
+  font-weight: lighter;
+}
+
+.block__unit {
+  margin-left: 3px;
+  color: $color-midnight;
+}
+
+.compare__prefix {
+  color: $color-boulder;
+}
+
+.compare__number {
+  color: $color-wasabi;
+}

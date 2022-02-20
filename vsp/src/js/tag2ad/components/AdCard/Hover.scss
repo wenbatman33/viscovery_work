@@ -1,0 +1,35 @@
+@import 'coreVariables';
+
+.overlay {
+  background: rgba(26, 10, 10, 0.5);
+  opacity: 1.00;
+  border-radius: 2px;
+  width : 100%;
+  height : 100%;
+  position : absolute;
+  z-index : 5;
+}
+
+.overlay-show {
+  composes: overlay;
+  visibility: visible;
+}
+
+.overlay-hidden {
+  composes: overlay;
+  visibility: hidden;
+}
+
+.fake-checkbox {
+  position: absolute;
+  left : 6px;
+  top : 6px;
+  z-index : 10;
+  width : 1.5em;
+  height: 1.5em;
+  background: white;
+  border : none;
+  &:hover {
+    border: 1px solid $color-river;
+  }
+}

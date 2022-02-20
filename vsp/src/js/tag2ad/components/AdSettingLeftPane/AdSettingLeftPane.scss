@@ -1,0 +1,86 @@
+@import 'coreVariables';
+@import '../../styles/_button.scss';
+
+$static-z-index : 29;
+.container {
+  background : white;
+  width : 100%;
+  min-width: 280px;
+  max-width: 500px;
+  height : 100%;
+  position : relative;
+}
+
+.container:focus {
+  outline: none;
+}
+
+.container-overlay{
+  composes: container;
+}
+
+.container-overlay:before {
+  content:'';
+  display: block;
+  position: absolute;
+  z-index: $static-z-index + 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255,255,255,0.6);
+}
+
+.static-container {
+  position: relative;
+  z-index : $static-z-index;
+  height : 100%;
+  width: 100%;
+  background : white;
+  border : 1px solid $color-mild;
+  > div:not(:last-child) {
+    border-bottom : 1px solid $color-mild;
+  }
+}
+
+.btn-group {
+  padding : 10px $padding-small;
+
+  button:first-child {
+    @extend .link-btn-grey;
+    border: none;
+    padding: 0;
+  }
+
+  button:not(:first-child) {
+    margin-top : 30px;
+    width: 100%;
+  }
+}
+
+.float-container {
+  position : absolute;
+  width: 100%;
+  height: 100%;
+  top : 0;
+  background : white;
+  border : 1px solid $color-mild;
+  border-left : none;
+}
+
+.float-container-show {
+  @extend .float-container;
+  transition : left 0.5s linear;
+  -webkit-transition: left 0.5s linear;
+  -moz-transition: left 0.5s linear;
+  -o-transition: left 0.5s linear;
+  left : calc(100% - 1px);
+  z-index : $static-z-index - 1;
+}
+
+.float-container-hide {
+  @extend .float-container;
+  left : 0;
+  opacity: -1;
+  z-index : -1;
+}

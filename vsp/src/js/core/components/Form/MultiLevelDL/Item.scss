@@ -1,0 +1,6 @@
+@import "coreVariables";
+@import "base";
+
+.container {
+  @extend .item;
+}

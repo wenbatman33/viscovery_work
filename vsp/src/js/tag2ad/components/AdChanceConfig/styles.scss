@@ -1,0 +1,82 @@
+@import '../../styles/effect';
+
+$common-padding: 16px;
+$first-child-space: 9px;
+
+.root {
+  width : 100%;
+  border: 1px solid rgba(0,0,0,0.2);
+  > div {
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+  }
+
+  > * {
+    font-size : 14px;
+  }
+}
+
+.interval-inputs {
+  display : flex;
+  align-items: center;
+  margin-top : $first-child-space;
+
+  > div {
+    width : 21.5%;
+  }
+
+  > span {
+    margin: 0 8px;
+  }
+}
+
+
+.interval-container {
+  padding : $common-padding;
+}
+
+.limit-container {
+  padding : $common-padding;
+  > div {
+    margin-top : $first-child-space;
+  }
+}
+
+.percentage-container {
+  position: relative;
+  padding: $common-padding;
+
+  > .inputs{
+    display : flex;
+    align-items: center;
+    margin-top : $first-child-space;
+
+    > div {
+      width : 30%;
+    }
+
+    > span {
+      margin : 0 8px;
+    }
+  }
+}
+
+.time-container {
+  position: relative;
+  padding: $common-padding;
+  width: 100%;
+
+  > .row {
+    display: flex;
+    width: 100%;
+    align-items: center;
+
+    > .input {
+      margin-left: 9px;
+      width: 30%;
+    }
+  }
+
+  > div {
+    margin-top: $first-child-space;
+  }
+}

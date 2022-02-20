@@ -1,0 +1,35 @@
+API_TOKEN=$(git config poeditor.apiToken)
+
+git log --name-only -1 HEAD | if grep -q 'src/js/cms/i18n/zhtw.json'
+then
+    if [ -n "$API_TOKEN" ]
+    then
+        curl -X POST https://api.poeditor.com/v2/projects/upload \
+             -F api_token="$API_TOKEN" \
+             -F id='106533' \
+             -F updating='terms_translations' \
+             -F file=@'src/js/cms/i18n/zhtw.json' \
+             -F language='zh-TW' \
+             -F overwrite='1' \
+             -F sync_terms='1' \
+             -s > /dev/null
+        echo 'Complete syncing cms i18n terms!'
+    fi
+fi
+
+git log --name-only -1 HEAD | if grep -q 'src/js/tag2ad/i18n/zhtw.json'
+then
+    if [ -n "$API_TOKEN" ]
+    then
+        curl -X POST https://api.poeditor.com/v2/projects/upload \
+             -F api_token="$API_TOKEN" \
+             -F id='107869' \
+             -F updating='terms_translations' \
+             -F file=@'src/js/tag2ad/i18n/zhtw.json' \
+             -F language='zh-TW' \
+             -F overwrite='1' \
+             -F sync_terms='1' \
+             -s > /dev/null
+        echo 'Complete syncing tag2ad i18n terms!'
+    fi
+fi

@@ -1,0 +1,18 @@
+@import "coreVariables";
+
+.container {
+  background: white;
+  border-top: 1px solid $color-sand;
+  padding: 16px 32px 16px 45px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.redCircle {
+  color: white;
+  background: $color-brand;
+  width: 22px;
+  border-radius: 22px;
+  margin-right: 7px;
+  text-align: center;
+}

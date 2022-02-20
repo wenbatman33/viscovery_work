@@ -1,0 +1,40 @@
+.container {
+  width: 100%;
+  position: relative;
+
+  &:hover > .nav {
+    visibility: visible;
+  }
+}
+
+.mask {
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+.content {
+  white-space: nowrap;
+  transition: transform 400ms;
+}
+
+.nav {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  visibility: hidden;
+}
+
+.moveLeft {
+  composes: nav;
+  left: 0;
+  transform: translateX(-50%);
+}
+
+.moveRight {
+  composes: nav;
+  right: 0;
+  transform: translateX(50%);
+}

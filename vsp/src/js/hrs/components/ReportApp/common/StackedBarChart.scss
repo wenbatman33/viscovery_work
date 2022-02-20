@@ -1,0 +1,40 @@
+@import "coreVariables";
+
+.axis {
+
+  & > path{
+    stroke: $color-mild;
+  }
+
+  & > g > line {
+    stroke: $color-mild;
+  }
+
+  & > g > text {
+    fill: $color-midnight;
+  }
+}
+
+.goal {
+  stroke: $color-rouge;
+  stroke-dasharray: 2,2;
+}
+
+.tooltip {
+  color: inherit;
+}
+
+.tooltip__rect {
+  stroke: $color-mild;
+  stroke-width: 1px;
+}
+
+.tooltip__text {
+  color: inherit;
+  font-size: 15px;
+  font-weight: lighter;
+}
+
+.tooltip__title {
+  fill: $color-boulder;
+}

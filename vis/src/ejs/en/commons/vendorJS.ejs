@@ -1,0 +1,15 @@
+<!--[if lte IE 9]>
+  <script src="scripts/console-polyfill.js"></script>
+  <script src="scripts/es5-shim.min.js"></script>
+  <script src="scripts/es5-sham.min.js"></script>
+  <script src="scripts/xhr-polyfill.js"></script>
+  <script src="scripts/matchMedia.js"></script>
+  <script src="scripts/matchMedia.addListener.js"></script>
+<![endif]-->
+<script type="text/javascript">
+  if(/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) {
+    document.write('<script src="Scripts\/es6-promise.min.js"><\/script>');
+    document.write('<script src="Scripts\/es6-shim.min.js"><\/script>');
+    document.write('<script src="Scripts\/fetch.js"><\/script>');
+  }
+</script>

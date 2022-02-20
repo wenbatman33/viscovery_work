@@ -1,0 +1,36 @@
+@import 'coreVariables';
+
+.memo-container {
+  // margin-top: 32px;
+  margin-top: 17px;
+}
+
+.memo-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  // height: 38px;
+  height: 33px;
+}
+
+.memo-warning {
+  color: $color-brand;
+}
+
+.hide-warning {
+  visibility: hidden;
+}
+
+.memo-area {
+  margin-top: 9px;
+  width: 724px;
+  height: 120px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 8px;
+
+  &:focus {
+    outline: none;
+  }
+}

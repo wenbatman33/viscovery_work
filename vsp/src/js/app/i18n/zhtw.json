@@ -1,0 +1,17 @@
+{
+  "admin": "帳號管理",
+  "cms": "影片管理",
+  "report": "Report",
+  "system": "系統資訊",
+  "tag2ad": "Tag2Ad",
+  "rims": "RIMS",
+  "login": "登入",
+  "logout": "登出",
+  "changeRole": "切換角色",
+  "english": "English",
+  "simplifiedChinese": "简体中文",
+  "traditionalChinese": "繁體中文",
+  "hrsDispatch": "HRS監控與派工",
+  "hrsReport": "HRS報表",
+  "hrsOperation": "HRS操作"
+}

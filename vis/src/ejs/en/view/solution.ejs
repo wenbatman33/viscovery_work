@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en" data-page="solution">
+<head>
+  <meta charset="UTF-8">
+  <base href="<%= htmlWebpackPlugin.options.base %>">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+  <%= require("../../meta.ejs")() %>
+  <title>Viscovery</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <%= require("../commons/vendorJS.ejs")() %>
+  <%= require("../../ga.ejs")() %>
+</head>
+<body class="lang-en">
+  <%= require("../commons/header.ejs")() %>
+  <div class='visc-main solution-main'>
+
+    <!-- Sub Menu -->
+    <div id="solutionSubMenu" data-select="1" class="solution-main__sub-menu">
+      <%= require("../commons/solution-sub-menu.ejs")() %>
+    </div>
+
+    <!-- Hero Block [start] -->
+    <div class="hero-block hero-block__no-msk">
+
+      <div class="hero-block__bg hidden-xs" style="background-image:url('./imgs/photo/solution-hero-photo-01-en.jpg')"></div>
+      <div class="hero-block__bg visible-xs" style="background-image:url('./imgs/photo/solution-hero-photo-01-en-xs.jpg')"></div>
+
+      <div class="container-med">
+
+        <!-- Intro Block -->
+        <div class="middle-block">
+          <section class="solution-main__intro">
+            <h1 class="solution-main__intro__title color-green">Key<br/>Moment</h1>
+            <h2 class="solution-main__intro__subtitle font-h2 color-white">Advertise at the right time<br/>to maximize ad effectiveness </h2>
+            <a href="https://sdkdemo.viscovery.com" target="_blank" class="ghost-dark-button">Demo</a>
+          </section>
+        </div>
+
+      </div>
+    </div>  <!-- Hero Block [end] -->
+
+
+    <!-- Effect Block [start] -->
+    <section class="solution-main__effect-block-type01">
+      <div class="container-med slick-area">
+
+        <div class="solution-main__effect-block-type01__list col-sm-6 slick-item">
+          <h4 class="top-title color-white">Analyze</h4>
+          <h4 class="med-number color-white">85<span class="med-number__sm-txt color-white">%</span></h4>
+          <p class="bottom-text color-white">Unstructured Video Data</p>
+        </div>
+
+        <div class="solution-main__effect-block-type01__list solution-main__effect-block-type01__list--none-border col-sm-6 slick-item">
+          <h4 class="top-title color-white">Increase</h4>
+          <h4 class="med-number color-white"><span class="med-number__sm-txt color-white">+</span>200<span class="med-number__sm-txt color-white">%</span></h4>
+          <p class="bottom-text color-white">Advertising Effectiveness</p>
+        </div>
+
+      </div>
+    </section>  <!-- Effect Block [end] -->
+
+    <!-- Scene Block [start] -->
+    <section class="solution-main__scene-block">
+      <div class="container-med">
+
+        <div class="solution-main__scene-block__content content-right col-md-6">
+          <div class="info-photo hidden-xs" style="background-image:url('./imgs/photo/photo-solution-01-1-en.jpg')"></div>
+          <div class="info-photo visible-xs" style="background-image:url('./imgs/photo/photo-solution-01-1-en-xs.jpg')"></div>
+          <h3 class="info-title font-h3 color-white">Automatic tags of FITAMOS</h3>
+          <p class="info-txt font-p-md color-white">advertise in a smart way</p>
+        </div>
+
+        <div class="solution-main__scene-block__content content-left col-md-6">
+          <div class="info-photo" style="background-image:url('./imgs/photo/photo-solution-01-2.jpg')"></div>
+          <h3 class="info-title font-h3 color-white">Contextual Advertisement</h3>
+          <p class="info-txt font-p-md color-white">An enjoyable experience with ads</p>
+        </div>
+
+      </div>
+    </section>  <!-- Scene Block [end] -->
+
+    <!-- Effect Block [start] -->
+    <section class="solution-main__effect-block-type02">
+      <div class="container-med  slick-area">
+
+        <div class="solution-main__effect-block-type02__list col-sm-4 slick-item">
+          <h4 class="top-title font-h6-sm color-dark">PC Click Through Rate</h4>
+          <h4 class="med-number color-dark"><span class="med-number__sm-txt--orange">+</span>67.6<span class="med-number__sm-txt color-dark">%</span></h4>
+        </div>
+
+        <div class="solution-main__effect-block-type02__list col-sm-4 slick-item">
+          <h4 class="top-title font-h6-sm color-dark">Pad Click Through Rate</h4>
+          <h4 class="med-number color-dark"><span class="med-number__sm-txt--orange">+</span>85.6<span class="med-number__sm-txt color-dark">%</span></h4>
+        </div>
+
+        <div class="solution-main__effect-block-type02__list solution-main__effect-block-type02__list--none-border col-sm-4 slick-item">
+          <h4 class="top-title font-h6-sm color-dark">Phone Click Through Rate</h4>
+          <h4 class="med-number color-dark"><span class="med-number__sm-txt--orange">+</span>58.1<span class="med-number__sm-txt color-dark">%</span></h4>
+        </div>
+
+      </div>
+    </section>  <!-- Effect Block [end] -->
+
+
+    <!-- Banner Block [start] -->
+    <section class="solution-main__banner-block">
+      <div solution-id="23" id="visualBanner"></div>
+    </seciton>  <!-- Banner Block [end] -->
+
+
+    <!-- Intro List Block [start] -->
+    <section class="solution-main__intro-list-block">
+      <div class="container-med">
+
+        <h2 class="solution-main__intro-list-block__title font-h2-lg color-dark">What We Do</h2>
+
+        <ul class="list-block">
+          <li class="list-block__list col-md-4">
+            <h3 class="list-block__list__title font-h3 color-dark">VDS Video Analysis</h3>
+            <p class="list-block__list__txt font-p-md color-dark-60a">Automatically analyze related scenes, grasp and filter related tags in the drama, and insert the corresponding Ad.</p>
+          </li>
+          <li class="list-block__list col-md-4">
+            <h3 class="list-block__list__title font-h3 color-dark">Smart Insert</h3>
+            <p class="list-block__list__txt font-p-md color-dark-60a">Seamlessly insert Ads which are connected to the scene. Smart advertising can decrease user interference and enhance user experience.</p>
+          </li>
+          <li class="list-block__list col-md-4">
+            <h3 class="list-block__list__title font-h3 color-dark">Innovative Advertising Method</h3>
+            <p class="list-block__list__txt font-p-md color-dark-60a">A revolutionizing video ad placement method, from blindly playing unrelated ads to accurately placing contextual Ads.</p>
+          </li>
+        </ul>
+
+      </div>
+    </section>  <!-- Intro List Block [end] -->
+
+
+  </div>
+  <%= require("../commons/footer.ejs")() %>
+</body>
+</html>

@@ -1,0 +1,9 @@
+@import 'coreVariables';
+
+.container {
+  width: 500px;
+  height: 100%;
+  overflow-y: auto;
+  background: white;
+  border-left: none;
+}

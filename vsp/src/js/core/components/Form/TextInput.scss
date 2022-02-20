@@ -1,0 +1,55 @@
+@import 'coreVariables';
+@import './formBase';
+
+.input{
+  @extend %base;
+  font-size: 14px;
+  width: 100%;
+}
+
+.container{
+  width: 100%;
+}
+
+.invalid{
+  @extend .input;
+
+  outline: 2px solid $color-rouge;
+
+  &:focus{
+    outline: 2px solid $color-rouge;
+  }
+}
+
+.gray-invalid{
+  @extend .invalid;
+
+  background: #362727;
+  color: #FFF;
+}
+
+.gray-input{
+  @extend .input;
+
+  border: 1px solid #FFF;
+  color: #FFF;
+  padding: 8px 0 8px 8px;
+  background: #362727;
+
+  &::placeholder{
+    color: rgba(#FFF, 0.5);
+  }
+
+  &:focus{
+    outline: 1px solid #FFF;
+  }
+}
+
+.invalidMessage{
+  color: $color-rouge;
+  margin-top: 6px;
+}
+
+.hidden{
+  display: none;
+}

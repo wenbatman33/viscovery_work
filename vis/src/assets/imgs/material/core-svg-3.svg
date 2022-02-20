@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="295px" height="322px" viewBox="0 0 295 322" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 19</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="0 0 295 109.234375 295 321.234375 0 212"></polygon>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="295" height="321.234375" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="295" height="321.234375" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <polygon id="path-5" points="36 44 67.2233085 55.5615546 67.2233085 78 36 66.4384454"></polygon>
+        <mask id="mask-6" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="31.2233085" height="34" fill="white">
+            <use xlink:href="#path-5"></use>
+        </mask>
+        <polygon id="path-7" points="233 59 275.932049 74.8971375 275.932049 125 233 109.102862"></polygon>
+        <mask id="mask-8" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="42.9320492" height="66" fill="white">
+            <use xlink:href="#path-7"></use>
+        </mask>
+        <polygon id="path-9" points="260 126 276 131.924576 276 143.422881 260 137.498305"></polygon>
+        <mask id="mask-10" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="16" height="17.4228814" fill="white">
+            <use xlink:href="#path-9"></use>
+        </mask>
+    </defs>
+    <g id="pc" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="2.0-核心技術-" transform="translate(-870.000000, -202.000000)">
+            <g id="Group" transform="translate(644.000000, 202.000000)">
+                <g id="Group-19" transform="translate(226.000000, 0.000000)">
+                    <mask id="mask-3" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <g id="Rectangle-11" stroke="#FFFFFF" mask="url(#mask-2)" stroke-width="2" fill="#00b280">
+                        <use mask="url(#mask-4)" xlink:href="#path-1"></use>
+                    </g>
+                    <g id="Rectangle-11" mask="url(#mask-3)" stroke-width="2" stroke="#FFFFFF">
+                        <use mask="url(#mask-6)" xlink:href="#path-5"></use>
+                    </g>
+                    <g id="Rectangle-11" mask="url(#mask-3)" stroke-width="2" stroke="#FFFFFF">
+                        <use mask="url(#mask-8)" xlink:href="#path-7"></use>
+                    </g>
+                    <g id="Rectangle-11" mask="url(#mask-3)" stroke-width="2" stroke="#FFFFFF">
+                        <use mask="url(#mask-10)" xlink:href="#path-9"></use>
+                    </g>
+                    <polyline id="Line" stroke="#FFFFFF" stroke-linecap="square" mask="url(#mask-3)" points="136 91 211.093581 118.585397 211.107422 141.860352 234.002441 150.587891 234.002441 240.278809"></polyline>
+                    <polyline id="Line" stroke="#FFFFFF" stroke-linecap="square" mask="url(#mask-3)" transform="translate(173.447510, 168.209229) scale(-1, -1) translate(-173.447510, -168.209229) " points="162 149 184.89502 157.727539 184.89502 187.418457"></polyline>
+                    <polyline id="Line" stroke="#FFFFFF" stroke-linecap="square" mask="url(#mask-3)" points="211 259 233.89502 267.727539 233.89502 297.418457"></polyline>
+                    <path d="M67,67 L95.1600928,77.3445239" id="Line" stroke="#FFFFFF" stroke-linecap="square" mask="url(#mask-3)"></path>
+                    <path d="M268,241 L277.386698,244.448175" id="Line" stroke="#FFFFFF" stroke-linecap="square" mask="url(#mask-3)"></path>
+                    <path d="M268,251 L277.386698,254.448175" id="Line" stroke="#FFFFFF" stroke-linecap="square" mask="url(#mask-3)"></path>
+                    <path d="M268,261 L277.386698,264.448175" id="Line" stroke="#FFFFFF" stroke-linecap="square" mask="url(#mask-3)"></path>
+                    <polyline id="Line" stroke="#FFFFFF" stroke-linecap="square" mask="url(#mask-3)" points="268.062988 141 268 207.421387 296.160093 217.765911"></polyline>
+                    <path d="M233.826083,246.766083 C235.386886,247.212172 236.652167,246.308518 236.652167,244.747715 C236.652167,243.186913 235.386886,241.560006 233.826083,241.113917 C232.265281,240.667828 231,241.571482 231,243.132285 C231,244.693088 232.265281,246.319995 233.826083,246.766083 Z" id="Oval-7" stroke="#FFFFFF" fill="#00b280" mask="url(#mask-3)"></path>
+                    <path d="M161.826083,152.766083 C163.386886,153.212172 164.652167,152.308518 164.652167,150.747715 C164.652167,149.186913 163.386886,147.560006 161.826083,147.113917 C160.265281,146.667828 159,147.571482 159,149.132285 C159,150.693088 160.265281,152.319995 161.826083,152.766083 Z" id="Oval-7" stroke="#FFFFFF" fill="#00b280" mask="url(#mask-3)"></path>
+                    <path d="M97.8260833,80.7660833 C99.386886,81.2121721 100.652167,80.308518 100.652167,78.7477153 C100.652167,77.1869126 99.386886,75.5600056 97.8260833,75.1139168 C96.2652806,74.667828 95,75.5714822 95,77.1322849 C95,78.6930875 96.2652806,80.3199945 97.8260833,80.7660833 Z" id="Oval-7" stroke="#FFFFFF" fill="#00b280" mask="url(#mask-3)"></path>
+                    <path d="M134.826083,143.766083 C136.386886,144.212172 137.652167,143.308518 137.652167,141.747715 C137.652167,140.186913 136.386886,138.560006 134.826083,138.113917 C133.265281,137.667828 132,138.571482 132,140.132285 C132,141.693088 133.265281,143.319995 134.826083,143.766083 Z" id="Oval-7" stroke="#FFFFFF" fill="#00b280" mask="url(#mask-3)"></path>
+                    <path d="M135.5,51.5 L135.5,137.5" id="Line" stroke="#FFFFFF" stroke-linecap="square" mask="url(#mask-3)"></path>
+                    <g id="Group-29" mask="url(#mask-3)" stroke-linecap="round" stroke="#FFFFFF">
+                        <g transform="translate(153.000000, 57.000000)" id="Line">
+                            <path d="M1.5,0.5 L1.5,20.5"></path>
+                            <path d="M15.6118774,5.5 L15.6118774,25.5"></path>
+                            <path d="M29.7237549,11.5 L29.7237549,31.5"></path>
+                            <path d="M43.8356323,16.5 L43.8356323,36.5"></path>
+                            <path d="M57.9475098,21.5 L57.9475098,41.5"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

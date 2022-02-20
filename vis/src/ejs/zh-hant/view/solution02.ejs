@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" data-page="solution">
+<head>
+  <meta charset="UTF-8">
+  <base href="<%= htmlWebpackPlugin.options.base %>">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+  <%= require("../../meta.ejs")() %>
+  <title>Viscovery</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <%= require("../commons/vendorJS.ejs")() %>
+  <%= require("../../ga.ejs")() %>
+</head>
+<body>
+  <%= require("../commons/header.ejs")() %>
+  <div class='visc-main solution-main'>
+
+    <!-- Sub Menu -->
+    <div id="solutionSubMenu" data-select="2" class="solution-main__sub-menu">
+      <%= require("../commons/solution-sub-menu.ejs")() %>
+    </div>
+
+    <!-- Hero Block [start] -->
+    <div class="hero-block hero-block__no-msk">
+
+      <div class="hero-block__bg hidden-xs" style="background-image:url('./imgs/photo/solution-hero-photo-02.jpg')"></div>
+      <div class="hero-block__bg visible-xs" style="background-image:url('./imgs/photo/solution-hero-photo-02-xs.jpg')"></div>
+
+      <div class="container-med">
+
+        <!-- Intro Block -->
+        <div class="middle-block">
+          <section class="solution-main__intro">
+            <h1 class="solution-main__intro__title color-green">V-Buy</h1>
+            <h2 class="solution-main__intro__subtitle font-h2 color-white">解讀影音內容 分析用戶行為<br/>產品精準推薦 實現內容變現</h2>
+            <!-- <a href="https://sdkdemo.viscovery.com" target="_blank" class="ghost-dark-button">Demo</a> -->
+          </section>
+        </div>
+
+      </div>
+    </div>  <!-- Hero Block [end] -->
+
+
+    <!-- Scene Block [start] -->
+    <section class="solution-main__scene-block">
+      <div class="container-med">
+
+        <div class="solution-main__scene-block__content content-right col-md-6">
+          <div class="info-photo hidden-xs" style="background-image:url('./imgs/photo/photo-solution-02-1-zh-hant.jpg')"></div>
+          <div class="info-photo visible-xs" style="background-image:url('./imgs/photo/photo-solution-02-1-zh-hant.jpg')"></div>
+          <h3 class="info-title font-h3 color-white">關鍵畫面投放互動廣告</h3>
+          <p class="info-txt font-p-md color-white">在影音關鍵畫面時刻投放互動式角標，彈出，側邊欄廣告</p>
+        </div>
+
+        <div class="solution-main__scene-block__content content-left col-md-6">
+          <div class="info-photo hidden-xs" style="background-image:url('./imgs/photo/photo-solution-02-2-zh-hant.jpg')"></div>
+          <div class="info-photo visible-xs" style="background-image:url('./imgs/photo/photo-solution-02-2-zh-hant.jpg')"></div>
+          <h3 class="info-title font-h3 color-white">多平台互動</h3>
+          <p class="info-txt font-p-md color-white">實現多平台互動，導流最大化</p>
+        </div>
+
+      </div>
+    </section>  <!-- Scene Block [end] -->
+
+    <!-- Effect Block [start] -->
+    <section class="solution-main__effect-block-type02">
+      <div class="container-med slick-area">
+
+        <div class="solution-main__effect-block-type02__list col-sm-6 slick-item">
+          <h4 class="top-title font-h6-sm color-dark">廣告平均CTR超過</h4>
+          <h4 class="med-number color-dark">7<span class="med-number__sm-txt">%</span></h4>
+        </div>
+
+        <div class="solution-main__effect-block-type02__list solution-main__effect-block-type02__list--none-border col-sm-6 slick-item">
+          <h4 class="top-title font-h6-sm color-dark">整體 ROI</h4>
+          <h4 class="med-number color-dark"><span class="med-number__sm-txt--orange">></span>3.5</h4>
+        </div>
+
+      </div>
+    </section>  <!-- Effect Block [end] -->
+
+
+    <!-- Banner Block [start] -->
+    <section class="solution-main__banner-block">
+      <div solution-id="14" id="visualBanner"></div>
+    </seciton>  <!-- Banner Block [end] -->
+
+
+    <!-- Intro List Block [start] -->
+    <section class="solution-main__intro-list-block">
+      <div class="container-med">
+
+        <h2 class="solution-main__intro-list-block__title font-h2-lg color-dark">What We Do</h2>
+
+        <ul class="list-block">
+          <li class="list-block__list col-md-4">
+            <h3 class="list-block__list__title font-h3 color-dark">情境式產品推薦 </h3>
+            <p class="list-block__list__txt font-p-md color-dark-60a">利用VDS自動分析影音結果，推薦與影音內容相關的產品。</p>
+          </li>
+          <li class="list-block__list col-md-4">
+            <h3 class="list-block__list__title font-h3 color-dark">互動式廣告呈現</h3>
+            <p class="list-block__list__txt font-p-md color-dark-60a">隨劇情點擊熱點關聯廣告，展示產品，提高點擊率。</p>
+          </li>
+          <li class="list-block__list col-md-4">
+            <h3 class="list-block__list__title font-h3 color-dark">跨平台觀影體驗</h3>
+            <p class="list-block__list__txt font-p-md color-dark-60a">透過不同載具的串連，增加影音與觀影者的互動。</p>
+          </li>
+        </ul>
+
+      </div>
+    </section>  <!-- Intro List Block [end] -->
+
+
+  </div>
+  <%= require("../commons/footer.ejs")() %>
+</body>
+</html>

@@ -1,0 +1,43 @@
+@import 'coreVariables';
+
+.container{
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  > button:nth-child(1) {
+    margin-right: $padding-small;
+  }
+
+}
+
+.title{
+  color : $color-blackhole;
+  align-self: center;
+}
+
+.name{
+  color : $color-brand;
+  align-self: center;
+  margin-bottom: $padding-medium;
+  word-wrap: break-word;
+  width:auto;
+  max-width:100%;
+}
+
+.description{
+  margin-bottom: $padding-small;
+}
+
+.checkbox-text {
+  margin-left: $padding-small;
+}
+
+.buttons {
+  margin-top: $padding-medium;
+  align-self: center;
+  > button:nth-child(1) {
+    margin-right : $padding-small;
+  }
+}

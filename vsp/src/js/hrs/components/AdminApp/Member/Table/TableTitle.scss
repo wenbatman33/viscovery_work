@@ -1,0 +1,13 @@
+@import "coreVariables";
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.taskCount-number {
+  color: $color-river;
+  display: inline-block;
+  margin-right: 8px;
+}

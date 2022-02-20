@@ -1,0 +1,16 @@
+/**/*.pyc
+output/
+/**/*.npy
+/**/*.caffemodel
+src/web_demo/config.ini
+src/web_demo/node_modules/body-parser/
+src/web_demo/node_modules/bootstrap-toggle/
+src/web_demo/node_modules/bootstrap/
+src/web_demo/node_modules/d3/
+src/web_demo/node_modules/express/
+src/web_demo/node_modules/jquery/
+src/web_demo/node_modules/keyMoment/
+src/web_demo/node_modules/socket.io/
+src/web_demo/node_modules/videojs-iplayer-skin/
+src/web_demo/node_modules/videojs-overlay/
+src/web_demo/node_modules/mathjs/

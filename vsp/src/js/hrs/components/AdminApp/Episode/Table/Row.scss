@@ -1,0 +1,93 @@
+@import "coreVariables";
+
+.row-container {
+  display: flex;
+  height: 72px;
+  background: white;
+  margin-bottom: 2px;
+  padding-right: 10%;
+}
+
+%block {
+  display: flex;
+  align-items: center;
+  padding: 0 8px;
+}
+
+.checkbox {
+  @extend %block;
+  justify-content: center;
+}
+
+.number {
+  @extend %block;
+  justify-content: center;
+}
+
+.videoName {
+  @extend %block;
+  color: $color-river;
+}
+
+%longword {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+
+  &:hover {
+    overflow: visible;
+    background: white;
+    z-index: 10;
+  }
+}
+
+.videoName__word {
+  @extend %longword;
+  cursor: pointer;
+}
+
+.seriesName {
+  @extend %block;
+  color: $color-boulder;
+}
+
+.long__word {
+  @extend %longword;
+}
+
+.account {
+  @extend %block;
+  color: $color-boulder;
+}
+
+.source {
+  @extend %block;
+  color: $color-boulder;
+}
+
+.tagCount {
+  @extend %block;
+}
+
+.tagCount__trigger {
+  position: relative;
+  &:hover > .tagCount__tooltip {
+    display: block;
+  }
+}
+
+.tagCount__tooltip {
+  position: absolute;
+  display: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  border: 1px solid $color-mild;
+  background: white;
+  min-width: 200px;
+  z-index: 10;
+}
+
+.priority {
+  @extend %block;
+  position: relative;
+}

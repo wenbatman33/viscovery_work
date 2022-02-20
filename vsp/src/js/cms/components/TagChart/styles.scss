@@ -1,0 +1,56 @@
+@import 'coreVariables';
+
+.component {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background: white;
+  border: 1px solid $color-sand;
+
+  .header {
+    flex: initial;
+    padding: $padding-small;
+    border-bottom: 1px solid $color-sand;
+  }
+
+  .body {
+    flex: 1;
+    display: flex;
+    padding: $padding-small $padding-medium $padding-small $padding-medium;
+    overflow: auto;
+
+    > .tags {
+      flex: initial;
+      margin-right: $padding-medium;
+
+      > div {
+        margin-bottom: $padding-tiny;
+      }
+
+      > div:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    > .chart {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+.tag {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+
+  > .circle {
+    width: 12px;
+    height: 12px;
+    margin-right: $padding-tiny;
+    border-radius: 50%;
+  }
+}

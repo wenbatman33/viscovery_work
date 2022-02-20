@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-Hans" data-page="news">
+<head>
+  <meta charset="UTF-8">
+  <base href="<%= htmlWebpackPlugin.options.base %>">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+  <%= require("../../meta.ejs")() %>
+  <title>Viscovery</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <%= require("../commons/vendorJS.ejs")() %>
+  <%= require("../../ga.ejs")() %>
+</head>
+<body>
+  <%= require("../commons/header.ejs")() %>
+  <div class='visc-main news-main'>
+
+    <!-- Hero Block -->
+    <div class="hero-block zoom-in-bg">
+      <h1 class="hero-block__title font-h1-xl color-white zoom-in"><img class="news-title-logo" src="imgs/logo-white.svg" />最新动态</h1>
+    </div>
+
+    <!-- Content Block [start] -->
+    <div id="searchContainer" class="container-med news-container"></div>
+    <!-- Content Block [end] -->
+
+  </div>
+  <%= require("../commons/footer.ejs")() %>
+</body>
+</html>

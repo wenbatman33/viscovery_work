@@ -1,0 +1,11 @@
+@import "coreVariables";
+
+.container {
+  width: 100%;
+}
+
+.assigneeName {
+  color: $color-river;
+  cursor: pointer;
+  margin-right: 8px;
+}

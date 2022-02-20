@@ -1,0 +1,16 @@
+.container {
+  background: white;
+}
+
+.lists-container {
+  padding: 32px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(200px, 400px));
+  grid-column-gap: 20px;
+  grid-row-gap: 32px;
+}
+
+.title {
+  padding: 16px;
+  border-bottom: 2px solid rgba(26, 10, 10, 0.1);
+}

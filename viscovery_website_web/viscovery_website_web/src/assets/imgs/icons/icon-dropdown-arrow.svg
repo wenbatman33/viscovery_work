@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="13px" height="7px" viewBox="0 0 13 7" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-dropdown-arrow</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="pc" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="4.0-最新動態" transform="translate(-262.000000, -837.000000)" fill="#FF5A37">
+            <g id="Group-12" transform="translate(54.000000, 815.000000)">
+                <path d="M212.938027,31.2537109 C212.609,31.5820964 212.075538,31.5820964 211.746671,31.2537109 C211.417776,30.9256175 211.417776,30.3934816 211.746671,30.0654148 L216.32345,25.4999137 L211.746804,20.9345719 C211.41791,20.6063457 211.41791,20.074263 211.746804,19.7461696 C212.075698,19.4179435 212.609133,19.4179435 212.938161,19.7461696 L218.110565,24.9058985 C218.275012,25.0700248 218.357143,25.2849029 218.357143,25.4998871 C218.357143,25.7149776 218.274853,25.930015 218.110432,26.0940617 L212.938027,31.2537109 Z" id="icon-dropdown-arrow" transform="translate(214.928571, 25.500000) scale(-1, 1) rotate(90.000000) translate(-214.928571, -25.500000) "></path>
+            </g>
+        </g>
+    </g>
+</svg>

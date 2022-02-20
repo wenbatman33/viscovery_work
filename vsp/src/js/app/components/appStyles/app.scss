@@ -1,0 +1,24 @@
+@import 'base';
+@import 'coreVariables';
+
+.root{
+  @extend %appBase;
+  background: $color-ivory;
+}
+
+.locale__zhtw{
+  font-family: $font-family-zhtw;
+}
+
+.locale__enus{
+  font-family: $font-family-enus;
+}
+
+.locale__zhcn{
+  font-family: $font-family-zhcn;
+}
+
+.app {
+  width: 100%;
+  height: calc(100% - 60px);
+}

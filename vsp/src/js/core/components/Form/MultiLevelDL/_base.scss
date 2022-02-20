@@ -1,0 +1,13 @@
+@import "coreVariables";
+
+.item {
+  padding: 8px 0 8px 8px;
+  color: $color-chocolate;
+  border-bottom: 1px solid $color-boulder;
+  user-select: none;
+
+  &:hover {
+    background: $color-river;
+    color: white;
+  }
+}

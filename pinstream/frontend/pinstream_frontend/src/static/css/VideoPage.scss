@@ -1,0 +1,233 @@
+.VideoPage{
+  height: 100%;
+  width: 100%;
+  .wrapper{
+    height: 100%;
+    width: 100%;
+  }
+  .header{
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    padding: 0 15px;
+    background: #fff;
+    z-index: 100;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.30);
+  }
+  .userAvatar{
+    display: inline-block;
+    height: 60px;
+    margin-right: 10px;
+    padding-top: 10px;
+    .userIcon{
+      float: left;
+      img.polygon{
+        float: left;
+        padding-top: 0px;
+        display: inline-block;
+        margin-right: 10px;
+        width: 40px;
+        height: 45px;
+        clip-path: polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);
+      }
+    }
+    .userDes{
+      float: left;
+      display: inline-block;
+      line-height: 16px;
+      color: #333;
+      a{
+        font-size: 12px;
+        color: #4A90E2 !important;
+        text-decoration: underline;
+      }
+    }
+  }
+  .VideoPageContent{
+    padding: 70px 10px 10px 10px;
+    height: auto;
+    width: 100%;
+  }
+  .VideoWrapper{
+    height: auto;
+    iframe{
+      background: #000;
+      outline: 0;
+      border: none;
+    }
+    .adBanner{
+      margin-top: 10px;
+      width: 100%;
+    }
+  }
+  .videoDes{
+    margin-top: -5px;
+    height: 110px;
+    background: #fff;
+    .title{
+      overflow: hidden;
+      width: 100%;
+      height: 40px;
+      line-height: 40px;
+      padding: 5px 10px 0 10px;
+      h2{
+        overflow: hidden;
+        text-overflow : ellipsis;
+        white-space : nowrap;
+        margin: 0;
+      }
+    }
+    .description{
+      padding: 0 10px 10px 10px;
+      width: 100%;
+      p{
+        color: #666;
+        overflow: hidden;
+        text-overflow : ellipsis;
+        white-space : nowrap;
+        margin: 0;
+      }
+    }
+    hr{
+      margin: 0;
+    }
+    .subDescription{
+      color: #999;
+      padding: 0 10px;
+      line-height: 36px;
+    }
+    .deleteBtn{
+      cursor: pointer;
+      float: right;
+    }
+
+  }
+  .VideoPageItem{
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    padding: 0px !important;
+    margin: 0 0 10px 0;
+    background: #fff;
+    transition: box-shadow .3s ease, transform .3s ease;
+    animation: fadein .3s;
+    &:hover{
+      box-shadow: 5px 5px 10px 0 rgba(0,0,0,0.30);
+      transform: translate(0, -4px);
+    }
+    a,a:hover{
+      text-decoration: none;
+    }
+  }
+  .VideoItemInner{
+    display: flex;
+    vertical-align: top;
+    flex-direction: row;
+    justify-content:space-between;
+  }
+  .videoImgWrapper{
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    flex: 1 2 50%;
+    background: #000;
+    justify-content:center;
+    align-items: center;
+    .videoImg{
+      // width: 100%;
+      height: 180px;
+      vertical-align: initial;
+    }
+  }
+
+  .videoInfoWrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: column;
+    overflow: hidden;
+    flex: 1 2 50%;
+    vertical-align: top;
+    .title{
+      display: flex;
+      overflow: hidden;
+      align-items:stretch;
+      width: 100%;
+      height: 50px;
+      line-height: 40px;
+      padding: 10px;
+      h2{
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        text-overflow : ellipsis;
+        white-space : nowrap;
+        font-size: 16px;
+      }
+    }
+    .description{
+      display: flex;
+      align-items:stretch;
+      p{
+        font-size: 13px;
+        padding: 0 10px;
+        margin: 0 0 10px 0;
+        color: #666;
+        overflow : hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;;
+      }
+    }
+    .subDescription{
+      display: flex;
+      padding: 0 10px;
+      align-items:stretch;
+      width: 100%;
+      height: 32px;
+      line-height: 32px;
+      flex-direction:row;
+      justify-content: space-between;
+      border-top: 1px solid #E3E3E3;
+      color: #999;
+      .channelIcon{
+        float: right;
+        text-align: right;
+      }
+    }
+  }
+  a{
+    color: #333 !important;
+    text-decoration: none;
+  }
+}
+@media (max-width: 992px) {
+  .VideoPage{
+    .VideoListContent{
+      padding: 0 5px;
+    }
+    .VideoWrapper{
+      height: auto;
+      padding-top: 70px 0 20px 0;
+      position: relative;
+    }
+    .VideoPageItem{
+      margin-top: 10px;
+    }
+  }
+}
+
+
+@keyframes fadein {
+  from {
+      opacity:0;
+  }
+  to {
+      opacity:1;
+  }
+}

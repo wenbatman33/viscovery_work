@@ -1,0 +1,22 @@
+.input {
+    font-size: 14px;
+    height: 38px;
+    width: calc((100% - 114px) / 2);
+    padding-left: 8px;
+  }
+
+  .btn {
+    border: thin solid rgba(26, 10, 10, 0.2);
+    height: 38px;
+    width: 34px;
+    text-align: center;
+    vertical-align: middle;
+    padding: 7px;
+    display: inline-block;
+    margin-bottom: 2px;
+    &:hover {
+      background: rgba(26, 10, 10, 0.1);
+      transition: background 0.4s;
+      color: rgba(26, 10, 10, 0.2);
+    }
+  }

@@ -1,0 +1,120 @@
+// Button
+.nav-block{
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  position: relative;
+  text-decoration: none !important;
+}
+
+.btn-search{
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border-radius: $border-r-s;
+  cursor: pointer;
+  background-color: $color-white;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url('../imgs/icons/icon-search.svg');
+  @extend .animation-m;
+
+  &:hover{
+    @extend .box-shadow-m;
+  }
+
+  &--selected{
+    width: 200px;
+    border: 1px solid $color-grey;
+    box-shadow: 0 0 0 rgba(0,0,0,0) !important;
+    background-position: left 15px center;
+  }
+
+  &:before{
+    content:'';
+    width: 0px;
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  &__form {
+    position: relative;
+    left: 45px;
+    width: calc(100% - 70px);
+    display: inline-block;
+    vertical-align: middle;
+    overflow: hidden;
+  }
+
+  &__input{
+    display: inline-block;
+    position: relative;
+    // left: 45px;
+    vertical-align: middle;
+    width: 100%;
+    // width: calc(100% - 70px);
+    border: none;
+    color: $color-dark;
+    font-size: $font-s-15;
+    // line-height: $font-s-15;
+    line-height: $font-s-24;
+    height: 24px;
+    background-color: transparent;
+
+    &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+      color: $color-dark-40a;
+    }
+
+    &:focus{
+      outline: none;
+    }
+
+  }
+
+}
+
+
+.btn-more{
+  display: block;
+  color: $color-dark;
+  text-decoration: none !important;
+  clear: both;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  font-size: $font-s-16;
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+  background-color: $color-white;
+  @extend .animation-m;
+
+  &:hover{
+    color: $color-dark-60a;
+    @extend .box-shadow-m;
+  }
+
+}
+
+
+.ghost-dark-button{
+  padding: 10px 60px;
+  display: inline-block;
+  font-size: $font-s-14;
+  text-decoration: none !important;
+  text-align: center;
+  overflow: hidden;
+  color: $color-white;
+  cursor: pointer;
+  border-radius: $border-r-s;
+  border: 1px solid $color-white-20a;
+  background-color: $color-white-10a;
+
+  &:hover, &:focus{
+    color: $color-white;
+    border: 1px solid $color-grey-light;
+    background-color: $color-white-20a;
+  }
+
+}

@@ -1,0 +1,139 @@
+@import '../commons/introList';
+@import '../commons/partnerList';
+
+/* index main [start] */
+.index-main{
+
+  .adv-block{
+    position: relative;
+    padding: 60px 0px;
+
+    &__title{
+      font-weight: 300;
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+  }
+
+  &__waves {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #232323;
+    background-image: url(../imgs/material/man-bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    opacity: 0;
+    transition: opacity 1s;
+
+    canvas{
+      // opacity: 0.5;
+    }
+
+    &--white {
+      background-color: #ffffff;
+    }
+  }
+
+  .hero-block {
+    @media only screen and (max-width: $win-screen-sm - 1) {
+      min-height: 520px;
+    }
+  }
+
+}  /* index main [end] */
+
+.recognition {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  text-align: center;
+  // opacity: 0;
+  transition: opacity 1s;
+
+  &__man {
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s;
+
+    @media only screen and (max-width: $win-screen-sm - 1) {
+      // pointer-events: none;
+    }
+  }
+
+  &__info {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    pointer-events: none;
+  }
+
+  &__area {
+    &:before {
+      content: "";
+      width: 0;
+      height: 100%;
+      position: relative;
+      vertical-align: middle;
+      display: inline-block;
+    }
+    @media only screen and (max-width: $win-screen-sm - 1) {
+      text-align: center;
+    }
+  }
+
+  &__description {
+    width: 440px;
+    vertical-align: middle;
+    display: inline-block;
+    @media only screen and (max-width: $win-screen-md - 1) {
+      width: 90%;
+    }
+    @media only screen and (max-width: $win-screen-sm - 1) {
+      vertical-align: bottom;
+      margin-bottom: 50px;
+    }
+    .lang-en & {
+      width: 560px;
+      @media only screen and (max-width: $win-screen-md - 1) {
+        width: 365px;
+      }
+      @media only screen and (max-width: 500px) {
+        width: 90%;
+      }
+    }
+  }
+
+  &__title {
+    font-family: 'Gotham', PingFangTC,PingFangSC,Microsoft JhengHei,'微軟正黑體',Arial,sans-serif;
+    font-size: $font-s-60;
+    color: $color-main-bright;
+    margin-bottom: 8px;
+    @media only screen and (max-width: $win-screen-md - 1) {
+      font-size: $font-s-38;
+    }
+
+    .lang-en & {
+      font-size: 48px;
+      @media only screen and (max-width: $win-screen-md - 1) {
+        font-size: 33px;
+      }
+    }
+  }
+
+  &__sub {
+    font-size: $font-s-18;
+    color: $color-white;
+    padding-left: 5px;
+    font-weight: 500;
+    @media only screen and (max-width: $win-screen-md - 1) {
+      font-size: $font-s-14;
+    }
+  }
+}

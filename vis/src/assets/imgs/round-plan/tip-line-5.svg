@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="188px" height="48px" viewBox="0 0 188 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>L1</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <ellipse id="path-1" cx="179.376396" cy="38.3763955" rx="7.37639553" ry="7.37639553"></ellipse>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="-1" y="-1" width="16.7527911" height="16.7527911">
+            <rect x="171" y="30" width="16.7527911" height="16.7527911" fill="white"></rect>
+            <use xlink:href="#path-1" fill="black"></use>
+        </mask>
+    </defs>
+    <g id="pc" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="1.0-首頁" transform="translate(-696.000000, -970.000000)">
+            <g id="五大解决方案" transform="translate(0.000000, 788.000000)">
+                <g id="Group-4" transform="translate(636.615630, 353.000000) scale(-1, 1) translate(-636.615630, -353.000000) translate(388.615630, 183.000000)">
+                    <g id="L1" transform="translate(0.633174, -0.000000)">
+                        <g id="Oval-4">
+                            <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                            <use stroke="#888888" mask="url(#mask-2)" stroke-width="2" xlink:href="#path-1"></use>
+                        </g>
+                        <ellipse id="Oval-4" fill="#47C388" cx="179.376396" cy="38.3763955" rx="4.42583732" ry="4.42583732"></ellipse>
+                        <polyline id="Line" stroke="#888888" stroke-linecap="square" points="174.945347 31.2597656 151.726597 0.291015625 0.41604989 0.291015625"></polyline>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

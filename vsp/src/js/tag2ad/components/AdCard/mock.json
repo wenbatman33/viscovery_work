@@ -1,0 +1,40 @@
+{
+  "ads": [
+    {
+      "count": 1,
+      "uid": 95,
+      "video_url": "static/videos/lq6GTSU2nwm4Q-zFACnggDp_i7dX",
+      "video_id": 21160,
+      "series_name": "\u8c37\u963f\u83ab",
+      "updated_time": "Fri, 28 Apr 2017 07:47:45 GMT",
+      "content": [
+        {
+          "category": 43,
+          "org_end_position": 376,
+          "form": 1,
+          "tags": [
+            1071
+          ],
+          "id": "5902f3a143d36d000c241285",
+          "start_position": 241,
+          "tag_infos": [
+            {
+              "position": 226,
+              "ratio": 13,
+              "rect": "643,120,333,368",
+              "tag_id": 1071
+            }
+          ],
+          "end_position": 841,
+          "thumbnail": "/static/orbit/0079001/0000496_face_total.jpg",
+          "org_start_position": 226
+        }
+      ],
+      "video_fps": 29.97002997,
+      "group_id": "1",
+      "video_name": "\u3010\u8c37\u963f\u83ab\u301112\u5206\u9418\u770b\u5b8c\u300a\u592a\u967d\u7684\u5f8c\u88d4\u300b.mp4"
+    }
+  ],
+  "message": "success",
+  "response_code": 1
+}

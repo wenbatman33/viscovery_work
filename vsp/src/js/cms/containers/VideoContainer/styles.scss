@@ -1,0 +1,40 @@
+@import 'coreVariables';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  background: white;
+}
+
+.header {
+  display: flex;
+  padding: $padding-medium;
+  background: $color-mild;
+
+  > .title {
+    flex: initial;
+  }
+
+  > .actions {
+    text-align: right;
+    flex: 1;
+
+    > button {
+      margin-left: $padding-small;
+    }
+
+    > input {
+      display: none;
+    }
+  }
+}
+
+.content {
+  flex: 1;
+  overflow: auto;
+
+  > .list {
+    width: 1160px;
+  }
+}

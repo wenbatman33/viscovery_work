@@ -1,0 +1,42 @@
+@import 'coreVariables';
+
+.box {
+  padding: 8px;
+  box-shadow: 0 0 7px 1px #888888;
+  position: relative;
+  background-color: white;
+}
+
+.parah {
+  display: inline-block;
+}
+
+.uploadParah {
+  display: block;
+  font-size: 14pt;
+  margin: 2px;
+}
+
+.resultParah {
+  display: block;
+  font-size: 10pt;
+  color: gray;
+  margin: 2px;
+}
+
+.side {
+  display: inline-block;
+  position: absolute;
+  right: 5px;
+  top: 15px;
+  > button {
+    color: $color-river;
+  }
+}
+
+.sideSpin {
+  display: inline-block;
+  position: absolute;
+  right: 10px;
+  top: 15px;
+}

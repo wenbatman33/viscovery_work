@@ -1,0 +1,118 @@
+.visc-footer{
+  position: relative;
+  width: 100%;
+  padding: 60px 0px;
+  z-index: $z-index-med;
+  background-color: $color-grey-dark;
+
+  /* logo [start] */
+  &__logo{
+    font-size: 1px;
+    line-height: 9999;
+    color: $color-white-5a;
+    display: inline-block;
+    vertical-align: top;
+    overflow: hidden;
+    width: 155px;
+    height: $visc-footer-logo-h;
+    position: relative;
+    background-image: url('../imgs/logo-white.svg');
+    @extend .bg-contain;
+
+    @media only screen and (max-width: $win-screen-sm - 1){
+      width: 100%;
+      height: $visc-footer-logo-mobile-h;
+      background-position: center;
+    }
+
+  }  /* logo [end] */
+
+
+  /* Right Block [start] */
+  &__right-bock{
+    display: inline-block;
+    vertical-align: top;
+    text-align: right;
+    width: calc(100% - 155px - #{$container-padding-w*2});
+
+    @media only screen and (max-width: $win-screen-sm - 1){
+      display: block;
+      width: 100%;
+    }
+
+  }  /* Right Block [end] */
+
+
+  /* Locations [start] */
+  $local-list-w: 400px;
+  $local-list-title-w: 50px;
+
+  &__locations{
+    display: inline-block;
+    width: $local-list-w;
+
+    &__list{
+      display: inline-block;
+      text-align: left;
+      margin-bottom: 20px;
+      font-weight: 400;
+      letter-spacing: 1px;
+
+      .local-title{
+        font-family: 'GothamBold', PingFangTC,PingFangSC,Microsoft JhengHei,'微軟正黑體',Arial,sans-serif;
+        width: $local-list-title-w;
+        display: inline-block;
+        vertical-align: middle;
+        text-transform: uppercase;
+      }
+
+      .local-text{
+        width: #{ $local-list-w - $local-list-title-w - 10px};
+        display: inline-block;
+        vertical-align: middle;
+        line-height: $font-s-22;
+        font-weight: 200;
+      }
+
+    }
+
+    @media only screen and (max-width: $win-screen-sm - 1){
+      display: block;
+      width: 100%;
+      margin-top: 30px;
+
+      &__list{
+        width: 100%;
+        display: block;
+        text-align: center;
+      }
+
+      .local-text{
+        font-size: $font-s-12;
+        width: 100%;
+      }
+
+    }
+
+  }  /* Locations [end] */
+
+
+  /* Bottom Block [start] */
+  &__bottom-block{
+    display: block;
+    width: calc(100% - #{$container-padding-w*2});
+
+    &__copy{
+      font-weight: 300;
+      letter-spacing: 1px;
+    }
+
+    @media only screen and (max-width: $win-screen-sm - 1){
+      width: 100%;
+      text-align: center;
+    }
+
+  }  /* Bottom Block [end] */
+
+
+}

@@ -1,0 +1,20 @@
+@import 'coreVariables';
+.item {
+  display: flex;
+  padding: $padding-tiny $padding-tiny $padding-tiny $padding-medium;
+  align-items: flex-start;
+}
+
+.label {
+  margin-left: $padding-tiny;
+}
+
+.label-normal {
+  composes: label;
+  color : $color-blackhole;
+}
+
+.label-disabled {
+  composes: label;
+  color : $color-boulder;
+}

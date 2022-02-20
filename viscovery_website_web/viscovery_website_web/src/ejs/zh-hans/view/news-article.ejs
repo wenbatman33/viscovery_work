@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="zh-Hans" data-page="news-article">
+<head>
+  <meta charset="UTF-8">
+  <base href="<%= htmlWebpackPlugin.options.base %>" target="_blank">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+  <%= require("../../meta.ejs")() %>
+  <title>Viscovery</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <%= require("../commons/vendorJS.ejs")() %>
+  <%= require("../../ga.ejs")() %>
+</head>
+<body>
+  <%= require("../commons/header.ejs")() %>
+  <div class='visc-main news-article-main' id="article">
+
+  </div>
+  <%= require("../commons/footer.ejs")() %>
+</body>
+</html>

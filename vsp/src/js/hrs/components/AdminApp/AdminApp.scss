@@ -1,0 +1,20 @@
+.container {
+  height: 100%;
+  position: relative;
+  padding: 0;
+}
+
+.left {
+  display: inline-block;
+  vertical-align: top;
+  height: 100%;
+  width: 280px;
+}
+
+.right {
+  display: inline-block;
+  vertical-align: top;
+  height: 100%;
+  width: calc(100% - 280px);
+  min-width: calc(100% - 280px);
+}

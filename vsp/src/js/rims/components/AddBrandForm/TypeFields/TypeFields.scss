@@ -1,0 +1,63 @@
+@import 'coreVariables';
+
+.class-type {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  // height: 38px;
+  height: 33px;
+  align-items: center;
+}
+
+.brand-type {
+  composes: class-type;
+  align-items: center;
+  // margin-top: 32px;
+  margin-top: 17px;
+}
+
+.new-class {
+  color: $color-wasabi;
+}
+
+.existed-class {
+  color: $color-brand;
+}
+
+.hide-class {
+  display: none;
+}
+
+.fields-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 724px;
+  height: 64px;
+  // margin-top: 16px;
+  // margin-bottom: 32px;
+  margin-top: 3px;
+  margin-bottom: 22px;
+}
+
+.auto-suggest-box {
+  width: 222px;
+  margin-top: 8px;
+
+  input:focus {
+    outline: none,
+  }
+
+  input:disabled {
+    background: rgba(26, 10, 10, .1);
+  }
+}
+
+.show-validation {
+  color: $color-brand;
+}
+
+.hide-validation {
+  display: none;
+}

@@ -1,0 +1,21 @@
+@import "coreVariables";
+
+.container {
+  padding: 32px;
+  background: white;
+  margin-bottom: 16px;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.detail__link {
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: $color-river;
+  cursor: pointer;
+}

@@ -1,0 +1,64 @@
+@import 'coreVariables';
+
+.container {
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+
+  > * {
+    display: inline-block;
+    margin-left: 16px;
+  }
+
+  > *:first-child {
+    margin-left: 0;
+  }
+}
+
+.tags {
+  flex: 1;
+  padding: 4px 0;
+
+  > * {
+    margin-right: 8px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+  }
+
+  > *:last-child {
+    display: inline-block;
+    padding: 4px 8px;
+    background: white;
+    border: 1px solid $color-mild;
+    border-radius: 100px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+
+  > *:last-child:hover {
+    border: 1px solid $color-midnight;
+  }
+}
+
+.selections {
+  > * {
+    width: 110px;
+    display: inline-block;
+    margin-left: 16px;
+  }
+
+  > *:first-child {
+    margin-left: 0;
+  }
+}
+
+.actions {
+  width: 50px;
+  margin-left: 16px;
+  text-align: right;
+
+  > i {
+    cursor: pointer;
+  }
+}

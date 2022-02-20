@@ -1,0 +1,47 @@
+@import 'coreVariables';
+
+.container {
+  width : 100%;
+  background : white;
+  flex-direction:row;
+  display: flex;
+  cursor: pointer;
+
+  .description {
+    width : 100%;
+    word-break: break-all;
+  }
+}
+
+.container-bordered {
+  @extend .container;
+  border:1px solid $color-mild;
+}
+
+.header-row {
+  display : flex;
+}
+
+.card-content {
+  min-width: 0;
+  flex: 1 1 100px;
+  padding : $padding-small;
+  padding-right: 0;
+}
+
+.expand-state {
+  color: rgba(26, 10, 10, 0.5);
+  font-size: 14px;
+  > i {
+    padding : 4px;
+  }
+  flex: 0 0 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  font-size: 18px;
+  color: #212121;
+}

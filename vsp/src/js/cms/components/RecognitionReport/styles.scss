@@ -1,0 +1,74 @@
+@import 'coreVariables';
+
+.donut-title {
+  fill : $color-midnight;
+  font-size : 24px;
+  text-anchor : middle ;
+}
+
+.donut-text {
+  fill : $color-boulder;
+  text-anchor : middle ;
+}
+
+.tag-table {
+  display : table ;
+  width : 400px;
+}
+
+.tag-table-caption {
+  color : $color-midnight;
+}
+
+.tag-table-row {
+  display : flex ;
+  > div {
+    width : 50%;
+  }
+}
+
+.tag-table-cell{
+  display: flex;
+  height : 50px;
+  padding : $padding-tiny;
+  color : $color-midnight;
+}
+
+.table-circle {
+  width : 20px;
+  height : 20px;
+  border-radius: 50%;
+  margin-right : $padding-small;
+}
+
+.report-container {
+  padding: $padding-small;
+  display : flex ;
+  justify-content: center;
+  background : $color-sand ;
+}
+
+.tab-group {
+  height : 100%;
+  margin-right : $padding-medium;
+
+  h3 {
+    box-sizing: border-box;
+  }
+}
+
+.tab {
+  color : $color-mild;
+  width : 100% ;
+  padding-right : $padding-medium;
+  cursor : pointer ;
+  margin-top : $padding-tiny;
+  margin-bottom : $padding-tiny;
+}
+
+.tab-selected {
+  composes: tab;
+  color : $color-blackhole;
+  border-right : solid ;
+  border-color : $color-blackhole;
+}

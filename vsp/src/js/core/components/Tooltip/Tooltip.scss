@@ -1,0 +1,29 @@
+@import 'coreVariables';
+
+.container {
+  position: absolute;
+  width: 100%;
+  z-index: 999;
+}
+
+.triangle {
+  position: relative;
+  top: 5px;
+  width: 10px;
+  height: 10px;
+  margin: 0 auto;
+  background: white;
+  border-right: 1px solid $color-mild;
+  border-top: 1px solid $color-mild;
+  transform: matrix(0.71, -0.71, 0.71, 0.71, 0, 0);
+  z-index: 5;
+}
+
+.box {
+  width: 100%;
+  padding: 16px 8px;
+  background: white;
+  border: 1px solid $color-mild;
+  border-radius: 4px;
+  text-align: center;
+}

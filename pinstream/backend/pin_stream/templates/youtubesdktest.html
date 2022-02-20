@@ -1,0 +1,115 @@
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+  <title>vSDKTest</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link type="text/css" rel="stylesheet" href="https://vsp.viscovery.com/visSDK/static/style.css" />
+  <script src="https://imasdk.googleapis.com/js/sdkloader/ima3.js"></script>
+
+  <script type="text/javascript" src="/static/sdktest.js"></script>
+  <!--<script type="text/javascript" src="https://vsp.viscovery.com/visSDK/lib/js/visSDK.1.1.js"></script>-->
+
+  <script type="text/javascript">
+        var tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/iframe_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+  </script>
+</head>
+<body>
+    <div id="container">
+    <div id="content">
+      <div id="player"></div>
+    </div>
+    <div id="adContainer"></div>
+  </div>
+    <!--<div id="player"></div>-->
+</body>
+<script type="text/javascript">
+    //https://developers.google.com/youtube/iframe_api_reference
+      // 2. This code loads the IFrame Player API code asynchronously.
+      var tag = document.createElement('script');
+
+      tag.src = "https://www.youtube.com/iframe_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+      // 3. This function creates an <iframe> (and YouTube player)
+      //    after the API code downloads.
+      var player;
+      function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+          height: '360',
+          width: '640',
+          videoId: 'ARrzxBZdBs0',
+          //https://developers.google.com/youtube/player_parameters?playerVersion=HTML5#Parameters
+          playerVars: { 'autoplay': 1, 'controls': 1 ,'start':51 },
+          events: {
+            'onReady': onPlayerReady,
+            'onStateChange': onPlayerStateChange,
+            'onError': onPlayerError
+          }
+        });
+      }
+
+      // 4. The API will call this function when the video player is ready.
+      function onPlayerReady(event) {
+        viscoveryAd.init('#player', '#adContainer', {
+          api_key: 'c2a5756a-f5c4-374f-8af8-498447924d2a',
+          video_url: "https%3A%2F%2Fwww.youtube.com%2Fembed%2FARrzxBZdBs0",
+          debug_mode: 0,
+          playerControl: {
+            play: playVideo,
+            pause:pauseVideo,
+            currentTime:getCurrentTime
+          }
+        });
+        //event.target.playVideo();
+      }
+
+      // 5. The API calls this function when the player's state changes.
+      //    The function indicates that when playing a video (state=1),
+      //    the player should play for six seconds and then stop.
+      var done = false;
+      function onPlayerStateChange(event) {
+        if (event.data == YT.PlayerState.PLAYING) {
+            console.info("PLAYING")
+           document.querySelector('#adContainer').style['z-index'] = '0';
+           //document.querySelector('#adContainer').style["display"] = 'none';
+        }
+      }
+
+      function onPlayerError(event){
+          console.info(event);
+      }
+
+      function playVideo(){
+          player.playVideo()
+      }
+
+      function pauseVideo(){
+          player.pauseVideo()
+      }
+
+      function stopVideo() {
+        player.stopVideo();
+      }
+
+      function getCurrentTime(){
+        console.info(player.getCurrentTime())
+        console.info(Math.floor(player.getCurrentTime()))
+        return Math.floor(player.getCurrentTime())
+      }
+
+      function getLastplay(videoId,startSeconds){
+          //videoId:'ARrzxBZdBs0'、startSeconds：11.274692990463256
+          //suggestedQuality small、medium、large、hd720、hd1080、highres 或 default
+          //https://developers.google.com/youtube/iframe_api_reference?hl=zh-cn#setPlaybackQuality
+          player.loadVideoById({videoId:videoId,
+          startSeconds:startSeconds,
+          suggestedQuality: "default"})
+      }
+
+</script>
+</html>

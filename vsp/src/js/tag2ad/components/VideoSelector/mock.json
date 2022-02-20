@@ -1,0 +1,46 @@
+{
+  "message": "success",
+  "response_code": 1,
+  "series_lst": [
+    {
+      "is_default": 1,
+      "scenario": null,
+      "series_id": 7,
+      "series_name": "小姐好白",
+      "alias": [
+        "alias1",
+        "alias2"
+      ],
+      "country_id": 1,
+      "summary": {
+        "available": 0,
+        "total": 0
+      },
+      "recognition_count" : 2,
+      "video_lst": [
+        {
+          "scenario": null,
+          "episode": "1",
+          "status": 3,
+          "video_id": 1,
+          "group_id": 1,
+          "video_name": "Sample.mp4",
+          "video_url": "lgpWkqP5lvOTQ4ZNSb0SLUYZCeTc",
+          "create_time": "2016-12-28T08:41:41Z",
+          "update_time": "2016-12-29T18:25:02Z"
+        },
+        {
+          "scenario": null,
+          "episode": "1",
+          "status": 3,
+          "video_id": 2,
+          "group_id": 1,
+          "video_name": "Thriller.mp4",
+          "video_url": "lgpWkqP5lvOTQ4ZNSb0SLUYfdjios",
+          "create_time": "2016-12-10T08:41:41Z",
+          "update_time": "2016-12-23T18:25:02Z"
+        }
+      ]
+    }
+  ]
+}

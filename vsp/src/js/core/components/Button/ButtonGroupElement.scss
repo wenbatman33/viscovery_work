@@ -1,0 +1,61 @@
+@import "coreVariables";
+
+.element{
+  text-align: center;
+  padding: 8px 1rem 7px 1rem;
+  color: $color-boulder;
+  flex-grow: 1;
+  box-sizing: border-box;
+  display: inline-block;
+
+  &:hover{
+    background: $color-sand;
+    transition: background 0.2s;
+    color: $color-mild;
+  }
+}
+
+.gray-element{
+  @extend .element;
+  color: white;
+
+  &:hover{
+    background: rgba(#FFF, 0.2);
+    color: white;
+  }
+}
+
+.label{
+  margin: 0;
+}
+
+.checked{
+  composes: element;
+  background: $color-sand;
+  color: $color-chocolate;
+  box-shadow: inset 0px 2px 2px rgba(#000, 0.1);
+
+  &:hover{
+    background: $color-sand;
+    color: $color-chocolate;
+  }
+}
+
+.gray-checked{
+  composes: gray-element;
+  background: $color-brand;
+
+  &:hover{
+    background: $color-brand;
+  }
+}
+
+.unchecked{
+  composes: element;
+  background: white;
+}
+
+.gray-unchecked{
+  composes: gray-element;
+  background: #362727;
+}

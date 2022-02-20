@@ -1,0 +1,47 @@
+@import "coreVariables";
+
+.container {
+  border: none;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 20fr 5fr 15fr 15fr 15fr 15fr 15fr;
+}
+
+.header {
+  composes: row;
+  background: $color-fog;
+  color: $color-blackhole;
+  height: 36px;
+  border-top: 1px solid $color-mild;
+  border-left: 1px solid $color-mild;
+  border-right: 1px solid $color-mild;
+}
+
+.content {
+  composes: row;
+  background: white;
+  color: $color-midnight;
+  height: 60px;
+}
+
+.col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-col {
+  composes: col;
+}
+
+.content-col {
+  composes: col;
+  border: 1px solid $color-sand;
+}
+
+.detail__link {
+  color: $color-river;
+  cursor: pointer;
+}

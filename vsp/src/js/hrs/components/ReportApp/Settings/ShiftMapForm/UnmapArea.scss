@@ -1,0 +1,9 @@
+@import 'coreVariables';
+
+.line {
+  border-color: $color-mild;
+}
+
+.over {
+  box-shadow: 0 0 0 2px $color-river;
+}

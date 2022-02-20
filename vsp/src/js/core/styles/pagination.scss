@@ -1,0 +1,36 @@
+@import 'coreVariables';
+
+$border-radius : 4px;
+
+.paginate {
+  display : inline;
+  user-select: none;
+}
+
+.paginate li {
+  padding : 5px 10px;
+  display : inline-block;
+  border : 1px solid #BDBDBD;
+  border-radius : $border-radius;
+  background : white ;
+  margin-right : $padding-tiny ;
+  color : #17ABFF;
+
+  &.disabled {
+    color: darkgrey;
+    visibility: hidden;
+  }
+}
+
+.paginate li:hover:not(.active):not(.disabled) {
+  text-decoration: underline;
+  color : #17ABFF;
+  cursor : pointer;
+}
+
+.paginate .active {
+  cursor : pointer;
+  border-radius : $border-radius;
+  background-color: #F2F2F2;
+  color: #4F4F4F;
+}

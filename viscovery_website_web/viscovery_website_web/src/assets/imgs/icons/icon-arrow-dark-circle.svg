@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="82px" height="82px" viewBox="0 0 82 82" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-arrow-dark-circle</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="pc" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="3.0-解決方案-情境式廣告" transform="translate(-600.000000, -1429.000000)">
+            <g id="自動標籤-關聯廣告" transform="translate(30.000000, 1210.000000)">
+                <g id="icon-arrow-dark-circle" transform="translate(570.000000, 219.000000)">
+                    <circle id="Oval-3" fill="#000000" cx="41" cy="41" r="41"></circle>
+                    <polyline id="Rectangle-6" stroke="#E14523" transform="translate(36.500000, 41.000000) rotate(45.000000) translate(-36.500000, -41.000000) " points="25 29.5 48 29.5 48 52.5"></polyline>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

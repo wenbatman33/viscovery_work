@@ -1,0 +1,14 @@
+@import 'coreVariables';
+
+.container {
+  padding: $padding-medium;
+  box-sizing: content-box;
+
+  > * {
+    margin-bottom: $padding-small;
+  }
+
+  > *:last-child {
+    margin-bottom: 150px;
+  }
+}

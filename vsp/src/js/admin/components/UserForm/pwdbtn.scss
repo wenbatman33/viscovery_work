@@ -1,0 +1,30 @@
+@import 'coreVariables';
+
+.wording {
+  margin-top: 5px;
+  font-size: 14px;
+  color: $color-boulder;
+}
+
+.renewPwd {
+  width: 100%;
+  display: flex;
+}
+
+.inlineWordbox {
+  display: inline-block;
+  width: 70%;
+  font-size: 18pt;
+}
+
+.inlineWording {
+  font-size: 18pt;
+  color: $color-boulder;
+}
+
+.inlineBtn {
+  display: inline-block;
+  width: 30%;
+  text-align: right;
+}
+

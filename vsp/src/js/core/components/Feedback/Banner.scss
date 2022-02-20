@@ -1,0 +1,28 @@
+@import 'coreVariables';
+
+.container {
+  width: 100%;
+  height: 36px;
+  color: white;
+  background: $color-rouge;
+  padding: 8px 8px;
+  border-radius: 4px;
+}
+
+.invalid-container {
+  composes: container;
+}
+
+.valid-container {
+  composes: container;
+  background: $color-wasabi;
+}
+
+.icon {
+  font-family: "FontAwesome";
+  margin-right: 4px;
+}
+
+.text {
+  display: inline-block;
+}

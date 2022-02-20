@@ -1,0 +1,55 @@
+
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+  <title>vimeoSDKTest</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://player.vimeo.com/api/player.js"></script>
+  <script type="text/javascript"></script>
+</head>
+<body>
+    <!--<iframe src="https://player.vimeo.com/video/76979871" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>-->
+    <div id="made-in-ny"></div>
+</body>
+<script type="text/javascript">
+    //https://github.com/vimeo/player.js
+
+    //option 1 iframe
+    //var iframe = document.querySelector('iframe');
+    //var player = new Vimeo.Player(iframe);
+
+    //option 2
+    //autoplay: true
+    var options = {
+        id: 59777392,//id or url
+        width: 640
+    };
+
+    var player = new Vimeo.Player('made-in-ny', options);
+
+    function videoPause(){
+        player.pause()
+    }
+
+    function videoPlay(){
+      player.play()
+    }
+
+    function getCurrentTime(){
+        player.getCurrentTime().then(function(seconds) {
+            console.info(seconds)
+        }).catch(function(error) {
+            // an error occurred
+        });
+    }
+
+    function setCurrentTime(seconds){
+        //seconds 30.456
+        player.setCurrentTime(seconds)
+        videoPlay()
+    }
+
+    setCurrentTime(11)
+</script>
+</html>

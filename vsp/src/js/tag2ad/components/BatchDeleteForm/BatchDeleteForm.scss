@@ -1,0 +1,35 @@
+@import 'coreVariables';
+
+$window-max-width : 350px;
+
+.container {
+  padding : $padding-small;
+  max-width : $window-max-width;
+}
+
+.description {
+  margin-bottom : $padding-small;
+  margin-top : $padding-medium;
+}
+
+.statement{
+  display: flex;
+  flex-direction: row;
+  > input {
+    margin-right: $padding-small;
+  }
+}
+
+.btn-group {
+  margin-top: $padding-medium;
+  display : flex;
+  justify-content: center;
+  > button:nth-child(1) {
+    margin-right : $padding-small;
+  }
+}
+
+.title {
+  width : 100% ;
+  text-align: center;
+}

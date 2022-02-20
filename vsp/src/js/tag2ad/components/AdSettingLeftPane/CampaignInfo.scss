@@ -1,0 +1,23 @@
+@import 'coreVariables';
+@import '../../styles/_effect.scss';
+
+.container {
+  height: 48px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+}
+
+.name {
+  @include single-line-ellipsis;
+  font-size: 18px;
+  color: $color-blackhole;
+  line-height: 48px;
+}
+
+.placeholder {
+  @extend .shimmering-animation;
+  height: 20px;
+  display: block;
+  width: 100%;
+}

@@ -1,0 +1,14 @@
+@import "coreVariables";
+
+.container {
+  display: flex;
+  align-items: center;
+  color: $color-boulder;
+  user-select: none;
+  cursor: pointer;
+  height: 100%;
+
+  &:hover {
+    color: $color-midnight;
+  }
+}

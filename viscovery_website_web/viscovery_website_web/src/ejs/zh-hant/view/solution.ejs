@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" data-page="solution">
+<head>
+  <meta charset="UTF-8">
+  <base href="<%= htmlWebpackPlugin.options.base %>">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+  <%= require("../../meta.ejs")() %>
+  <title>Viscovery</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <%= require("../commons/vendorJS.ejs")() %>
+  <%= require("../../ga.ejs")() %>
+</head>
+<body>
+  <%= require("../commons/header.ejs")() %>
+  <div class='visc-main solution-main'>
+
+    <!-- Sub Menu -->
+    <div id="solutionSubMenu" data-select="1" class="solution-main__sub-menu">
+      <%= require("../commons/solution-sub-menu.ejs")() %>
+    </div>
+
+    <!-- Hero Block [start] -->
+    <div class="hero-block hero-block__no-msk">
+
+      <div class="hero-block__bg hidden-xs" style="background-image:url('./imgs/photo/solution-hero-photo-01-zh-hant.jpg')"></div>
+      <div class="hero-block__bg visible-xs" style="background-image:url('./imgs/photo/solution-hero-photo-01-zh-hant-xs.jpg')"></div>
+
+      <div class="container-med">
+
+        <!-- Intro Block -->
+        <div class="middle-block">
+          <section class="solution-main__intro">
+            <h1 class="solution-main__intro__title color-green">Key<br/>Moment</h1>
+            <h2 class="solution-main__intro__subtitle font-h2 color-white">情境式廣告投放<br/>最大化投放效果</h2>
+            <a href="https://sdkdemo.viscovery.com" target="_blank" class="ghost-dark-button">Demo</a>
+          </section>
+        </div>
+
+      </div>
+    </div>  <!-- Hero Block [end] -->
+
+
+    <!-- Effect Block [start] -->
+    <section class="solution-main__effect-block-type01">
+      <div class="container-med slick-area">
+
+        <div class="solution-main__effect-block-type01__list col-sm-6 slick-item">
+          <h4 class="top-title color-white">高效解讀</h4>
+          <h4 class="med-number color-white">85<span class="med-number__sm-txt color-white">%</span></h4>
+          <p class="bottom-text color-white">高效解讀85%影音<br/>非結構化數據</p>
+        </div>
+
+        <div class="solution-main__effect-block-type01__list solution-main__effect-block-type01__list--none-border col-sm-6 slick-item">
+          <h4 class="top-title color-white">投放效益</h4>
+          <h4 class="med-number color-white"><span class="med-number__sm-txt color-white">+</span>200<span class="med-number__sm-txt color-white">%</span></h4>
+          <p class="bottom-text color-white">提升200％廣告投放效益</p>
+        </div>
+
+      </div>
+    </section>  <!-- Effect Block [end] -->
+
+    <!-- Scene Block [start] -->
+    <section class="solution-main__scene-block">
+      <div class="container-med">
+
+        <div class="solution-main__scene-block__content content-right col-md-6">
+          <div class="info-photo hidden-xs" style="background-image:url('./imgs/photo/photo-solution-01-1-zh-hant.jpg')"></div>
+          <div class="info-photo visible-xs" style="background-image:url('./imgs/photo/photo-solution-01-1-zh-hant-xs.jpg')"></div>
+          <h3 class="info-title font-h3 color-white">自動標簽</h3>
+          <p class="info-txt font-p-md color-white">自動標簽人事時地物，智慧投放廣告</p>
+        </div>
+
+        <div class="solution-main__scene-block__content content-left col-md-6">
+          <div class="info-photo" style="background-image:url('./imgs/photo/photo-solution-01-2.jpg')"></div>
+          <h3 class="info-title font-h3 color-white">關聯廣告</h3>
+          <p class="info-txt font-p-md color-white">情境式關聯廣告，更舒適的廣告體驗</p>
+        </div>
+
+      </div>
+    </section>  <!-- Scene Block [end] -->
+
+    <!-- Effect Block [start] -->
+    <section class="solution-main__effect-block-type02">
+      <div class="container-med  slick-area">
+
+        <div class="solution-main__effect-block-type02__list col-sm-4 slick-item">
+          <h4 class="top-title font-h6-sm color-dark">PC端點擊率</h4>
+          <h4 class="med-number color-dark"><span class="med-number__sm-txt--orange">+</span>67.6<span class="med-number__sm-txt color-dark">%</span></h4>
+        </div>
+
+        <div class="solution-main__effect-block-type02__list col-sm-4 slick-item">
+          <h4 class="top-title font-h6-sm color-dark">Pad端點擊率</h4>
+          <h4 class="med-number color-dark"><span class="med-number__sm-txt--orange">+</span>85.6<span class="med-number__sm-txt color-dark">%</span></h4>
+        </div>
+
+        <div class="solution-main__effect-block-type02__list solution-main__effect-block-type02__list--none-border col-sm-4 slick-item">
+          <h4 class="top-title font-h6-sm color-dark">Phone端點擊率</h4>
+          <h4 class="med-number color-dark"><span class="med-number__sm-txt--orange">+</span>58.1<span class="med-number__sm-txt color-dark">%</span></h4>
+        </div>
+
+      </div>
+    </section>  <!-- Effect Block [end] -->
+
+
+    <!-- Banner Block [start] -->
+    <section class="solution-main__banner-block">
+      <div solution-id="13" id="visualBanner"></div>
+    </seciton>  <!-- Banner Block [end] -->
+
+
+    <!-- Intro List Block [start] -->
+    <section class="solution-main__intro-list-block">
+      <div class="container-med">
+
+        <h2 class="solution-main__intro-list-block__title font-h2-lg color-dark">What We Do</h2>
+
+        <ul class="list-block">
+          <li class="list-block__list col-md-4">
+            <h3 class="list-block__list__title font-h3 color-dark">VDS影音分析</h3>
+            <p class="list-block__list__txt font-p-md color-dark-60a">自動分析關聯情境，抓取、篩選劇中的tag，插入廣告。</p>
+          </li>
+          <li class="list-block__list col-md-4">
+            <h3 class="list-block__list__title font-h3 color-dark">智慧廣告插入</h3>
+            <p class="list-block__list__txt font-p-md color-dark-60a">以無縫中插的形式，嫁接劇情本身，智慧投放廣告，減少用戶觀看干擾，提升用戶體驗。</p>
+          </li>
+          <li class="list-block__list col-md-4">
+            <h3 class="list-block__list__title font-h3 color-dark">創新廣告模式</h3>
+            <p class="list-block__list__txt font-p-md color-dark-60a">共同創建新型廣告投放模式，從粗暴式廣告投放轉變為情境式的精準廣告投放。</p>
+          </li>
+        </ul>
+
+      </div>
+    </section>  <!-- Intro List Block [end] -->
+
+
+  </div>
+  <%= require("../commons/footer.ejs")() %>
+</body>
+</html>

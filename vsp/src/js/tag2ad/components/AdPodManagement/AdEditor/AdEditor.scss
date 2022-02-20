@@ -1,0 +1,83 @@
+@import 'coreVariables';
+
+.container {
+  width: 100%;
+  background : $color-fog;
+  display : flex;
+  flex-direction: row;
+  min-height : 500px;
+  padding: 8px 32px 34px 64px;
+}
+
+.left {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  margin-right: 34px;
+}
+
+.right {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+}
+
+.player {
+  flex: 1;
+  height: 100%;
+}
+
+
+.setting {
+  display:flex;
+  flex-direction: column;
+  width :40%;
+  padding: $padding-small;
+}
+
+.control {
+  display : flex;
+  flex-direction: row-reverse;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.caption {
+  margin-top : $padding-medium;
+  color : $color-blackhole;
+  font-weight: bolder;
+}
+
+.btn-modify{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+  align-items: flex-end;
+}
+
+.top {
+  margin-bottom: 8px;
+}
+
+.bottom {
+  display: flex;
+  flex-direction: row;
+}
+
+.info {
+  flex: initial;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.delete__ad {
+  color: $color-boulder;
+  margin: 0 0 42px 0;
+}

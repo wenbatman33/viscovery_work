@@ -1,0 +1,6 @@
+.categories {
+  margin-top : 5px;
+  > div:not(:last-child) {
+    margin-bottom : 8px;
+  }
+}

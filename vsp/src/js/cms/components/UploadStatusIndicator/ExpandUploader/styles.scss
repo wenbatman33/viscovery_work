@@ -1,0 +1,11 @@
+.container {
+  box-shadow: 0 0 7px 1px #888888;
+  height: 100%;
+  background-color: white;
+}
+
+.body {
+  padding: 4px;
+  overflow: scroll;
+  height: calc(100% - 36px);
+}

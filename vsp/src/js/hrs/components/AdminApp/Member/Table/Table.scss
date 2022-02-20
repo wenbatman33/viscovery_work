@@ -1,0 +1,62 @@
+@import "./Row.scss";
+
+.container {
+  background: white;
+  border-radius: 4px;
+  border: 1px solid $color-sand;
+  margin: 0 48px 16px 65px;
+}
+
+.tableTitle {
+  padding: 20px 20px 20px 32px;
+}
+
+.row-container-header {
+  @extend .row-container;
+  height: 36px;
+  background: #F6F7F7;
+  margin-bottom: 0;
+}
+
+.hide {
+  display: none;
+}
+
+.checkbox-header {
+  @extend .checkbox;
+}
+
+.seriesName-header {
+  @extend .seriesName;
+  color: $color-blackhole;
+}
+
+.videoName-header {
+  @extend .videoName;
+  color: $color-blackhole;
+}
+
+.brandName-header {
+  @extend .brandName;
+  color: $color-blackhole;
+}
+
+.brandId-header {
+  @extend .brandId;
+  color: $color-blackhole;
+}
+
+.tagCount-header {
+  @extend .tagCount;
+  color: $color-blackhole;
+}
+
+.priority-header {
+  @extend .priority;
+  color: $color-blackhole;
+}
+
+.delete-header {
+  @extend .delete;
+  color: $color-blackhole;
+}

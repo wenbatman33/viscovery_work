@@ -1,0 +1,51 @@
+@import "coreVariables";
+
+.container {
+  background: white;
+  width: 150px;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.groupName {
+  padding: 16px;
+  color: black;
+  border-bottom: 1px solid $color-mild;
+}
+
+.hr {
+  margin: 10px 0;
+}
+
+.action-area {
+  display: flex;
+  flex-direction: column;
+  color: $color-midnight;
+}
+
+.action__button {
+  cursor: pointer;
+  padding: 10px 16px;
+  &:hover {
+    background: #E9EDEF;
+  }
+}
+
+.username {
+  padding: 16px;
+  color: $color-boulder;
+  border-bottom: 1px solid $color-mild;
+}
+
+.text-overflow {
+  width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.roleName {
+  color: $color-boulder;
+  composes: text-overflow;
+}

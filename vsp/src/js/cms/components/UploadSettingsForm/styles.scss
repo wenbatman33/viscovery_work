@@ -1,0 +1,44 @@
+@import 'coreVariables';
+
+.form {
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+
+  > .settings {
+    flex: 1;
+    display: flex;
+
+    > * > * {
+      margin-bottom: $padding-medium;
+    }
+
+    > .upload {
+      display: flex;
+      flex-direction: column;
+      width: 360px;
+      height: 100%;
+
+      > .content {
+        flex: 1;
+        overflow: auto;
+      }
+    }
+
+    > .recognition {
+      width: 360px;
+      height: 100%;
+      margin-left: $padding-medium;
+    }
+  }
+
+  > .actions {
+    margin-bottom: 0;
+    text-align: right;
+
+    > * {
+      margin-left: $padding-small;
+    }
+  }
+
+}

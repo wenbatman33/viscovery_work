@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" data-page="core">
+<head>
+  <meta charset="UTF-8">
+  <base href="<%= htmlWebpackPlugin.options.base %>">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+  <%= require("../../meta.ejs")() %>
+  <title>Viscovery</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <%= require("../commons/vendorJS.ejs")() %>
+  <%= require("../../ga.ejs")() %>
+</head>
+<body>
+  <%= require("../commons/header.ejs")() %>
+  <div class='visc-main core-main'>
+
+    <!-- Hero Block [start] -->
+    <div class="hero-block hero-block__no-msk">
+      <div class="container-med">
+
+        <!-- Intro Block -->
+        <div class="middle-block col-sm-6">
+          <section class="core-main__intro">
+            <div class="core-main__intro__vds-logo"></div>
+            <h2 class="core-main__intro__vds-title font-h1-lg color-white">Video Discovery Service<br/>智能影音探索平台</h2>
+            <p class="core-main__intro__vds-text font-h6 color-white">經過多年影像辨識技術的積累，Viscovery成功開發出VDS（Video Discovery Service）智能影音探索平台。VDS能夠自動辨識影片中的內容，標記相關具有商業價值的物件，解決影片、圖片等非結構化數據無法被有效利用的問題。</p>
+
+            <div class="core-main__intro__svg hidden-sm hidden-md hidden-lg">
+              <img src="imgs/material/core-svg.svg">
+            </div>
+          </section>
+        </div>
+
+        <!-- Intro Block Ills -->
+        <div class="middle-block col-sm-6">
+          <div class="core-main__intro-ills hidden-xs">
+            <canvas id="platforms" class="core-main__canvas"></canvas>
+          </div>
+        </div>
+
+      </div>
+    </div>  <!-- Hero Block [end] -->
+
+
+    <div class='core-main__container core-main__container__fitamos-block'>
+      <div class="container-med">
+
+        <!-- FITAMOS Block [start] -->
+        <div class="FITAMOS-block">
+          <h2 class="FITAMOS-block__title font-h1 color-main-red"><span class="txt-block">FITAMOS</span> <span class="txt-block">7大識別技術</span></h2>
+          <h6 class="FITAMOS-block__sub-title font-h6-sm color-dark">自動辨識7大類影音內容 <span class="br-xs">業界唯一整合型辨識方案</span></h6>
+
+          <!-- Intro Block [start] -->
+          <section class="FITAMOS-block__intro-block">
+            <img class="FITAMOS-block__intro-block__circle-photo" src="./imgs/ills/ills-vds-fitamos-zh-hant.svg" />
+
+            <ul class="FITAMOS-list">
+              <li class="FITAMOS-list__list FITAMOS-list__list__01 right-txt">
+                <h6 class="FITAMOS-list__list__title font-h6-sm color-dark"><sapn class="color-main-red">F</span><sapn class="color-dark">ace</span></h6>
+                <p class="FITAMOS-list__list__txt font-p color-dark">擁有10000+人的名人明星人臉識別庫，辨識海內外名人明星相關畫面。</p>
+              </li>
+              <li class="FITAMOS-list__list FITAMOS-list__list__02 right-txt">
+                <h6 class="FITAMOS-list__list__title font-h6-sm color-dark"><sapn class="color-main-red">I</span><sapn class="color-dark">mage</span></h6>
+                <p class="FITAMOS-list__list__txt font-p color-dark">擁有10000+ 品牌商品資料庫，幫助品牌輕鬆管理SKU商品訊息，滿足汽車／零售／家居／奢侈品等品牌相關產品的智慧辨識。</p>
+              </li>
+              <li class="FITAMOS-list__list FITAMOS-list__list__03 right-txt">
+                <h6 class="FITAMOS-list__list__title font-h6-sm color-dark"><sapn class="color-main-red">T</span><sapn class="color-dark">ext</span></h6>
+                <p class="FITAMOS-list__list__txt font-p color-dark">基於深度學習的自然語言處理技術，理解影像中出現的文字內容，並精確辨識其中的關聯情緒與抽象概念。</p>
+              </li>
+              <li class="FITAMOS-list__list FITAMOS-list__list__04 right-txt">
+                <h6 class="FITAMOS-list__list__title font-h6-sm color-dark"><sapn class="color-main-red">A</span><sapn class="color-dark">udio</span></h6>
+                <p class="FITAMOS-list__list__txt font-p color-dark">掌握背景音效，自動識別音律節奏對觀影者造成的情緒反應，準確匹配適合的影音廣告。</p>
+              </li>
+              <li class="FITAMOS-list__list FITAMOS-list__list__05">
+                <h6 class="FITAMOS-list__list__title font-h6-sm color-dark"><sapn class="color-main-red">M</span><sapn class="color-dark">otion</span></h6>
+                <p class="FITAMOS-list__list__txt font-p color-dark">辨識畫面動作，整合動作、情境，最大化提煉情境廣告價值。</p>
+              </li>
+              <li class="FITAMOS-list__list FITAMOS-list__list__06">
+                <h6 class="FITAMOS-list__list__title font-h6-sm color-dark"><sapn class="color-main-red">O</span><sapn class="color-dark">bject</span></h6>
+                <p class="FITAMOS-list__list__txt font-p color-dark">準確辨識10000+常用物件，挖掘影音商業價值。</p>
+              </li>
+              <li class="FITAMOS-list__list FITAMOS-list__list__07">
+                <h6 class="FITAMOS-list__list__title font-h6-sm color-dark"><sapn class="color-main-red">S</span><sapn class="color-dark">cene</span></h6>
+                <p class="FITAMOS-list__list__txt font-p color-dark">自動排除影音中的干擾訊息，如商標或廣告橫幅等，準確辨識500+場景。</p>
+              </li>
+            </ul>
+
+          </section>  <!-- Intro Block [end] -->
+
+        </div>  <!-- FITAMOS Block [end] -->
+
+      </div>
+    </div>
+
+    <div class='core-main__container core-main__container__adv-block'>
+      <div class="container-med">
+
+        <!-- Advantage Block [start] -->
+        <div class="adv-block">
+          <div class="container-sm">
+            <h6 class="adv-block__intro font-h6 color-dark">VDS(Video Discovery Service)智能影音探索平台，深度挖掘影音大數據，與影音平台、直播app等平台廠商合作，針對大量影音內容，採集具有商業價值的物件與場景，發展全新的商業模式，創造新的廣告收入。</h6>
+          </div>
+          <%= require("../commons/intro-list.ejs")() %>
+        </div>  <!-- Advantage Block [end] -->
+
+      </div>
+    </div>
+
+  </div>
+  <%= require("../commons/footer.ejs")() %>
+</body>
+</html>

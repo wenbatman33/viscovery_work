@@ -1,0 +1,62 @@
+<IfModule mod_rewrite.c>
+    <IfModule mod_negotiation.c>
+        Options -MultiViews
+    </IfModule>
+
+    DirectoryIndex index.en.html
+
+    RewriteEngine On
+
+    # Redirect Trailing Slashes If Not A Folder...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)/$ /$1 [L,R=301]
+
+    # Handle Front Controller...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^$ index.en.html [L]
+    RewriteRule ^zh-cn$ index.zh-hans.html [L]
+    RewriteRule ^zh-tw$ index.zh-hant.html [L]
+    RewriteRule ^en-us$ index.en.html [L]
+    RewriteRule ^core$ core.en.html [L]
+    RewriteRule ^zh-cn/core$ core.zh-hans.html [L]
+    RewriteRule ^zh-tw/core$ core.zh-hant.html [L]
+    RewriteRule ^en-us/core$ core.en.html [L]
+    RewriteRule ^solution/1$ solution.en.html [L]
+    RewriteRule ^zh-cn/solution/1$ solution.zh-hans.html [L]
+    RewriteRule ^zh-tw/solution/1$ solution.zh-hant.html [L]
+    RewriteRule ^en-us/solution/1$ solution.en.html [L]
+    RewriteRule ^solution/2$ solution02.en.html [L]
+    RewriteRule ^zh-cn/solution/2$ solution02.zh-hans.html [L]
+    RewriteRule ^zh-tw/solution/2$ solution02.zh-hant.html [L]
+    RewriteRule ^en-us/solution/2$ solution02.en.html [L]
+    RewriteRule ^solution/3$ solution03.en.html [L]
+    RewriteRule ^zh-cn/solution/3$ solution03.zh-hans.html [L]
+    RewriteRule ^zh-tw/solution/3$ solution03.zh-hant.html [L]
+    RewriteRule ^en-us/solution/3$ solution03.en.html [L]
+    RewriteRule ^solution/4$ solution04.en.html [L]
+    RewriteRule ^zh-cn/solution/4$ solution04.zh-hans.html [L]
+    RewriteRule ^zh-tw/solution/4$ solution04.zh-hant.html [L]
+    RewriteRule ^en-us/solution/4$ solution04.en.html [L]
+    RewriteRule ^solution/5$ solution05.en.html [L]
+    RewriteRule ^zh-cn/solution/5$ solution05.zh-hans.html [L]
+    RewriteRule ^zh-tw/solution/5$ solution05.zh-hant.html [L]
+    RewriteRule ^en-us/solution/5$ solution05.en.html [L]
+    RewriteRule ^news$ news.en.html [L]
+    RewriteRule ^zh-cn/news$ news.zh-hans.html [L]
+    RewriteRule ^zh-tw/news$ news.zh-hant.html [L]
+    RewriteRule ^en-us/news$ news.en.html [L]
+    RewriteRule ^news-article$ news-article.en.html [L]
+    RewriteRule ^zh-cn/news-article$ news-article.zh-hans.html [L]
+    RewriteRule ^zh-tw/news-article$ news-article.zh-hant.html [L]
+    RewriteRule ^en-us/news-article$ news-article.en.html [L]
+    RewriteRule ^about$ about.en.html [L]
+    RewriteRule ^zh-cn/about$ about.zh-hans.html [L]
+    RewriteRule ^zh-tw/about$ about.zh-hant.html [L]
+    RewriteRule ^en-us/about$ about.en.html [L]
+
+
+    # Handle Authorization Header
+    RewriteCond %{HTTP:Authorization} .
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+</IfModule>

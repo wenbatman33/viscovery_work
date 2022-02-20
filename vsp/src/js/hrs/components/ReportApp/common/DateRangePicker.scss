@@ -1,0 +1,31 @@
+@import "coreVariables";
+
+.input {
+  width: 130px;
+  height: 36px;
+  border: 1px solid $color-mild;
+  color: $color-boulder;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  font-weight: normal;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.connect {
+  margin: 0 16px;
+  color: $color-blackhole;
+}
+
+.display {
+  color: $color-blackhole;
+  margin-right: 16px;
+}
+
+.icon {
+  color: $color-boulder;
+  pointer-events: none;
+  position: relative;
+  right: 1.5rem;
+  margin-right: -1.5rem;
+}

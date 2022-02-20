@@ -1,0 +1,16 @@
+.error {
+  color : red ;
+  margin-bottom: 10px;
+}
+
+.pull-right  {
+  composes : error ;
+  float : right ;
+  align-self: flex-end;
+}
+
+.pull-left {
+  composes : error ;
+  float : left;
+  align-self : flex-start;
+}

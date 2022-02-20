@@ -1,0 +1,20 @@
+.pin-button {
+    opacity:0;
+    width: 34px;
+    height: 34px;
+    margin: 0 !important;
+    padding: 0 !important;
+    position: absolute;
+    border: 1px solid #d3d3d3;
+    border-radius: 2px;
+    background: #f8f8f8 url('chrome-extension://__MSG_@@extension_id__/icon/pin_Icon_32x32.png') no-repeat;
+    cursor: pointer;
+    z-index: 999;
+}
+
+.ux-thumb-wrap:hover .pin-button,
+.yt-lockup-thumbnail:hover .pin-button,
+.thumb-wrapper:hover .pin-button,
+.player-area:hover .pin-button{
+    opacity:0.9;
+}

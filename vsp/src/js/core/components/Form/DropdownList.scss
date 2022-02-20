@@ -1,0 +1,154 @@
+@import 'coreVariables';
+@import './formBase';
+
+%horizontalPadding{
+  padding-left:  8px;
+}
+
+.container{
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 14px;
+  // z-index: 10;
+
+  &:focus .displayZone{
+    border: 2px solid $color-river;
+  }
+
+  &:focus .collapseZone{
+    border: 1px solid $color-river;
+    z-index: 110;
+  }
+
+  &:focus{
+    outline: 0;
+  }
+}
+
+.gray-container{
+  @extend .container;
+
+  &:focus .displayZone{
+    border: 2px solid white;
+  }
+
+  &:focus .collapseZone{
+    border: 0;
+  }
+}
+
+.displayZone{
+  @extend %horizontalPadding;
+  display: flex;
+  align-items: center;
+  padding-right: 16px;
+  padding-bottom: 8px;
+  padding-top: 8px;
+  border: 1px solid $color-mild;
+  box-sizing: border-box;
+  background: white;
+
+  > div {
+    width: 100%;
+
+    > p {
+      width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  &::after{
+    content: "\f107";
+    font-family: "FontAwesome";
+    position: absolute;
+    right: 0;
+    margin-right: 12px;
+    color: $color-boulder;
+  }
+}
+
+.gray-displayZone{
+  @extend .displayZone;
+  border-color: #E0E0E0;
+  background: #362727;
+
+  &::after{
+    color: #FFFFFF;
+  }
+}
+
+.collapseZone{
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  position: absolute;
+  background: white;
+  width: 100%;
+}
+
+.collapse{
+  composes: collapseZone;
+  display: none;
+}
+
+.expand{
+  composes: collapseZone;
+  display: block;
+}
+
+.zBox {
+  position: relative;
+  z-index: 100;
+  background: white;
+}
+
+.options{
+  overflow-y: scroll;
+  min-width: 100%;
+  padding-top: 8px;
+  padding-bottom: 15px;
+  max-height: 200px;
+  box-sizing: border-box;
+}
+
+.gray-options{
+  @extend .options;
+  background: #362727;
+}
+
+.option{
+  @extend %horizontalPadding;
+  cursor: pointer;
+
+  &:hover{
+    background: $color-river;
+    color: white;
+  }
+}
+
+.gray-option{
+  @extend .option;
+  color: white;
+
+  &:hover{
+    background: rgba(#FFF, 0.2);
+  }
+}
+
+.selected{
+  color: inherit;
+}
+
+.gray-selected{
+  color: white;
+}
+
+.placeholder{
+  color: $color-boulder;
+}
+
+.gray-placeholder{
+  color: rgba(#ffffff, 0.5);
+}

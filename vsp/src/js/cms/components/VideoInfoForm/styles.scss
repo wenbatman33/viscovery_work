@@ -1,0 +1,26 @@
+@import 'coreVariables';
+
+.container {
+  width : 400px;
+}
+
+.header {
+  color : $color-blackhole;
+}
+
+.unit {
+  margin-top : $padding-small;
+  margin-bottom : $padding-medium ;
+  > p {
+    margin-bottom : $padding-tiny ;
+  }
+}
+
+.control-btn-group {
+  display : flex ;
+  flex-direction: row;
+  justify-content: flex-end;
+  > button:nth-child(1) {
+    margin : 0 $padding-tiny 0 0;
+  }
+}

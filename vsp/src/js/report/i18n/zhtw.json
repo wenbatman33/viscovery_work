@@ -1,0 +1,10 @@
+{
+  "tagAdChanceReport": "Tags與廣告機會點統計報表",
+  "title": "Tags與廣告機會點統計報表",
+  "targetGroup": "目標群組",
+  "statisticalInterval": "統計區間",
+  "any": "不限",
+  "specificInterval": "指定區間",
+  "exportReport": "匯出報表",
+  "emptyResult": "查無資料"
+}

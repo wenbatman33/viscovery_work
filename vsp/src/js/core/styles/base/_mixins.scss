@@ -1,0 +1,23 @@
+@mixin single-line-ellipsis(){
+  overflow : hidden;
+  text-overflow : ellipsis;
+  white-space : nowrap;
+  width : 100%;
+}
+
+@mixin three-line-ellipsis($font-size:14px, $line-height: 1.6, $lines-to-show: 3){
+  display: -webkit-box;
+  word-wrap: break-word;
+  height: auto;
+  max-height: $font-size*$line-height*$lines-to-show; /* Fallback for non-webkit */
+  margin: 0 auto;
+  font-size: $font-size;
+  -webkit-line-clamp: $lines-to-show;
+  -webkit-box-orient: vertical;
+  line-height: $line-height;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;     /* required for Opera */
+  -ms-text-overflow: ellipsis;     /* required for IE8, allegedly */
+  -moz-text-overflow: ellipsis;
+}

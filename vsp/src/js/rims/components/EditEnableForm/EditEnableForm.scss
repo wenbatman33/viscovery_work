@@ -1,0 +1,36 @@
+@import 'coreVariables';
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+}
+
+.modal-title {
+  padding: 8px 0;
+  margin-bottom: 9px;
+}
+
+.switch-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.switch-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 100px;
+}
+
+.switch-title {
+  margin-right: 27px;
+}
+
+.btn-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-top: 32px;
+}

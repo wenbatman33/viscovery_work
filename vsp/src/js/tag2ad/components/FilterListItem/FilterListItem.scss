@@ -1,0 +1,57 @@
+@import 'coreVariables';
+
+.container {
+  display: flex;
+  align-items: center;
+  width : 100%;
+}
+
+.card {
+  display: flex;
+  flex:1;
+  justify-content: space-between;
+  align-items: center;
+  background: #FFFFFF;
+  border: 1px solid rgba(26, 10, 10, 0.2);
+  box-sizing: border-box;
+  border-radius: 2px;
+  width : calc(100% - 24px);
+  height : 36px;
+  padding : $padding-tiny $padding-small;
+  cursor : default;
+}
+
+.card-hover {
+  composes: card;
+  border: 1px solid rgba(26, 10, 10, 0.9);
+}
+
+.text {
+  @include single-line-ellipsis;
+  flex: 1;
+  color: #212121;
+  margin-right : $padding-tiny;
+  font-size: 14px;
+}
+
+.hover-icon {
+  cursor:pointer;
+  text-align: center;
+  width: 26px;
+}
+
+.hover-icon-show {
+  composes: hover-icon;
+  visibility: visible;
+}
+
+.hover-icon-hide {
+  composes: hover-icon;
+  cursor:default;
+  visibility: hidden;
+}
+
+.icon {
+  padding : 2px;
+  cursor : pointer;
+}

@@ -1,0 +1,11 @@
+@import 'coreVariables';
+.container {
+  display : flex;
+  align-items: center;
+  justify-content: center;
+  color : $color-boulder;
+  border : solid 2px $color-mild;
+  padding : 5%;
+  background: white;
+  height: 100%;
+}

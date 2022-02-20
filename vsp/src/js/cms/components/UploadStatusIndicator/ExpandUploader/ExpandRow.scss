@@ -1,0 +1,54 @@
+@import 'coreVariables';
+
+.box {
+  position: relative;
+  height: 50px;
+  padding: 4px 2px 1px 2px;
+  border-bottom:1px solid gainsboro;
+}
+
+.left {
+  background-color: white;
+  padding: 3px;
+}
+
+.noBarLeft {
+  composes: left;
+  position: relative;
+  top: 17%;
+}
+
+.description {
+  display: flex;
+  width: 85%;
+  font-size: 8pt;
+
+  .fileName {
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .progress {
+    flex: initial;
+  }
+
+  .failProgress {
+    color: $color-rouge;
+  }
+}
+
+.progressBox {
+  display: block;
+}
+
+.progressBar {
+  width: 85%;
+}
+
+.right {
+  position: absolute;
+  right: 5%;
+  top: 25%;
+}

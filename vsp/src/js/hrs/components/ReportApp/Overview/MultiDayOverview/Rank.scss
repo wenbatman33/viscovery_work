@@ -1,0 +1,30 @@
+@import 'coreVariables';
+
+.title {
+  color: $color-midnight;
+  margin-bottom: 32px;
+}
+
+.rank {
+  color: $color-boulder;
+  font-size: 1.125rem;
+  font-weight: bold;
+  width: 100px;
+}
+
+.username {
+  color: $color-midnight;
+  font-size: 1.5rem;
+  font-weight: 100;
+  width: 200px;
+}
+
+.count {
+  composes: username;
+  width: calc(100% - 300px);
+}
+
+.line {
+  border-color: $color-mild;
+  margin: 17px 0;
+}

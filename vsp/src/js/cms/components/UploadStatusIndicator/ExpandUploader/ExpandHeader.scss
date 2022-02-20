@@ -1,0 +1,45 @@
+@import 'coreVariables';
+
+.box {
+  background-color: dimgray;
+  color: white;
+  height: 10%;
+  min-height: 36px;
+  position: relative;
+}
+
+.left {
+  position: absolute;
+  height: 100%;
+  padding-top: 8px;
+  font-size: 10pt;
+}
+
+.right {
+  position: absolute;
+  display: flex;
+  height: 100%;
+  right: 3%;
+  align-items: center;
+
+  > i {
+    margin-left: $padding-tiny;
+  }
+}
+
+.tabBase {
+  color: white;
+  display: inline;
+  padding: 10px;
+}
+
+.tab {
+  composes: tabBase;
+  background-color: black;
+}
+
+.untab {
+  composes: tabBase;
+  background-color: dimgray;
+}
+

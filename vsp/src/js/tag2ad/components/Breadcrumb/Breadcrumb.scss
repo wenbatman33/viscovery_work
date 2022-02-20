@@ -1,0 +1,29 @@
+@import 'coreVariables';
+.tab-container {
+  background : white;
+  display : flex ;
+}
+
+.root {
+  display : flex ;
+  justify-content: space-between;
+  align-items: center;
+  padding : 0 10%;
+  background: white;
+}
+
+.icon {
+  background: $color-brand;
+  color: white;
+  width: 16px;
+  height: 16px;
+  line-height : 16px;
+  border-radius: 50px;
+  text-align: center;
+  margin : 0 5px;
+}
+
+.warning {
+  color : $color-brand;
+  font-size : 14px;
+}

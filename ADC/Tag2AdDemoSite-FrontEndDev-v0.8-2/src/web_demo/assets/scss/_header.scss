@@ -1,0 +1,108 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: stretch;
+}
+
+.nav {
+    position: relative;
+    display: flex;
+    height: 60px;
+    background: #fff;
+    line-height: 60px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.20);
+    vertical-align: middle;
+    z-index: 11;
+    .container {
+        @include breakpoint(xs) {
+            padding: 0 10px;
+            width: 100%;
+        }
+    }
+    @include breakpoint(xs) {
+        position: fixed;
+        width: 100%;
+    }
+    @include breakpoint(sm) {
+        position: fixed;
+        width: 100%;
+    }
+    .logo {
+        @include breakpoint(xs) {
+            width: 100px;
+        }
+    }
+    .searchBar {
+        display: inline-block;
+        height: 40px;
+        width: 400px;
+        line-height: 60px;
+        float: right;
+        margin-top: 10px;
+        border: #F42323 2px solid;
+        vertical-align: top;
+        input {
+            height: 35px;
+            line-height: 30px;
+            width: 300px;
+            outline: 0;
+            margin: 0;
+            padding: 0 10px;
+            border: none;
+            vertical-align: top;
+            background: none;
+        }
+        @include breakpoint(xs) {
+            width: 180px;
+            border: #F42323 1px solid;
+            input {
+                width: 80px;
+            }
+        }
+        @include breakpoint(sm) {
+            width: 300px;
+            input {
+                width: 200px;
+            }
+        }
+    }
+    button {
+        float: right;
+        height: 38px;
+        margin: 0;
+        line-height: 38px;
+        vertical-align: top;
+        margin: 0;
+        background: #F42323;
+        color: #fff;
+        outline: none;
+        text-decoration: none;
+        padding: 0 20px;
+        border-style: none;
+        border: #F42323 1px solid;
+        &:hover {
+            background: #D0021B;
+        }
+    }
+    .ver {
+        color: $blueBlack10;
+        @include breakpoint(xs) {
+            display: none;
+        }
+    }
+    .uploadFile{
+        display: none;
+        display: inline-block;
+        height: 40px;
+        line-height: 60px;
+        float: right;
+        margin-top: 10px;
+        vertical-align: top;
+        padding: 0px 3px;
+        button{
+            height: 40px;
+        }
+
+    }
+}

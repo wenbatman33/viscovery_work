@@ -1,0 +1,54 @@
+@import "./Row.scss";
+
+.container {
+  margin-bottom: 32px;
+}
+
+.modelName {
+  padding: 20px 0 20px 32px;
+  background: white;
+}
+
+.row-container-header {
+  @extend .row-container;
+  height: 36px;
+  background: #F6F7F7;
+  margin-bottom: 0;
+}
+
+.pure-row-area {
+  height: auto;
+}
+
+.checkbox-header {
+  @extend .checkbox;
+}
+
+.number-header {
+  @extend .number;
+}
+
+.brandName-header {
+  @extend .brandName;
+  color: $color-blackhole;
+}
+
+.brandId-header {
+  @extend .brandId;
+  color: $color-blackhole;
+}
+
+.tagCount-header {
+  @extend .tagCount;
+  color: $color-blackhole;
+}
+
+.assigneeAccount-header {
+  @extend .assigneeAccount;
+  color: $color-blackhole;
+}
+
+.status-header {
+  @extend .status;
+  color: $color-blackhole;
+}

@@ -1,0 +1,16 @@
+@import 'coreVariables';
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 48px;
+  padding: 0 $padding-small;
+
+}
+
+.btn-container {
+  button:first-child {
+    margin-right: $padding-tiny;
+  }
+}

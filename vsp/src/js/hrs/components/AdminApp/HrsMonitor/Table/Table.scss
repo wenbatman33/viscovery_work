@@ -1,0 +1,51 @@
+@import "./Row.scss";
+
+.container {
+  height: calc(100%);
+}
+
+.row-container-header {
+  @extend .row-container;
+  height: 36px;
+  background: #F6F7F7;
+  margin-bottom: 0;
+}
+
+.pure-row-area {
+  overflow-y: scroll;
+  height: calc(100% - 36px);
+}
+
+.number-header {
+  @extend .number;
+}
+
+.account-header {
+  @extend .account;
+  color: $color-blackhole;
+}
+
+.videoName-header {
+  @extend .videoName;
+  color: $color-blackhole;
+}
+
+.model-header {
+  @extend .model;
+  color: $color-blackhole;
+}
+
+.brand-header {
+  @extend .brand;
+  color: $color-blackhole;
+}
+
+.progress-header {
+  @extend .progress;
+  color: $color-blackhole;
+}
+
+.spentTime-header {
+  @extend .spentTime;
+  color: $color-blackhole;
+}

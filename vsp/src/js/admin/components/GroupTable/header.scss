@@ -1,0 +1,59 @@
+.container {
+  position: fixed;
+  width: calc(100% - 256px);
+  background-color: #F6F7F7;
+  padding: 8px 0 8px 0;
+  font-size: 12pt;
+}
+
+.base {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  word-wrap: break-word;
+}
+
+.name {
+  composes: base;
+  width: 12%;
+}
+
+.maxUpload {
+  composes: base;
+  width: 14%;
+}
+
+.vip {
+  composes: base;
+  width: 8%;
+}
+
+.hrs {
+  composes: base;
+  width: 8%;
+}
+
+.members {
+  composes: base;
+  width: 8%;
+}
+
+.validTime {
+  composes: base;
+  width: 12%;
+}
+
+.creator {
+  composes: base;
+  width: 16%;
+}
+
+.country {
+  composes: base;
+  width: 14%;
+}
+
+.manipulate {
+  composes: base;
+  width: 8%;
+}

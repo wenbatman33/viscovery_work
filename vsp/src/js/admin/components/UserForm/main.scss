@@ -1,0 +1,126 @@
+@import 'coreVariables';
+
+.container {
+  width: 95%;
+  height: 100%;
+  margin: 0 auto;
+  padding-bottom: 1%;
+}
+
+.nameTitle {
+  color: #E24522;
+}
+
+.top {
+  padding: 1% 0 2% 0;
+  height: 55px;
+}
+
+.topic {
+  padding: 16px;
+}
+
+.basicInfo {
+  background: white;
+  margin: 1% auto;
+  
+}
+
+.contactInfo {
+  background: white;
+  margin: 2% auto;
+}
+
+.setting {
+  background: white;
+  margin: 2% auto;
+}
+
+.hrLine {
+  border-top: thin solid $color-mild;
+}
+
+.formArea {
+  width: 45%;
+  display: inline-block;
+  padding: 32px;
+  vertical-align: top;
+}
+
+.inputField {
+  padding: 16px;
+}
+
+.contactInput {
+  display: flex;
+  justify-content: space-around;
+}
+.contactTextBlock {
+  display: inline-block;
+  width: 75%;
+  margin-right: 8px;
+}
+
+.contactBtnGroup {
+  display: inline-block;
+  width: 25%;
+  margin-left: 8px;
+}
+
+.contactRegionInput {
+  display: inline-block;
+  width: 30%;
+  margin-right: 8px;
+}
+
+.contactPhoneInput {
+  display: inline-block;
+  width: 70%;
+  margin-left: 8px;
+}
+
+.MemoTextbox {
+  vertical-align: top;
+  width: 100%;
+  height: 134px;
+  max-height: 100%;
+  border: 1px solid $color-mild;
+  color: $color-blackhole;
+  padding: 8px 0 8px 8px;
+
+  &::placeholder{
+    color: $color-boulder;
+  }
+
+  &:focus{
+    outline: 1px solid $color-river;
+  }
+}
+
+.switchInput {
+  display: inline-block;
+  vertical-align: middle;
+  height: 41px;
+}
+
+.switchLabel {
+  margin-left: 10px;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 41px;
+}
+
+.submitArea {
+  position: relative;
+  height: 6%;
+}
+
+.formBtn {
+  float: right;
+}
+
+.cancelFormBtn {
+  float: right;
+  margin-right: 16px;
+}
+

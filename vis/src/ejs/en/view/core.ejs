@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" data-page="core">
+<head>
+  <meta charset="UTF-8">
+  <base href="<%= htmlWebpackPlugin.options.base %>">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+  <%= require("../../meta.ejs")() %>
+  <title>Viscovery</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <%= require("../commons/vendorJS.ejs")() %>
+  <%= require("../../ga.ejs")() %>
+</head>
+<body class="lang-en">
+  <%= require("../commons/header.ejs")() %>
+  <div class='visc-main core-main'>
+
+    <!-- Hero Block [start] -->
+    <div class="hero-block hero-block__no-msk">
+      <div class="container-med">
+
+        <!-- Intro Block -->
+        <div class="middle-block col-sm-6">
+          <section class="core-main__intro">
+            <div class="core-main__intro__vds-logo"></div>
+            <h2 class="core-main__intro__vds-title font-h1-lg color-white">Video Discovery Service</h2>
+            <p class="core-main__intro__vds-text font-h6 color-white">Based on many years of research in video recognition technology and it's applications, Viscovery has successfully developed VDS (Video Discovery Service). VDS automatically recognizes video content and generates tags highlighting content with high business value. In the past, unstructured data (photos and videos) could not be analyzed, but now with VDS solution we can automatically structurize video content and apply the results to digital advertising as well as brand analysis. </p>
+
+            <div class="core-main__intro__svg hidden-sm hidden-md hidden-lg">
+              <img src="imgs/material/core-svg.svg">
+            </div>
+          </section>
+        </div>
+
+        <!-- Intro Block Ills -->
+        <div class="middle-block col-sm-6">
+          <div class="core-main__intro-ills hidden-xs">
+            <canvas id="platforms" class="core-main__canvas"></canvas>
+          </div>
+        </div>
+
+      </div>
+    </div>  <!-- Hero Block [end] -->
+
+
+    <div class='core-main__container core-main__container__fitamos-block'>
+      <div class="container-med">
+
+        <!-- FITAMOS Block [start] -->
+        <div class="FITAMOS-block">
+          <h2 class="FITAMOS-block__title font-h1 color-main-red"><span class="txt-block">FITAMOS</span> <span class="txt-block">7 recognition categories</span></h2>
+          <h6 class="FITAMOS-block__sub-title font-h6-sm color-dark">The only integrated recognition solution in the industry</h6>
+
+          <!-- Intro Block [start] -->
+          <section class="FITAMOS-block__intro-block">
+            <img class="FITAMOS-block__intro-block__circle-photo" src="./imgs/ills/ills-vds-fitamos-en.svg" />
+
+            <ul class="FITAMOS-list">
+              <li class="FITAMOS-list__list FITAMOS-list__list__01 right-txt">
+                <h6 class="FITAMOS-list__list__title font-h6-sm color-dark"><sapn class="color-main-red">F</span><sapn class="color-dark">ace</span></h6>
+                <p class="FITAMOS-list__list__txt font-p color-dark">Identify more than 10000+ celebrities accurately.</p>
+              </li>
+              <li class="FITAMOS-list__list FITAMOS-list__list__02 right-txt">
+                <h6 class="FITAMOS-list__list__title font-h6-sm color-dark"><sapn class="color-main-red">I</span><sapn class="color-dark">mage</span></h6>
+                <p class="FITAMOS-list__list__txt font-p color-dark">Recognize brand and specs of 10000+ products, including cars, FMCG, household products, and luxury goods.</p>
+              </li>
+              <li class="FITAMOS-list__list FITAMOS-list__list__03 right-txt">
+                <h6 class="FITAMOS-list__list__title font-h6-sm color-dark"><sapn class="color-main-red">T</span><sapn class="color-dark">ext</span></h6>
+                <p class="FITAMOS-list__list__txt font-p color-dark">Grasp emotional and abstract concepts through our Deep Natural Language Processing based parsing engine.</p>
+              </li>
+              <li class="FITAMOS-list__list FITAMOS-list__list__04 right-txt">
+                <h6 class="FITAMOS-list__list__title font-h6-sm color-dark"><sapn class="color-main-red">A</span><sapn class="color-dark">udio</span></h6>
+                <p class="FITAMOS-list__list__txt font-p color-dark">Recognize the rhythm and melody of the video being played and match advertisements accordingly.</p>
+              </li>
+              <li class="FITAMOS-list__list FITAMOS-list__list__05">
+                <h6 class="FITAMOS-list__list__title font-h6-sm color-dark"><sapn class="color-main-red">M</span><sapn class="color-dark">otion</span></h6>
+                <p class="FITAMOS-list__list__txt font-p color-dark">Identify motion to the context, maximizing the value of contextual ads.</p>
+              </li>
+              <li class="FITAMOS-list__list FITAMOS-list__list__06">
+                <h6 class="FITAMOS-list__list__title font-h6-sm color-dark"><sapn class="color-main-red">O</span><sapn class="color-dark">bject</span></h6>
+                <p class="FITAMOS-list__list__txt font-p color-dark">Precisely recognizing 10000+ objects to generate business value in videos.</p>
+              </li>
+              <li class="FITAMOS-list__list FITAMOS-list__list__07">
+                <h6 class="FITAMOS-list__list__title font-h6-sm color-dark"><sapn class="color-main-red">S</span><sapn class="color-dark">cene</span></h6>
+                <p class="FITAMOS-list__list__txt font-p color-dark">Accurately identifying 500+ scenes while automatically excluding interference including objects, logos, and banners.</p>
+              </li>
+            </ul>
+
+          </section>  <!-- Intro Block [end] -->
+
+        </div>  <!-- FITAMOS Block [end] -->
+
+      </div>
+    </div>
+
+    <div class='core-main__container core-main__container__adv-block'>
+      <div class="container-med">
+
+        <!-- Advantage Block [start] -->
+        <div class="adv-block">
+          <div class="container-sm">
+            <h6 class="adv-block__intro font-h6 color-dark">VDS (Video Discovery Service) makes mining big video data possible. We partner with video platforms and live streaming apps to analyze massive video content and find objects and scenes with great business values. A new business model is created to boost advertising revenues.</h6>
+          </div>
+          <%= require("../commons/intro-list.ejs")() %>
+        </div>  <!-- Advantage Block [end] -->
+
+      </div>
+    </div>
+
+  </div>
+  <%= require("../commons/footer.ejs")() %>
+</body>
+</html>

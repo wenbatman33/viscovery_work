@@ -1,0 +1,118 @@
+@import 'coreVariables';
+
+$icon-size: 32px;
+$circle-diameter: 20px;
+$circle-diameter-lg: 28px;
+
+.icon {
+  display: flex;
+  width: $icon-size;
+  height: $icon-size;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle {
+  width: $circle-diameter;
+  height: $circle-diameter;
+  border-radius: 50%;
+  line-height : $circle-diameter;
+  text-align: center;
+  color: #ffffff;
+  position :relative ;
+  cursor: default;
+  &.waiting{
+    background: $color-mild;
+  }
+  &.processing {
+    background: $color-mild;
+    &.number {
+      background : $color-brand;
+      width : $circle-diameter-lg;
+      height : $circle-diameter-lg;
+      line-height: $circle-diameter-lg;
+    }
+  }
+  &.success {
+    background : $color-wasabi;
+  }
+  &.fail {
+    background : $color-brand;
+  }
+}
+
+/* bubble container */
+.container{
+  display: inline-block;
+  position: relative;
+  background : white ;
+  right : 19px;
+  top : 7px;
+  border: 1px solid $color-mild;
+  border-radius: 7px;
+  padding: 15px 16px;
+  box-sizing: border-box;
+  box-shadow: 0 5px 10px 2px $color-mild;
+  color : $color-midnight;
+  z-index: 3;
+}
+
+.triangleWrapper{
+  position: absolute;
+  left: $padding-small;
+  top: 0;
+  height: 20px;
+  transform: translateY(-50%);
+  z-index : 10;
+}
+
+.triangle{
+  fill: white;
+  stroke: $color-mild;
+  stroke-width: 0.6px;
+}
+
+.progress-container{
+  height: 28px;
+  width: 28px;
+}
+
+.bar {
+  stroke: $color-brand;
+  stroke-width: 2px;
+  fill : transparent ;
+  transition: stroke-dashoffset 1s linear;
+}
+
+.svg {
+  transform : rotate(270deg);
+}
+
+.radial-container {
+  position : relative ;
+  box-sizing: content-box;
+  width : $circle-diameter-lg;
+  height : $circle-diameter-lg;
+}
+
+.child-1 {
+  top : 4px;
+  left: 4px;
+  z-index : 10;
+}
+.spinner:before {
+  content: '';
+  box-sizing: border-box;
+  position: absolute;
+  top : 0;
+  width: $circle-diameter-lg;
+  height: $circle-diameter-lg;
+  border-radius: 50%;
+  border-top: 2px solid $color-wasabi;
+  border-right: 2px solid transparent;
+  animation: spinner 1s linear infinite;
+}
+
+@keyframes spinner {
+  to {transform: rotate(360deg);}
+}

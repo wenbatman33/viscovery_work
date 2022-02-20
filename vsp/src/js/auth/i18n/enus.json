@@ -1,0 +1,15 @@
+{
+  "contactLabel": "Please contact administrator",
+  "contactPrompt": "Please contact administrator to reset password",
+  "loginPrompt": "Return to login",
+  "rolePrompt": "Please choose a role",
+  "loginPrompt": "Login to VSP",
+  "expirePrompt": "Login expired, please login again",
+  "incorrectPrompt": "Incorrect account or password, please try again",
+  "accountLabel": "Account",
+  "accountPrompt": "Please enter your account",
+  "passwordLabel": "Password",
+  "passwordPrompt": "Please enter your password",
+  "forgetPassword": "Forget password?",
+  "submit": "Submit"
+}

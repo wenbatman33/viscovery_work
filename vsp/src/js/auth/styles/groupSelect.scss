@@ -1,0 +1,61 @@
+@import 'coreVariables';
+
+.container {
+  background: white;
+  margin: 64px auto 0px;
+  padding: 10px;
+  width: 424px;
+  height: 528px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 0px 9px 1px #888888;
+}
+
+.titleRow {
+  width: 90%;
+  margin: 10px auto;
+}
+
+.optContainer {
+  height: 420px;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+}
+
+.row {
+  width: 90%;
+  margin: 4px auto;
+  border: 2px solid $color-mild;
+  padding-bottom: 4px;
+  padding-left: 8px;
+  border-radius: 4px;
+  &:hover {
+    border: 1px solid $color-river;
+  }
+}
+
+.selectedRow {
+  width: 90%;
+  margin: 4px auto;
+  border: 2px solid $color-mild;
+  padding-bottom: 4px;
+  padding-left: 8px;
+  border-radius: 4px;
+  background: gray;
+}
+
+.groupWording {
+  font-size: 18pt;
+}
+
+.roleWording {
+  font-size: 14pt;
+  color: $color-boulder;
+}
+
+.btnRow {
+  width: 90%;
+  text-align: center;
+  margin: 16px auto 0px;
+}

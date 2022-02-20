@@ -1,0 +1,30 @@
+@import 'coreVariables';
+
+.container{
+  position: relative;
+  width: 220px;
+  border: 1px solid $color-brand;
+  border-radius: 3px;
+  padding: 15px 16px;
+  box-sizing: border-box;
+  box-shadow: 0px 5px 10px 2px $color-mild;
+}
+
+.triangleWrapper{
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  height: 20px;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.triangle{
+  fill: white;
+  stroke: $color-brand;
+  stroke-width: 0.6px;
+}
+
+.wrap {
+  white-space: normal;
+}

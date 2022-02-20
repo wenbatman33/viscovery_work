@@ -1,0 +1,14 @@
+@import "coreVariables";
+
+.container{
+  width: auto;
+  border-radius: 4px;
+  border: 1px solid $color-mild;
+  overflow: hidden;
+  display: flex;
+}
+
+.gray-container{
+  @extend .container;
+  border: 0;
+}

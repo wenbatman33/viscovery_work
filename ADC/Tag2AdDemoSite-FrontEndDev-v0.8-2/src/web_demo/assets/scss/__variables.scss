@@ -1,0 +1,66 @@
+$black: #000;
+$blueBlack90: #16181E;
+$blueBlack80: #313541;
+$blueBlack70: #3F4A56;
+$blueBlack60: #667587;
+$blueBlack50: #8091A5;
+$blueBlack30: #B0BAC5;
+$blueBlack20: #DFE6EE;
+$blueBlack10: #F4F7FA;
+$white: #fff;
+$blueLight: #0099FA;
+$blueDark: #0086DA;
+.blueGradient {
+    background-image: linear-gradient(45deg, $blueDark 0%, $blueLight 100%);
+}
+
+$yellowLight: #FFCD02;
+$yellowDark: #FFA800;
+.yellowGradient {
+    background-image: linear-gradient(45deg, $yellowDark 0%, $yellowLight 100%);
+}
+
+$redLight: #F42323;
+$redDark: #D0021B;
+.redGradient {
+    background-image: linear-gradient(45deg, $redDark 0%, $redLight 100%);
+}
+
+$orangeLight: #E67E22;
+$orangeDark: #D35400;
+.redGradient {
+    background-image: linear-gradient(45deg, $orangeDark 0%, $orangeLight 100%);
+}
+
+$greenLight: #2ECC71;
+$greenDark: #27AE60;
+.redGradient {
+    background-image: linear-gradient(45deg, $greenDark 0%, $greenLight 100%);
+}
+
+$purpleLight: #BA61EB;
+$greenDark: #8D6CD1;
+.redGradient {
+    background-image: linear-gradient(45deg, $greenDark 0%, $purpleLight 100%);
+}
+
+@mixin breakpoint($class) {
+  @if $class == xs {
+    @media (max-width: 575px) { @content; }
+  }
+  @else if $class == sm {
+    @media (min-width: 576px) and (max-width: 767px){ @content; }
+  }
+  @else if $class == md {
+    @media (min-width: 768px) and (max-width: 991px){ @content; }
+  }
+  @else if $class == lg {
+    @media (min-width: 992px) and (max-width: 1199px) { @content; }
+  }
+  @else if $class == xl {
+    @media (min-width: 1200px) { @content; }
+  }
+  @else {
+    @warn "Breakpoint mixin supports: xs, sm, md, lg";
+  }
+}

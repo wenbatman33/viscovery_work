@@ -1,0 +1,11 @@
+.img1{
+  width: 600px;
+  height: 600px;
+  margin: 50px 0;
+  border: 1px solid rgb(214, 214, 214);
+}
+
+.img2 {
+  @extend .img1;
+  height: 400px;
+}

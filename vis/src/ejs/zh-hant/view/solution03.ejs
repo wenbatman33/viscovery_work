@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" data-page="solution">
+<head>
+  <meta charset="UTF-8">
+  <base href="<%= htmlWebpackPlugin.options.base %>">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+  <%= require("../../meta.ejs")() %>
+  <title>Viscovery</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <%= require("../commons/vendorJS.ejs")() %>
+  <%= require("../../ga.ejs")() %>
+</head>
+<body>
+  <%= require("../commons/header.ejs")() %>
+  <div class='visc-main solution-main'>
+
+    <!-- Sub Menu -->
+    <div id="solutionSubMenu" data-select="3" class="solution-main__sub-menu">
+      <%= require("../commons/solution-sub-menu.ejs")() %>
+    </div>
+
+    <!-- Hero Block [start] -->
+    <div class="hero-block hero-block__no-msk">
+
+      <div class="hero-block__bg hidden-xs" style="background-image:url('./imgs/photo/solution-hero-photo-03.jpg')"></div>
+      <div class="hero-block__bg visible-xs" style="background-image:url('./imgs/photo/solution-hero-photo-03-xs.jpg')"></div>
+
+      <div class="container-med">
+
+        <!-- Intro Block -->
+        <div class="middle-block">
+          <section class="solution-main__intro">
+            <h1 class="solution-main__intro__title color-green">V-SEARCH</h1>
+            <h2 class="solution-main__intro__subtitle font-h2 color-white">搜尋影音關鍵畫面 提升搜索準確度</span></h2>
+            <!-- <a href="https://sdkdemo.viscovery.com" target="_blank" class="ghost-dark-button">Demo</a> -->
+          </section>
+        </div>
+
+      </div>
+    </div>  <!-- Hero Block [end] -->
+
+
+    <!-- Scene Block [start] -->
+    <section class="solution-main__scene-block">
+      <div class="container-med">
+
+        <div class="solution-main__scene-block__content content-right col-md-6">
+          <div class="info-photo hidden-xs" style="background-image:url('./imgs/photo/photo-solution-03-1-zh-hant.jpg')"></div>
+          <div class="info-photo visible-xs" style="background-image:url('./imgs/photo/photo-solution-03-1-zh-hant-xs.jpg')"></div>
+          <h3 class="info-title font-h3 color-white">以圖片搜文/圖片/影音，找到想要了解的所有內容</h3>
+          <p class="info-txt font-p-md color-white">搜索出影音中的關鍵畫面進行播放</p>
+        </div>
+
+        <div class="solution-main__scene-block__content content-left col-md-6">
+          <div class="info-photo hidden-xs" style="background-image:url('./imgs/photo/photo-solution-03-2-zh-hant.jpg')"></div>
+          <div class="info-photo visible-xs" style="background-image:url('./imgs/photo/photo-solution-03-2-zh-hant-xs.jpg')"></div>
+          <h3 class="info-title font-h3 color-white">以文字搜影音，找到想要觀看的關鍵畫面</h3>
+          <p class="info-txt font-p-md color-white">搜索出影音中的關鍵畫面進行播放</p>
+        </div>
+
+      </div>
+    </section>  <!-- Scene Block [end] -->
+
+
+    <!-- Banner Block [start] -->
+    <section class="solution-main__banner-block">
+      <div solution-id="15" id="visualBanner"></div>
+    </seciton>  <!-- Banner Block [end] -->
+
+
+    <!-- Intro List Block [start] -->
+    <section class="solution-main__intro-list-block">
+      <div class="container-med">
+
+        <h2 class="solution-main__intro-list-block__title font-h2-lg color-dark">What We Do</h2>
+
+        <ul class="list-block">
+          <li class="list-block__list col-md-4">
+            <h3 class="list-block__list__title font-h3 color-dark">全球影音資料庫</h3>
+            <p class="list-block__list__txt font-p-md color-dark-60a">建立全球影音資料庫，收集並分析全球影音大數據。</p>
+          </li>
+          <li class="list-block__list col-md-4">
+            <h3 class="list-block__list__title font-h3 color-dark">影音數據結構化</h3>
+            <p class="list-block__list__txt font-p-md color-dark-60a">使全球大影音數據能被有效利用。</p>
+          </li>
+          <li class="list-block__list col-md-4">
+            <h3 class="list-block__list__title font-h3 color-dark">關鍵畫面搜索</h3>
+            <p class="list-block__list__txt font-p-md color-dark-60a">以關鍵字搜索影音內容。</p>
+          </li>
+        </ul>
+
+      </div>
+    </section>  <!-- Intro List Block [end] -->
+
+
+  </div>
+  <%= require("../commons/footer.ejs")() %>
+</body>
+</html>

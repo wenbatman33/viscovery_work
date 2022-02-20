@@ -1,0 +1,31 @@
+@import 'coreVariables';
+
+.container{
+  width : 100%;
+  background : #ffffff;
+  height : 4rem;
+  display : flex;
+  align-items: center;
+  justify-content: space-between;
+  padding : 0 $padding-small;
+  border: 1px solid rgba(26, 10, 10, 0.1);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
+  z-index: 19;
+}
+
+.number {
+  background : $color-brand;
+  border-radius: 50px;
+  color : white;
+  height: 16px;
+  min-width: 14px;
+  padding: 2px 8px;
+}
+
+.description {
+  flex : 1;
+}
+
+.container button {
+  margin-left : $padding-tiny;
+}

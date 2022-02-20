@@ -1,0 +1,66 @@
+.ADC_ImageBlock{
+  color: #fff;
+  height: calc(100vh - 60px);
+  background: #000;
+  background-image: url("../img/ImageBg.jpg");
+}
+.ADC_VideoBlock{
+  color: #fff;
+  height: calc(100vh - 60px);
+  background: #000;
+  background-image: url("../img/VideoBg.jpg");
+}
+.ADCZoomInBg{
+  background-size:contain;
+  background-size: 180%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  transition: background-size .6s ease-in-out;
+  .content{
+    padding-top: 40%;
+    @include breakpoint(xs) {
+      padding-top: 30%;
+    }
+    @include breakpoint(sm) {
+      padding-top: 40%;
+    }
+    @include breakpoint(md) {
+      padding-top: 40%;
+    }
+    .exampleList{
+      li{
+        img{
+          width: 135px;
+        }
+      }
+    }
+  }
+  h1{
+    line-height: 10px;
+  }
+  h3{
+    margin:0;
+  }
+  h1,h3{
+    text-shadow: 0 2px 4px rgba(0,0,0,0.50);
+  }
+  ul{
+    display: inline-block;
+    padding: 0;
+    margin-top: 10px;
+    li{
+      display: inline-block;
+      list-style: none;
+      float: left;
+      margin: 3px;
+      border: 4px #fff solid;
+      transition: all .3s ease-in-out;
+      &:hover{
+        border: 4px #F42323 solid;
+      }
+    }
+  }
+}
+.ADCZoomInBg:hover{
+  background-size: 220%;
+}

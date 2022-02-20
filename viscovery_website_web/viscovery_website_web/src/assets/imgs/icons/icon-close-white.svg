@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-close-white</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="mobile" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="mbi-menu" transform="translate(-17.000000, -17.000000)" fill="#FFFFFF">
+            <g id="Group-33">
+                <g id="Mobile/nav" transform="translate(16.000000, 14.000000)">
+                    <g id="icon-close-white" transform="translate(1.000000, 3.000000)">
+                        <rect id="Rectangle-160-Copy" transform="translate(8.000000, 8.000000) rotate(-315.000000) translate(-8.000000, -8.000000) " x="-1" y="7" width="18" height="2"></rect>
+                        <rect id="Rectangle-160-Copy" transform="translate(8.000000, 8.000000) scale(-1, 1) rotate(-315.000000) translate(-8.000000, -8.000000) " x="-1" y="7" width="18" height="2"></rect>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

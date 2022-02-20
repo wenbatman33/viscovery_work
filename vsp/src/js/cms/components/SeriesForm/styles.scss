@@ -1,0 +1,65 @@
+@import 'coreVariables';
+
+.form {
+  display: flex;
+  flex-direction: column;
+
+  > .settings {
+    flex: 1;
+    display: flex;
+
+    > * > * {
+      margin-bottom: $padding-medium;
+    }
+
+    > .upload {
+      display: flex;
+      flex-direction: column;
+      width: 360px;
+      height: 100%;
+
+      > .list {
+        height: 200px;
+      }
+    }
+
+    > .recognition {
+      width: 360px;
+      margin-left: $padding-medium;
+    }
+  }
+
+  > .actions {
+    text-align: right;
+
+    > * {
+      margin-left: $padding-small;
+    }
+  }
+}
+
+.panel {
+  padding: $padding-small;
+  text-align: center;
+  background-color: white;
+  border: 1px $color-mild solid;
+  border-radius: 3px;
+
+  > i {
+    color: $color-boulder;
+    font-size: 48px;
+  }
+
+  > div {
+    margin-top: $padding-tiny;
+  }
+
+  a {
+    margin-top: $padding-tiny;
+    color: $color-river;
+  }
+
+  input {
+    display: none;
+  }
+}

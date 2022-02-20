@@ -1,0 +1,210 @@
+@import 'coreVariables';
+
+.table-base {
+  display: table;
+  background: #F6F7F7;
+  width: 75%;
+}
+
+.header-table {
+  composes: table-base;
+  margin: 16px 176px 0 176px;
+
+  p {
+    padding: 8px;
+  }
+}
+
+.content-table {
+  composes: table-base;
+  margin: 0 176px 50px 176px;
+  height: 800px;
+}
+
+.center-msg {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  background: white;
+  height: 100%;
+}
+
+.header-base {
+  display: table-cell;
+  height: 32px;
+  vertical-align: middle;
+}
+
+.col0, .col4 {
+  composes: header-base;
+  width: 10%;
+}
+
+.col1, .col2 {
+  composes: header-base;
+  width: 15%;
+}
+
+.col3, .col5 {
+  composes: header-base;
+  width: 25%;
+}
+
+.data-table {
+  background: #F6F7F7;
+  border: 0.2px solid lighten(#999, 15%);
+  margin-left: 176px;
+  margin-top: 16px;
+  width: 75%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 14px;
+  table-layout: fixed;
+}
+
+.data-tbody {
+  background: white;
+
+  td {
+    padding: 8px;
+    height: 58px;
+  }
+}
+
+.campaign-name {
+  @include single-line-ellipsis;
+  color: $color-river;
+  cursor: pointer;
+}
+
+.data-thead {
+
+  > tr {
+
+    th {
+      padding: 8px;
+      word-wrap: wrap;
+      font-weight: normal;
+
+      &:nth-child(1) {
+        width: 5%;
+      }
+
+      &:nth-child(5) {
+        width: 15%;
+      }
+
+      &:nth-child(2), &:nth-child(3) {
+        width: 15%;
+      }
+
+      &:nth-child(4), &:nth-child(6) {
+        width: 25%;
+      }
+    }
+  }
+}
+
+.action-container {
+  display: flex;
+  flex-direction: row-reverse;
+
+  div {
+    margin-left: 8px;
+  }
+}
+
+.dot-btn {
+  width: 32px;
+  height: 32px;
+  background: white;
+  border: 2px solid black;
+  color: rgba(26, 10, 10, 0.8);
+  box-sizing: border-box;
+  outline: none;
+  margin-right: 8px;
+
+  &:before {
+    content: '';
+    height: 100%;
+    vertical-align: middle;
+    display: inline-block;
+  }
+
+  &:focus {
+    pointer-events: none;
+    background: black;
+    color: white;
+
+    .drop-container {
+      visibility: visible;
+      pointer-events: auto;
+      background: white;
+      color: black;
+    }
+  }
+}
+
+.dot-icon {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  margin: 0 8px;
+}
+
+.drop-container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 112px;
+  height: auto;
+  background: white;
+  border: 1px solid rgba(26, 10, 10, .2);
+  z-index: 10;
+  top: 160%;
+  right: -100%;
+  visibility: hidden;
+}
+
+.drop-item {
+  height: 42px;
+  vertical-align: middle;
+  display: inline-block;
+  cursor: pointer;
+  padding-left: 8px;
+
+  &:before {
+    content: '';
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  &:hover {
+    background: $color-mild;
+  }
+}
+
+.disabled-drop-item {
+  composes: drop-item;
+  color : rgba(26, 10, 10, 0.2);
+  cursor: not-allowed;
+}
+
+.action-btn {
+  border: 2px solid black;
+  min-width: 61px;
+  height: 32px;
+  text-align: center;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.disabled-action-btn {
+  composes: action-btn;
+  border: 2px solid rgba(26, 10, 10, 0.2);
+  color : rgba(26, 10, 10, 0.2);
+  cursor : not-allowed;
+}

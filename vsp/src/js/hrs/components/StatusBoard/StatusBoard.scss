@@ -1,0 +1,56 @@
+@import "coreVariables";
+
+.container {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  border-top: 1px solid $color-sand;
+  border-bottom: 1px solid $color-sand;
+  padding: 0 15px 0 0;
+  background: white;
+}
+
+.filter {
+  display: inline-block;
+  width: 112px;
+}
+
+.rightPanel {
+  margin-left: auto;
+}
+
+.toggleNav {
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+  width: 50px;
+  height: 100%;
+  border-right: 1px solid $color-sand;
+  cursor: pointer;
+}
+.vertical-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.river {
+  color: $color-river;
+}
+
+.multiple-action {
+  display: inline-block;
+  margin-right: 13px;
+}
+
+.hidden-multiple-action {
+  composes: multiple-action;
+  visibility: hidden;
+}
+
+.videoName {
+  padding: 0 16px;
+  color: $color-midnight;
+  border-right: 1px solid $color-sand;
+}

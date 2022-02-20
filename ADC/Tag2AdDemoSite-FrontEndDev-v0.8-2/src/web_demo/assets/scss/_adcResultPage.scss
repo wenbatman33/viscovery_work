@@ -1,0 +1,110 @@
+.resultMain {
+    .sourceWrapp {
+        .adKeyPoint {
+            position: relative;
+            height: 36px;
+            width: 200px;
+            background: $black;
+            color: $yellowLight;
+            line-height: 36px;
+            margin: 10px 0 10px 0;
+            padding-left: 10px;
+            animation: fadeinLeft .5s;
+            animation-delay: 1s;
+            animation-fill-mode: forwards;
+            opacity: 0;
+            @include breakpoint(xs) {
+                display: none;
+            }
+            &:before {
+                border-bottom: 25px solid transparent;
+                border-left: 25px solid transparent;
+                border-right: 25px solid $black;
+                transform: rotate(45deg);
+                content: "";
+                height: 0;
+                left: 0;
+                position: absolute;
+                left: 166px;
+                top: -3px;
+                width: 0;
+            }
+        }
+        .adKeyPointList {
+            @include breakpoint(xs) {
+                display: none;
+            }
+        }
+    }
+    .adCategoy {
+        position: relative;
+        height: 36px;
+        width: 200px;
+        background: $blueBlack20;
+        line-height: 36px;
+        margin: 0 0 10px 0;
+        padding-left: 10px;
+        animation: fadeinLeft .5s;
+        animation-delay: 1.5s;
+        opacity: 0;
+        animation-fill-mode: forwards;
+        &:before {
+            border-bottom: 25px solid transparent;
+            border-left: 25px solid transparent;
+            border-right: 25px solid $blueBlack20;
+            transform: rotate(45deg);
+            content: "";
+            height: 0;
+            left: 0;
+            position: absolute;
+            left: 166px;
+            top: -3px;
+            width: 0;
+        }
+    }
+    .quickExample {
+        display: flex;
+        flex-direction: row;
+        line-height: 85px;
+        .quickExampleTitle {
+            margin: 15px 10px;
+        }
+        .quickExampleList {
+            li {
+                float: left;
+                margin: 0 5px;
+                img {
+                    width: 90px;
+                    height: 50px;
+                    border: 4px #fff solid;
+                    transition: all .3s ease-in-out;
+                    border: 4px #fff solid;
+                    transition: all .3s ease-in-out;
+                    &:hover {
+                        border: 4px #F42323 solid;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes fadeinLeft {
+    0% {
+        opacity: 0;
+        left: -10px;
+    }
+    100% {
+        opacity: 1;
+        left: 0px;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

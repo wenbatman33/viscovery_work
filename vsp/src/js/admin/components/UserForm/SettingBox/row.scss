@@ -1,0 +1,62 @@
+@import 'coreVariables';
+
+.container {
+  padding: 2px 2%;
+  width: 100%;
+}
+
+.groupDD {
+  display: inline-block;
+  margin: 10px auto;
+  padding-right: 5%;
+  width: 25%;
+}
+
+.roleDD {
+  display: inline-block;
+  margin: 10px auto;
+  padding-right: 5%;
+  width: 25%;
+}
+
+.switchInput {
+  display: inline-block;
+  margin: 10px auto;
+  width: 36%;
+  vertical-align: middle;  
+}
+
+.manipulate {
+  display: inline-block;
+  text-align: right;
+  vertical-align: middle;
+  margin: 10px auto;  
+  width: 14%;
+}
+
+.functionBtn {
+  user-select: none;
+  &:focus{
+    outline: 0;
+  }
+
+  &:disabled{
+    cursor: not-allowed;
+  }
+  background: white;
+  border: 1px solid $color-mild;
+  color: $color-chocolate;
+
+  &:hover{
+    border-color: $color-boulder;
+  }
+
+  &:active{
+    background: $color-sand;
+    border-color: $color-boulder;
+  }
+  font-size: 12px;
+  padding: 0 8px;
+  height: 30px;
+  border-radius: 2px;
+}

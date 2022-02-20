@@ -1,0 +1,62 @@
+@import 'coreVariables';
+
+.label{
+  cursor: pointer;
+  margin: 0;
+}
+
+%icon{
+  font-family: "FontAwesome";
+  font-size: 25px;
+  color: white;
+}
+
+.switch{
+  display: flex;
+  position: relative;
+  align-items: center;
+  width: 82px;
+  height: 36px;
+  border-radius: 30px;
+  border: 1px solid $color-mild;
+  background: $color-rouge;
+  transition: background 0.4s ease;
+
+  &::after{
+    @extend %icon;
+    content: "\f00d";
+    transform: translateX(45px);
+  }
+}
+
+.input{
+  &:checked + .switch{
+    background: $color-wasabi;
+
+    &::after{
+      content: "";
+    }
+
+    &::before{
+      @extend %icon;
+      content: "\f00c";
+      transform: translateX(12px);
+    }
+
+    > .round{
+      transform: translateX(44px);
+    }
+  }
+}
+
+.round{
+  position: absolute;
+  transform: translateX(4px);
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+  border: 1px solid $color-mild;
+  background: white;
+
+  transition: transform 0.4s ease;
+}

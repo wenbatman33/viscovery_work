@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" data-page="solution">
+<head>
+  <meta charset="UTF-8">
+  <base href="<%= htmlWebpackPlugin.options.base %>">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+  <%= require("../../meta.ejs")() %>
+  <title>Viscovery</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <%= require("../commons/vendorJS.ejs")() %>
+  <%= require("../../ga.ejs")() %>
+</head>
+<body class="lang-en">
+  <%= require("../commons/header.ejs")() %>
+  <div class='visc-main solution-main'>
+
+    <!-- Sub Menu -->
+    <div id="solutionSubMenu" data-select="4" class="solution-main__sub-menu">
+      <%= require("../commons/solution-sub-menu.ejs")() %>
+    </div>
+
+    <!-- Hero Block [start] -->
+    <div class="hero-block hero-block__no-msk">
+
+      <div class="hero-block__bg hidden-xs" style="background-image:url('./imgs/photo/solution-hero-photo-04.jpg')"></div>
+      <div class="hero-block__bg visible-xs" style="background-image:url('./imgs/photo/solution-hero-photo-04.jpg')"></div>
+
+      <div class="container-med">
+
+        <!-- Intro Block -->
+        <div class="middle-block">
+          <section class="solution-main__intro">
+            <h1 class="solution-main__intro__title color-green" style="text-transform:none;">IoT</h1>
+            <h2 class="solution-main__intro__subtitle font-h2 color-white">Consumer behavior recognition and big data analysis<br/>360°Application: Smart Retail / Smart household</h2>
+            <!-- <a href="https://sdkdemo.viscovery.com" target="_blank" class="ghost-dark-button">Demo</a> -->
+          </section>
+        </div>
+
+      </div>
+    </div>  <!-- Hero Block [end] -->
+
+    <!-- Scene Block [start] -->
+    <section class="solution-main__scene-block">
+      <div class="container-med">
+
+        <div class="solution-main__scene-block__content content-right col-md-6">
+          <div class="info-photo hidden-xs" style="background-image:url('./imgs/photo/photo-solution-04-1.jpg')"></div>
+          <div class="info-photo visible-xs" style="background-image:url('./imgs/photo/photo-solution-04-1-xs.jpg')"></div>
+          <h3 class="info-title font-h3 color-white">Consumer Big Data Collection and Analysis</h3>
+          <!-- <p class="info-txt font-p-md color-white">自动标签人事时地物，智能投放广告</p> -->
+        </div>
+
+        <div class="solution-main__scene-block__content content-left col-md-6">
+          <div class="info-photo hidden-xs" style="background-image:url('./imgs/photo/photo-solution-04-2.jpg')"></div>
+          <div class="info-photo visible-xs" style="background-image:url('./imgs/photo/photo-solution-04-2-xs.jpg')"></div>
+          <h3 class="info-title font-h3 color-white">Shopping behavior tracking and analysis</h3>
+          <!-- <p class="info-txt font-p-md color-white">情境式关联广告，更舒适的广告体验</p> -->
+        </div>
+
+      </div>
+    </section>  <!-- Scene Block [end] -->
+
+
+    <!-- Banner Block [start] -->
+    <section class="solution-main__banner-block">
+      <div solution-id="26" id="visualBanner"></div>
+    </seciton>  <!-- Banner Block [end] -->
+
+
+    <!-- Intro List Block [start] -->
+    <section class="solution-main__intro-list-block">
+      <div class="container-med">
+
+        <h2 class="solution-main__intro-list-block__title font-h2-lg color-dark">What We Do</h2>
+
+        <ul class="list-block">
+          <li class="list-block__list col-md-4">
+            <h3 class="list-block__list__title font-h3 color-dark">Consumer Big Data Collection and Analysis</h3>
+            <p class="list-block__list__txt font-p-md color-dark-60a">Collecting massive cosumer behavioral data, establishing consumer behavior database.</p>
+          </li>
+          <li class="list-block__list col-md-4">
+            <h3 class="list-block__list__title font-h3 color-dark">Build a Smart Life</h3>
+            <p class="list-block__list__txt font-p-md color-dark-60a">Recognition technology applied to daily life.</p>
+          </li>
+          <li class="list-block__list col-md-4">
+            <h3 class="list-block__list__title font-h3 color-dark">Smart Retail Made Possible</h3>
+            <p class="list-block__list__txt font-p-md color-dark-60a">Identify products and consumer behavior making creative marketing and smart supply chain come true.</p>
+          </li>
+        </ul>
+
+      </div>
+    </section>  <!-- Intro List Block [end] -->
+
+
+  </div>
+  <%= require("../commons/footer.ejs")() %>
+</body>
+</html>

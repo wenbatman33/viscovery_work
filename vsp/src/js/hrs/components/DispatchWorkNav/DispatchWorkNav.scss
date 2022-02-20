@@ -1,0 +1,28 @@
+@import "coreVariables";
+
+.container {
+  background: $color-midnight;
+  height: 100%;
+  overflow-y: scroll;
+  padding-top: 23px;
+  transition: transform 0.2s linear;
+  vertical-align: top;
+  display: inline-block;
+  width: 20%;
+  position: relative;
+}
+
+.show {
+  composes: container;
+}
+
+.hide {
+  composes: container;
+  transform: translateX(-100%);
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

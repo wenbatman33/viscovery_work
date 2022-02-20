@@ -1,0 +1,16 @@
+.link-unselected {
+  color : whitesmoke;
+  cursor : pointer;
+  padding : 16px;
+}
+
+.link-selected {
+  composes : link-unselected;
+  background : rgba(26,10,10,0.9);
+}
+
+.root {
+  background : rgba(26,10,10,0.8);
+  padding : 16px 0;
+  height : 100%;
+}

@@ -1,0 +1,170 @@
+@import 'coreVariables';
+
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  background: white;
+}
+
+.editor {
+  width: calc(100% - 280px);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border-right: 1px solid $color-mild;
+  z-index: 1;
+}
+
+.selector {
+  width: 280px;
+  height: 100%;
+  position: relative;
+  left: -280px;
+  overflow: auto;
+  background: white;
+  border-right: 1px solid $color-mild;
+  border-bottom: 1px solid $color-mild;
+  transition: left 0.5s linear;
+}
+
+.expanded-selector {
+  @extend .selector;
+  left: 0;
+  transition: left 0.5s linear;
+}
+
+.filter, .header, .button {
+  display: flex;
+  align-items: center;
+  padding: 8px 16px;
+}
+
+.filter, .header {
+  border-bottom: 1px solid $color-mild;
+}
+
+.filter {
+  .select, .actions {
+    margin-left: 8px;
+  }
+
+  .input {
+    flex: 1;
+
+    > * {
+      width: 200px;
+    }
+  }
+
+  .select {
+    width: 140px;
+  }
+
+  .actions {
+    > * {
+      margin-left: 8px;
+    }
+
+    > *:first-child {
+      margin-left: 0;
+    }
+  }
+}
+
+.header {
+  font-size: 14px;
+
+  .tags {
+    flex: 1;
+  }
+
+  .ratio, .duration, .actions {
+    margin-left: 16px;
+  }
+
+  .ratio, .duration {
+    width: 110px;
+    text-align: center;
+
+    > .icon {
+      width: 24px;
+      height: 24px;
+      display: inline-block;
+      padding: 4px;
+      margin-left: 4px;
+      border: 1px solid $color-mild;
+      border-radius: 2px;
+      font-size: 12px;
+      cursor: pointer;
+
+      > div:last-child {
+        position: relative;
+        left: -74px;
+        top: 5px;
+        width: 160px;
+        cursor: auto;
+
+        .option {
+          width: 100%;
+          height: 30px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-top: 8px;
+          border: 1px solid $color-mild;
+          border-radius: 4px;
+          font-size: 14px;
+          cursor: pointer;
+        }
+
+        .option:hover {
+          border: 1px solid $color-midnight;
+        }
+
+        .option:first-child {
+          margin-top: 0;
+        }
+      }
+    }
+
+    .icon:hover {
+      border-color: $color-midnight;
+    }
+  }
+
+  .actions {
+    width: 50px;
+  }
+}
+
+.criteria {
+  flex: 1;
+  overflow: auto;
+
+  .criterion {
+    > * {
+      border-bottom: 1px solid $color-mild;
+    }
+
+    > .divider {
+      padding: 8px 16px;
+      text-align: center;
+      color: $color-boulder;
+    }
+  }
+
+  .button {
+    > * {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid $color-mild;
+      border-radius: 4px;
+      font-size: 14px;
+      text-align: center;
+      cursor: pointer;
+    }
+  }
+}

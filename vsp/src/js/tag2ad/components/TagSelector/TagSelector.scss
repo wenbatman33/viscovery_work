@@ -1,0 +1,26 @@
+@import 'coreVariables';
+
+.title, .search {
+  border-bottom: 1px solid $color-mild;
+}
+
+.title {
+  height: 48px;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  font-size: 14px;
+
+  span {
+    flex: 1;
+  }
+
+  i {
+    padding: 4px;
+    cursor: pointer;
+  }
+}
+
+.search {
+  padding: 8px;
+}

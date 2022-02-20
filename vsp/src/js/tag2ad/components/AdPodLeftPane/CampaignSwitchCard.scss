@@ -1,0 +1,54 @@
+@import 'coreVariables';
+
+.dropDownToggler {
+  height: 48px;
+  padding : 0 $padding-small;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.dropDownToggler-expand {
+  composes: dropDownToggler;
+  background: $color-blackhole;
+  color: white;
+}
+
+.toggleTitle {
+  min-height: 1em;
+  width: 100%;
+}
+
+.dropdown {
+  display: block;
+  position: relative;
+
+  >div {
+    padding: $padding-tiny;
+    border: 1px solid $color-blackhole;
+
+    >div >div {
+      font-size: 14px;
+      padding: 8px;
+      padding-right: 4px;
+      cursor: pointer;
+
+      &:hover{
+        background: $color-river;
+        color: white;
+      }
+    }
+
+    input {
+      width: 100%;
+      font-size: 14px;
+      padding: $padding-tiny;
+      box-sizing: border-box;
+      border: 1px solid $color-blackhole;
+    }
+  }
+}
+
+.hidden {
+  display: none;
+}

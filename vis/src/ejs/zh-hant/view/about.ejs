@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" data-page="about">
+<head>
+  <meta charset="UTF-8">
+  <base href="<%= htmlWebpackPlugin.options.base %>">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+  <%= require("../../meta.ejs")() %>
+  <title>Viscovery</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <%= require("../commons/vendorJS.ejs")() %>
+  <%= require("../../ga.ejs")() %>
+</head>
+<body>
+  <%= require("../commons/header.ejs")() %>
+  <div class='visc-main about-main'>
+
+    <!-- Hero Block [start] -->
+    <div class="hero-block hero-block__no-msk">
+      <div class="about-main__waves"></div>
+      <div class="about-main__circle">
+        <div class="about-main__circle-middle">
+          <canvas id="circle" class="about-main__circle-canvas" height="500"></canvas>
+          <h2 class="about-main__heading color-main-red">智慧影音搜索的無限可能</h2>
+        </div>
+      </div>
+    </div>  <!-- Hero Block [end] -->
+
+    <!-- Intro block [start] -->
+    <div class='about-main__intro'>
+      <div class="container-sm">
+
+        <h2 class="about-main__intro__title font-h1 color-main-red">公司簡介</h2>
+        <div class="about-main__intro__info font-h6 color-dark-80a" id="intro">
+
+        </div>
+
+      </div>
+    </div>  <!-- Intro block [end] -->
+
+
+    <!-- Office Photo [start] -->
+    <div class="about-main__view-block">
+      <div class="middle-block container-med">
+
+        <h3 class="about-main__view-block__title font-h1-xl color-white">Video AI Discovery, Unlimited Possibilities</h3>
+
+      </div>
+    </div>  <!-- Office Photo [end] -->
+
+
+    <!-- History Block [start] -->
+    <div class="history-block">
+      <div class="container-med">
+
+        <!-- History Block Photos [start] -->
+        <div class="col-sm-6 col-md-7">
+
+          <div class="history-block__award-photo">
+            <img class="history-block__award-photo__photo photo01" src="./imgs/photo/photo-history-01.jpg" />
+            <img class="history-block__award-photo__photo photo02" src="./imgs/photo/photo-history-02.jpg" />
+            <img class="history-block__award-photo__photo photo03" src="./imgs/icons/icon-awards.svg" />
+          </div>
+
+        </div>  <!-- History Block Photos [end] -->
+
+        <!-- History Block List [start] -->
+        <div class="col-sm-6 col-md-5" id="histories"></div>
+        <!-- History Block List [end] -->
+
+      </div>
+    </div> <!-- History Block [end] -->
+
+
+    <!-- Team Block [start] -->
+    <div class="team-block team-block--about" style="display:none">
+
+      <div class="container-sm">
+        <h2 class="team-block__title font-h1 color-main-red">團隊介紹</h2>
+        <h6 class="team-block__sub-title font-h6 color-dark">網羅中，美，台灣知名計算機視覺，深度學習，人工智能業界博士/碩士/專家，國際論文發表超過100篇，累積美，中，台的十項專利頂尖識別技術。</h6>
+      </div>
+
+      <div class="container-med container-med--about">
+
+        <div class="team-block__list-block">
+          <div class="team-block__swiper" id="memberSwiper">
+            <!-- members  -->
+          </div>
+          <div class="team-block__swiper-description visible-xs ">
+            <!-- mobile description  -->
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>  <!-- Team Block [end] -->
+
+
+    <!-- Contact Us [start] -->
+    <div class="contact-block">
+      <div class="contact-block__container container-med">
+
+        <h2 class="contact-block__container__title font-h1 color-white">聯繫我們</h2>
+
+        <ul class="contact-list">
+          <li class="contact-list__list col-sm-4">
+            <img class="contact-icon" src="./imgs/icons/icon-contact-01.svg" />
+            <h6 class="contact-list__list__title font-h2 color-white">商務合作</h6>
+            <a href="mailto:marketing@viscovery.com" target="_self" class="contact-list__list__nav font-h6-sm color-white" class="nav-block">marketing@viscovery.com</a>
+          </li>
+          <li class="contact-list__list col-sm-4">
+            <img class="contact-icon" src="./imgs/icons/icon-contact-02.svg" />
+            <h6 class="contact-list__list__title font-h2 color-white">新聞採訪</h6>
+            <a href="mailto:PR@viscovery.com" target="_self" class="contact-list__list__nav font-h6-sm color-white" class="nav-block">PR@viscovery.com </a>
+          </li>
+          <li class="contact-list__list col-sm-4">
+            <img class="contact-icon" src="./imgs/icons/icon-contact-03.svg" />
+            <h6 class="contact-list__list__title font-h2 color-white">加入我們</h6>
+            <a href="mailto:hr@viscovery.com" target="_self" class="contact-list__list__nav font-h6-sm color-white" class="nav-block">hr@viscovery.com</a>
+            <a href="https://www.104.com.tw/jobbank/custjob/index.php?r=cust&j=387042273c5c3f2456583a1d1d1d1d5f2443a363189j56&jobsource=n104bank1" target="_blank" class="contact-list__list__nav font-h6-sm color-white" class="nav-block">104人力銀行</a>
+          </li>
+        </ul>
+
+      </div>
+    </div> <!-- Contact Us [end] -->
+
+
+  </div>
+  <%= require("../commons/footer.ejs")() %>
+
+  <script src="scripts/three-js/three.min.js"></script>
+  <script src="scripts/three-js/renderers/Projector.js"></script>
+  <script src="scripts/three-js/renderers/CanvasRenderer.js"></script>
+  <script src="scripts/three-js/Detector.js"></script>
+</body>
+</html>

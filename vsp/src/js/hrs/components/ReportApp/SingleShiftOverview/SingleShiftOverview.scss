@@ -1,0 +1,7 @@
+@import "coreVariables";
+
+.container {
+  padding: 20px 32px;
+  height: calc(100% - 60px);
+  overflow-y: scroll;
+}

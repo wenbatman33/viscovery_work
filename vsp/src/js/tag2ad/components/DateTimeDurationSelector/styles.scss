@@ -1,0 +1,36 @@
+.root {
+  width : 100%;
+  display: flex;
+  justify-content: space-between;
+
+  > div {
+    height: 2rem;
+  }
+
+  input {
+    height: 100%;
+  }
+}
+
+.datePicker {
+  height: 100%;
+}
+
+.date {
+  width: 25%;
+}
+
+.time {
+  width: 15%;
+  height: 100%;
+
+  div {
+    height: 100%;
+  }
+}
+
+.text {
+  width: 2rem;
+  text-align: center;
+  margin: 8px 0;
+}

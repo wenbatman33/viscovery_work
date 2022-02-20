@@ -1,0 +1,55 @@
+@import 'coreVariables';
+
+.container {
+  width : 350px;
+}
+
+.header {
+  color : $color-blackhole;
+  margin-bottom : $padding-small ;
+}
+
+.sub-header {
+  color : $color-blackhole;
+  margin-bottom : $padding-tiny ;
+}
+
+.list {
+  border : $color-mild 1px solid ;
+  border-radius : 5px ;
+  height : 200px ;
+  margin-bottom: $padding-small;
+  overflow: auto;
+}
+
+.control-btn-group {
+  display : flex ;
+  justify-content: flex-end;
+  > button {
+    margin-left : $padding-tiny ;
+  }
+}
+
+.file-container {
+  display : flex ;
+  line-height: 30px;
+  box-sizing : border-box;
+  align-items: center;
+  padding-right : $padding-tiny ;
+  padding-left : $padding-tiny ;
+  > div {
+    margin-right : 2px ;
+    color : $color-boulder ;
+  }
+  > i {
+    margin-right : $padding-tiny;
+  }
+}
+.selected {
+  compose : file-container ;
+  background: $color-river;
+  color: $color-ivory;
+  > div {
+    color : $color-ivory;
+  }
+}

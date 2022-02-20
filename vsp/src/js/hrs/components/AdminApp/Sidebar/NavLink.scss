@@ -1,0 +1,13 @@
+@import "coreVariables";
+
+.container {
+  color: $color-midnight;
+  padding: 8px 27px;
+  cursor: pointer;
+}
+
+.active {
+  composes: container;
+  color: white;
+  background: $color-river;
+}

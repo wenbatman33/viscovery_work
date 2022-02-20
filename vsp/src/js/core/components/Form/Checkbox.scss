@@ -1,0 +1,63 @@
+$checkbox-width: 1rem;
+.control {
+  font-size : $checkbox-width;
+  position : relative;
+  display: block;
+  cursor : pointer ;
+  height : $checkbox-width;
+  width : $checkbox-width;
+}
+
+/* hide the original input*/
+.control input {
+  position : absolute;
+  z-index : -1;
+  opacity: 0;
+}
+
+.indicator {
+  position: absolute;
+  left: 0;
+  border-radius: 0;
+  border : solid 1px rgba(26, 10, 10, 0.2);
+  width: $checkbox-width;
+  height: $checkbox-width;
+  background: white;
+}
+
+
+/* Disabled state */
+input:disabled ~ .indicator{
+  cursor: not-allowed;
+  opacity: .6;
+  background: rgba(26, 10, 10, 0.2);
+}
+
+/* Check mark */
+.indicator:after {
+  position: absolute;
+  display: none;
+  content: '';
+}
+
+/* Show check mark */
+.control input:checked ~ .indicator:after {
+  display: inline-block;
+}
+
+/* Checkbox tick */
+.checkbox .indicator:after {
+  top: 2px;
+  left: 5px;
+  width: 3px;
+  height: 8px;
+  transform: rotate(45deg);
+  border: solid #2aa1c0;
+  border-width: 0 2px 2px 0;
+  padding: 1px;
+}
+
+/* Disabled tick colour */
+.checkbox input:disabled ~ .indicator:after {
+  border-color: #7b7b7b;
+}

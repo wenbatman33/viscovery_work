@@ -1,0 +1,46 @@
+@import 'coreVariables';
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 400px;
+  margin: -3rem;
+  text-align: center;
+}
+
+.content {
+  padding: $padding-medium;
+  width: 100%;
+}
+
+.row {
+  margin-bottom: $padding-medium;
+  width: 100%;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  > div {
+    margin-top: $padding-tiny;
+  }
+}
+
+.header {
+  composes: row;
+}
+
+.body {
+  text-align: left;
+}
+
+.footer {
+  width: 100%;
+  padding: $padding-small $padding-medium;
+
+  button+button {
+    margin-left: $padding-small;
+  }
+}

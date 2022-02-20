@@ -1,0 +1,131 @@
+@import 'coreVariables';
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 8px 32px 34px 64px;
+  background: $color-fog;
+}
+
+.top {
+  margin-bottom: 8px;
+}
+
+.bottom {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+}
+
+.left {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  margin-right: 34px;
+}
+
+.right {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+}
+
+.info {
+  flex: initial;
+  display: flex;
+  flex-direction: row;
+
+  > * {
+    flex: 1;
+  }
+
+  > *:last-child {
+    flex: initial;
+  }
+}
+
+.player {
+  flex: 1;
+  height: 100%;
+}
+
+.ads {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: $padding-small;
+}
+
+.settings {
+  flex: initial;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  padding-bottom: $padding-small;
+}
+
+.body {
+  height: 95px;
+  overflow-y: scroll;
+}
+
+.row {
+  padding-bottom: $padding-small;
+  display: flex;
+  justify-content: space-between;
+}
+
+.submit-btn {
+  width : 100%;
+}
+
+.prev-next-group {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-grow {
+  display : flex ;
+  flex-grow: 1;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+.tags {
+  margin : $padding-small 0;
+  color : $color-midnight;
+}
+
+.tag-number {
+  color : $color-river;
+  text-decoration: underline;
+  padding : 0 4px;
+  cursor: default;
+}
+
+.ad-number {
+  color: $color-blackhole;
+}
+
+.right-upper-text {
+  color: $color-boulder;
+}
+
+.report-hrs {
+  color: $color-boulder;
+  margin: 0 0 42px 0;
+}
+
+.disabled {
+  filter: opacity(60%);
+  pointer-events: none;
+}

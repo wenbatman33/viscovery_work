@@ -1,0 +1,81 @@
+@import "coreVariables";
+
+.container {
+  opacity: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 15;
+}
+
+.base {
+  composes: container;
+}
+
+.baseHide {
+  composes: container;
+  opacity: 0;
+  z-index: -1;
+}
+
+.content {
+  position: absolute;
+  border: 1px solid $color-sand;
+  background: white;
+  min-width: 510px;
+}
+
+.header {
+  border-bottom: 1px solid $color-sand;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  height: 58px;
+  justify-content: space-between;
+}
+
+.column-wrapper {
+  display: flex;
+  align-content: stretch;
+  min-height: 430px;
+}
+
+.column {
+  border: 1px solid $color-sand;
+}
+
+.gray-column {
+  composes: column;
+  background: $color-sand;
+}
+
+.column-header {
+  border-bottom: 1px solid $color-sand;
+  color: $color-chocolate;
+  padding: 0 70px 0 15px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.column-content {
+  color: $color-chocolate;
+  display:flex;
+  flex-direction: column;
+  width: 170px;
+  max-height: 400px;
+  overflow-y: scroll;
+}
+
+.element {
+  cursor: pointer;
+  padding: 0 70px 0 15px;
+}
+
+.current-element {
+  composes: element;
+  color: white;
+  background: $color-brand;
+}

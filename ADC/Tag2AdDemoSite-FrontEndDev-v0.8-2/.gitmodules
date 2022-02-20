@@ -1,0 +1,12 @@
+[submodule "src/SSD"]
+	path = src/SSD
+	url = http://awsgit.viscovery.co/Cybertron/SSD.git
+[submodule "src/keyMoment"]
+	path = src/keyMoment
+	url = http://awsgit.viscovery.co/Cybertron/keyMoment.git
+[submodule "src/adc_infer"]
+	path = src/adc_infer
+	url = http://awsgit.viscovery.co/Cybertron/adc_infer.git
+[submodule "src/tag_infer"]
+	path = src/tag_infer
+	url = http://awsgit.viscovery.co/Cybertron/tag-infer.git

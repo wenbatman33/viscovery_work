@@ -1,0 +1,31 @@
+@import "coreVariables";
+
+.container {
+  position: relative;
+  height: 100%;
+}
+
+.button {
+  user-select: none;
+  cursor: pointer;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  color: $color-boulder;
+
+  &:hover {
+    color: $color-midnight;
+  }
+}
+
+.hide {
+  display: none;
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  z-index: 100;
+  box-shadow: 0 2px 5px #888888;
+}

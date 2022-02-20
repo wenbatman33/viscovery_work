@@ -1,0 +1,83 @@
+@import 'coreVariables';
+
+.container {
+  width: 100%;
+  background-color: white;
+  padding: 1.5% 0 1.5% 0;
+  font-size: 12pt;
+  border-bottom: thin solid $color-boulder;
+}
+
+.base {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  word-wrap: break-word;
+}
+
+.name {
+  composes: base;
+  width: 12%;
+  padding: 15px;
+}
+
+.maxUpload {
+  composes: base;
+  width: 14%;
+}
+
+.vip {
+  composes: base;
+  width: 8%;
+}
+
+.wording {
+  background: $color-river;
+  color: white;
+  padding: 0 8px;
+  border-radius: 2px;
+}
+
+.hrs {
+  composes: base;
+  width: 8%;
+}
+
+.members {
+  composes: base;
+  width: 8%;
+  color: $color-boulder;  
+}
+
+.memberCount {
+  padding-left: 3px;
+}
+
+.validTime {
+  composes: base;
+  width: 12%;
+  color: $color-boulder;
+}
+
+.creator {
+  composes: base;
+  width: 16%;
+  color: $color-boulder;  
+}
+
+.country {
+  composes: base;
+  width: 14%;
+  color: $color-boulder;  
+}
+
+.manipulate {
+  composes: base;
+  width: 8%;
+}
+
+.subContent {
+  display: block;
+  text-align: center;
+}
+

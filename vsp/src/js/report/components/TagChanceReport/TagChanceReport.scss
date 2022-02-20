@@ -1,0 +1,39 @@
+.root {
+  padding : 32px;
+  height : 100%;
+  background : white;
+}
+
+.group:after {
+  content:':';
+  margin : 0 3px;
+}
+
+.ta-container {
+  line-height : 32px;
+}
+
+.interval-container {
+  display : flex;
+  margin-bottom : 16px;
+}
+
+.title-interval:after {
+  content:':';
+  margin : 0 3px;
+  line-height: 32px;
+}
+
+input[type=radio] {
+  margin : 0 5px;
+}
+
+.interval-any {
+  line-height: 32px;
+}
+
+.interval-specific {
+  display : flex;
+  align-items: center;
+  height: 32px;
+}

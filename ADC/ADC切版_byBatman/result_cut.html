@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Viscovery ADC Inference Demo">
+	<title>Viscovery ADC Inference</title>
+	<script src="../node_modules/jquery/dist/jquery.min.js"></script>
+	<link href="../node_modules/video.js/dist/video-js.css" rel="stylesheet">
+	<script src="../node_modules/video.js/dist/video.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+	<link href="../assets/css/adc.css" rel="stylesheet">
+</head>
+
+<body>
+	<div class="main container-fluid">
+		<div class="nav">
+			<div class="container">
+				<a href="/"><img src="../assets/img/logo.svg" class="logo" alt="Viscovery"></a>
+				<small class="ver">({{version}})</small>
+				<div class="searchBar">
+					<form>
+						<input type="text" name="targeturl" id="targeturl" placeholder="Please provide an Image or Video URL">
+						<button>Classify</button>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<div class="resultMain row">
+			<div class="sourceWrapp col-xs-12 col-sm-12 col-md-8 col-lg-8 col-xl8">
+				<div class="media">
+					<video id="demo_video" class="video-js vjs-default-skin vjs-big-play-centered" controls preload="auto" data-setup='{}'>
+						<source src="../assets/video/WINNER - 'ISLAND' M-V MAKING FILM.mp4" type='video/mp4'>
+					</video>
+				</div>
+				<div class="adKeyPoint">現在最佳廣告機會點：</div>
+				<ul class="adKeyPointList">
+					<li>
+						<div class="adKeyPointBtn">
+							<span class="stg">
+								<svg class="svgIcon" width="20px" height="20px" viewBox="0 0 20 20">
+									<g id="tagIcon" stroke="none" stroke-width="1" fill="none">
+										<g class="Rectangle">
+											<rect stroke-opacity="0.3" stroke="#8091A5" stroke-width="1" x="0.5" y="0.5" width="19" height="19"></rect>
+										</g>
+									</g>
+									<circle class="keyPoint" fill="#DFE6EE" cx="10" cy="10" r="2"></circle>
+									<polygon class="tag" fill="#F5A623" points="20 19.9228516 20 12 12 20"></polygon>
+								</svg>
+							</span> 
+							<span>Photography Books</span>
+						</div>
+					</li>
+					<li>
+						<div class="adKeyPointBtn">
+							<span class="stg">
+								<svg class="svgIcon" width="20px" height="20px" viewBox="0 0 20 20">
+									<g id="tagIcon" stroke="none" stroke-width="1" fill="none">
+										<g class="Rectangle">
+											<rect stroke-opacity="0.3" stroke="#8091A5" stroke-width="1" x="0.5" y="0.5" width="19" height="19"></rect>
+										</g>
+									</g>
+									<circle class="keyPoint" fill="#DFE6EE" cx="10" cy="10" r="2"></circle>
+									<polygon class="tag" fill="#F5A623" points="20 19.9228516 20 12 12 20"></polygon>
+								</svg>
+							</span> Photography Books
+						</div>
+					</li>
+					<li>
+						<div class="adKeyPointBtn">
+							<span class="stg">
+								<svg class="svgIcon" width="20px" height="20px" viewBox="0 0 20 20">
+									<g id="tagIcon" stroke="none" stroke-width="1" fill="none">
+										<g class="Rectangle">
+											<rect stroke-opacity="0.3" stroke="#8091A5" stroke-width="1" x="0.5" y="0.5" width="19" height="19"></rect>
+										</g>
+									</g>
+									<circle class="keyPoint" fill="#DFE6EE" cx="10" cy="10" r="2"></circle>
+									<polygon class="tag" fill="#F5A623" points="20 19.9228516 20 12 12 20"></polygon>
+								</svg>
+							</span> Photography Books
+						</div>
+					</li>
+					<li>
+						<div class="adKeyPointBtn">
+							<span class="stg">
+								<svg class="svgIcon" width="20px" height="20px" viewBox="0 0 20 20">
+									<g id="tagIcon" stroke="none" stroke-width="1" fill="none">
+										<g class="Rectangle">
+											<rect stroke-opacity="0.3" stroke="#8091A5" stroke-width="1" x="0.5" y="0.5" width="19" height="19"></rect>
+										</g>
+									</g>
+									<circle class="keyPoint" fill="#DFE6EE" cx="10" cy="10" r="2"></circle>
+									<polygon class="tag" fill="#F5A623" points="20 19.9228516 20 12 12 20"></polygon>
+								</svg>
+							</span> Photography Books
+						</div>
+					</li>
+				</ul>
+			</div>
+
+			<div class="tagsWrapp col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+				<div class="adCategoy">Ad Category</div>
+				<ul class="adCategoyList">
+					<li>
+						<div class="adCategoyBtn">
+							<span class="stg">
+								<svg class="svgIcon" width="20px" height="20px" viewBox="0 0 20 20">
+									<g id="tagIcon" stroke="none" stroke-width="1" fill="none">
+										<g class="Rectangle">
+											<rect stroke-opacity="0.3" stroke="#8091A5" stroke-width="1" x="0.5" y="0.5" width="19" height="19"></rect>
+										</g>
+									</g>
+									<circle class="keyPoint" fill="#667587" cx="10" cy="10" r="2"></circle>
+									<polygon class="tag" fill="#D0021B" points="0 0 8 0 0 8"></polygon>
+								</svg>
+							</span>
+							<span>Art and Photography Books</span>
+						</div>
+					</li>
+					<li>
+						<div class="adCategoyBtn">
+							<span class="stg">
+								<svg class="svgIcon" width="20px" height="20px" viewBox="0 0 20 20">
+									<g id="tagIcon" stroke="none" stroke-width="1" fill="none">
+										<g class="Rectangle">
+											<rect stroke-opacity="0.3" stroke="#8091A5" stroke-width="1" x="0.5" y="0.5" width="19" height="19"></rect>
+										</g>
+									</g>
+									<circle class="keyPoint" fill="#667587" cx="10" cy="10" r="2"></circle>
+									<polygon class="tag" fill="#D0021B" points="0 0 8 0 0 8"></polygon>
+								</svg>
+							</span>
+							<span>Art and Photography Books</span>
+						</div>
+					</li>
+					<li>
+						<div class="adCategoyBtn">
+							<span class="stg">
+								<svg class="svgIcon" width="20px" height="20px" viewBox="0 0 20 20">
+									<g id="tagIcon" stroke="none" stroke-width="1" fill="none">
+										<g class="Rectangle">
+											<rect stroke-opacity="0.3" stroke="#8091A5" stroke-width="1" x="0.5" y="0.5" width="19" height="19"></rect>
+										</g>
+									</g>
+									<circle class="keyPoint" fill="#667587" cx="10" cy="10" r="2"></circle>
+									<polygon class="tag" fill="#D0021B" points="0 0 8 0 0 8"></polygon>
+								</svg>
+							</span>
+							<span>Art and Photography Books</span>
+						</div>
+					</li>
+					<li>
+						<div class="adCategoyBtn">
+							<span class="stg">
+								<svg class="svgIcon" width="20px" height="20px" viewBox="0 0 20 20">
+									<g id="tagIcon" stroke="none" stroke-width="1" fill="none">
+										<g class="Rectangle">
+											<rect stroke-opacity="0.3" stroke="#8091A5" stroke-width="1" x="0.5" y="0.5" width="19" height="19"></rect>
+										</g>
+									</g>
+									<circle class="keyPoint" fill="#667587" cx="10" cy="10" r="2"></circle>
+									<polygon class="tag" fill="#D0021B" points="0 0 8 0 0 8"></polygon>
+								</svg>
+							</span>
+							<span>Art and Photography Books</span>
+						</div>
+					</li>
+					<li>
+						<div class="adCategoyBtn">
+							<span class="stg">
+								<svg class="svgIcon" width="20px" height="20px" viewBox="0 0 20 20">
+									<g id="tagIcon" stroke="none" stroke-width="1" fill="none">
+										<g class="Rectangle">
+											<rect stroke-opacity="0.3" stroke="#8091A5" stroke-width="1" x="0.5" y="0.5" width="19" height="19"></rect>
+										</g>
+									</g>
+									<circle class="keyPoint" fill="#667587" cx="10" cy="10" r="2"></circle>
+									<polygon class="tag" fill="#D0021B" points="0 0 8 0 0 8"></polygon>
+								</svg>
+							</span>
+							<span>Art and Photography Books</span>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="quickExample">
+				<div class="quickExampleTitle">
+					<h6>
+						Quick<br/> Example
+					</h6>
+				</div>
+				<ul class="quickExampleList">
+					<li>
+						<a href="result.html" target="_self"><img src="http://fakeimg.pl/90x50/ " alt=""></a>
+					</li>
+					<li>
+						<a href="result.html" target="_self"><img src="http://fakeimg.pl/90x50/ " alt=""></a>
+					</li>
+					<li>
+						<a href="result.html" target="_self"><img src="http://fakeimg.pl/90x50/ " alt=""></a>
+					</li>
+					<li>
+						<a href="result.html" target="_self"><img src="http://fakeimg.pl/90x50/ " alt=""></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,142 @@
+{
+  "manifest_version": 0,
+  "name": "PinStream",
+  "description": "PinStream Tool",
+  "version": "1.14",
+  "browser_action": {
+    "default_title": "PinStream",
+    "default_icon": "icon/pin_Icon_48x48.png",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "contextMenus",
+    "unlimitedStorage",
+    "storage",
+    "notifications",
+    "webRequest",
+    "https://ajax.googleapis.com/",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "content_security_policy": "script-src 'self' https:\/\/www.youtube.com https:\/\/s.ytimg.com; object-src 'self' https:\/\/www.youtube.com",
+  "content_scripts": [
+    {
+      "run_at": "document_end",
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "css": [
+        "content.min.css"
+      ],
+      "js": [
+        "utilities.min.js",
+        "content.min.js"
+      ]
+    },
+    {
+      "matches": [
+        "*://pinstream.viscovery.com/u/success"
+      ],
+      "js": [
+        "utilities.min.js",
+        "auth-login.min.js"
+      ]
+    },
+    {
+      "run_at": "document_start",
+      "matches": [
+        "*://pinstream.viscovery.com/LoadingPage"
+      ],
+      "js": [
+        "utilities.min.js",
+        "auth-login.min.js"
+      ]
+    },
+    {
+      "matches": [
+        "*://pinstream.viscovery.com/?out=1"
+      ],
+      "js": [
+        "auth-logout.min.js"
+      ]
+    },
+    {
+      "run_at": "document_start",
+      "matches": [
+        "*://www.dailymotion.com/*"
+      ],
+      "js": [
+        "content/inject-resource.js"
+      ]
+    },
+    {
+      "run_at": "document_end",
+      "matches": [
+        "*://www.dailymotion.com/*"
+      ],
+      "js": [
+        "utilities.min.js",
+        "content/global-connect-dailymotion.js"
+      ]
+    },
+    {
+      "run_at": "document_end",
+      "matches": [
+        "*://vimeo.com/*",
+        "*://vimeo.com/"
+      ],
+      "js": [
+        "utilities.min.js",
+        "content/vimeo.js"
+      ]
+    },
+    {
+      "run_at": "document_end",
+      "matches": [
+        "*://www.facebook.com/*"
+      ],
+      "css": [
+        "content.min.css"
+      ],
+      "js": [
+        "utilities.min.js",
+        "content/p-facebook.js"
+      ]
+    }
+  ],
+  "background": {
+    "scripts": [
+      "utilities.min.js",
+      "backend.min.js"
+    ]
+  },
+  "icons": {
+    "16": "icon/logo_16x16.png",
+    "24": "icon/logo_24x24.png",
+    "32": "icon/logo_32x32.png",
+    "48": "icon/logo_48x48.png",
+    "64": "icon/logo_64x64.png",
+    "128": "icon/logo_128x128.png"
+  },
+  "web_accessible_resources": [
+    "icon/logo_16x16.png",
+    "icon/logo_24x24.png",
+    "icon/logo_32x32.png",
+    "icon/logo_48x48.png",
+    "icon/logo_64x64.png",
+    "icon/logo_128x128.png",
+    "icon/pin_Icon_16x16.png",
+    "icon/pin_Icon_24x24.png",
+    "icon/pin_Icon_32x32.png",
+    "icon/pin_Icon_48x48.png",
+    "icon/pin_Icon_64x64.png",
+    "icon/pin_Icon_128x128.png",
+    "content/react-dom.min.js",
+    "content/react.min.js",
+    "content/dailymotion.js",
+    "content.min.css"
+  ]
+}

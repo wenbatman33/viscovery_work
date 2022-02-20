@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.1 (44463) - http://www.bohemiancoding.com/sketch -->
+    <title>tagIcon</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="20" height="20"></rect>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="tagIcon">
+            <g id="Rectangle">
+                <use fill="#DFE6EE" fill-rule="evenodd" xlink:href="#path-1"></use>
+                <rect stroke-opacity="0.3" stroke="#8091A5" stroke-width="1" x="0.5" y="0.5" width="19" height="19"></rect>
+            </g>
+            <g>
+                <circle id="keyPoint" fill="#667587" cx="10" cy="10" r="2"></circle>
+            </g>
+            <g>
+                <polygon id="tag" fill="#D0021B" points="0 0 8 0 0 8"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

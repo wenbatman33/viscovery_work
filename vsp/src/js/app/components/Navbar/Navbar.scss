@@ -1,0 +1,49 @@
+@import "coreVariables";
+
+.container {
+  width: 100%;
+  height: 60px;
+  background: white;
+  padding: 0 0 0 26px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+.right {
+  margin-left: auto;
+  color: $color-boulder;
+  height: 100%;
+}
+
+.right-container {
+  display: flex;
+  height: 100%;
+}
+
+.locale__selector {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0 20px;
+  height: 100%;
+  width: 60px;
+  border-left: 1px solid $color-sand;
+  color: $color-midnight;
+}
+
+.username {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  height: 36px;
+  width: 36px;
+  border-radius: 36px;
+}
+
+.left {
+  display: flex;
+  height: 100%;
+}

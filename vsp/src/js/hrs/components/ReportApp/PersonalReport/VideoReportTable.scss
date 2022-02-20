@@ -1,0 +1,86 @@
+@import "coreVariables";
+
+.container {
+  border: none;
+}
+
+.labelRow {
+  display: grid;
+  grid-template-columns: 80fr 20fr;
+}
+
+.label {
+  composes: labelRow;
+  background: white;
+  border-top: 1px solid $color-mild;
+  border-left: 1px solid $color-mild;
+  border-right: 1px solid $color-mild;
+  height: 60px;
+
+  p {
+    font-size: 1rem;
+  }
+}
+
+.sumTitle {
+  color: $color-boulder;
+  margin-right: 5px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 5fr 10fr 15fr 10fr 10fr 10fr 10fr 10fr 10fr 10fr;
+}
+
+.header {
+  composes: row;
+  background: $color-fog;
+  color: $color-blackhole;
+  height: 56px;
+  border-left: 1px solid $color-mild;
+  border-right: 1px solid $color-mild;
+}
+
+.content {
+  composes: row;
+  background: white;
+  color: $color-midnight;
+  height: 60px;
+}
+
+.total {
+  composes: content;
+
+  p {
+    font-weight: bold;
+  }
+}
+
+.col-common {
+  display: flex;
+  align-items: center;
+}
+
+.col {
+  composes: col-common;
+  justify-content: center;
+}
+
+.col-left {
+  composes: col-common;
+  justify-content: left;
+}
+
+.col-right {
+  composes: col-common;
+  justify-content: right;
+}
+
+.header-col {
+  composes: col;
+}
+
+.content-col {
+  composes: col;
+  border: 1px solid $color-mild;
+}

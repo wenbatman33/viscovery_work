@@ -1,0 +1,11 @@
+@import 'coreVariables';
+
+.header {
+  padding: $padding-medium;
+}
+
+.content {
+  padding-left: $padding-medium;
+  padding-right: $padding-medium;
+  padding-bottom: $padding-medium;
+}

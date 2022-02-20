@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Viscovery ADC Inference Demo">
+  <title>Viscovery ADC Inference</title>
+  <script src="/assets/js/app.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/app.min.css">
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="nav">
+      <div class="container">
+        <img class="logo" src="../assets/img/logo.svg" alt="Viscovery">
+        <div class="searchBar">
+          <form>
+            <input type="text" name="targeturl" id="targeturl" placeholder="Please provide an Image or Video URL">
+            <button type="button" value="Classify URL" id="classifyurl">Classify</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="ADCZoomInBg ADC_ImageBlock col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+        <div class="content">
+          <h3>Click for </h3>
+          <h1>Quick Image Example</h1>
+          <ul class="exampleList">
+            <li>
+              <a href="/inspect_job?targetid=ImageExample1" target="_self"><img src="../assets/img/ImageExample_1.png" alt=""></a>
+            </li>
+            <li>
+              <a href="/inspect_job?targetid=ImageExample2" target="_self"><img src="../assets/img/ImageExample_2.png " alt=""></a>
+            </li>
+            <li>
+              <a href="/inspect_job?targetid=ImageExample3" target="_self"><img src="../assets/img/ImageExample_3.png" alt=""></a>
+            </li>
+            <li>
+              <a href="/inspect_job?targetid=ImageExample4" target="_self"><img src="../assets/img/ImageExample_4.png" alt=""></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="ADCZoomInBg ADC_VideoBlock col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+        <div class="content">
+          <h3>Click for </h3>
+          <h1>Quick Video Example</h1>
+          <ul class="exampleList">
+            <li>
+              <a href="/inspect_job?targetid=VideoExample1" target="_self"><img src="../assets/img/VideoExample_1.png" alt=""></a>
+            </li>
+            <li>
+              <a href="/inspect_job?targetid=VideoExample2" target="_self"><img src="../assets/img/VideoExample_2.png" alt=""></a>
+            </li>
+            <li>
+              <a href="/inspect_job?targetid=VideoExample3" target="_self"><img src="../assets/img/VideoExample_3.png" alt=""></a>
+            </li>
+            <li>
+              <a href="/inspect_job?targetid=VideoExample4" target="_self"><img src="../assets/img/VideoExample_4.png" alt=""></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="fullScreenLoading" class="fullScreenLoading">
+    <div class="loadingWarp">
+      <canvas id="waves"></canvas>
+      <div class='loadingTips' id="result"></div>
+      <div class="loadingBtnWrap" id="loadingBtnWrap">
+        <button type="button" id="loadingBtn">back</button>
+      </div>
+    </div>
+  </div>
+  <script src="{{ notifier_url }}/socket.io/socket.io.js"></script>
+  <script>
+    // global variables for xxx
+    var notifier_url = '{{ notifier_url }}';
+    var isLiteVersion = String('{{liteVersion}}').toLowerCase() == 'true';
+  </script>
+  <script src="/nm/demoSite-inspectADC/js/classify.js"></script>
+  <script>
+    var waves = new SineWaves({
+      el: document.getElementById('waves'),
+      speed: 4,
+      width: function () {
+        return 600;
+      },
+      height: function () {
+        return 200;
+      },
+      ease: 'SineInOut',
+      wavesWidth: '80%',
+      waves: [
+        {
+          timeModifier: 4,
+          lineWidth: 2,
+          amplitude: -100,
+          wavelength: 25,
+          strokeStyle: 'rgba(244,35,35,1)'
+
+        },
+        {
+          timeModifier: 4,
+          lineWidth: 1,
+          amplitude: -50,
+          wavelength: 40,
+          strokeStyle: 'rgba(0,153,250,.5)'
+        },
+        {
+          timeModifier: 4,
+          lineWidth: 1,
+          amplitude: -25,
+          wavelength: 60,
+          strokeStyle: 'rgba(255, 255, 255, 0.2)'
+        }
+      ],
+      // Resize
+      resizeEvent: function () {
+
+      }
+    });
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+@import 'coreVariables';
+
+.container {
+  padding: 0;
+  position: relative;
+  height: 100%;
+  min-width: 1080px;
+}
+
+.left {
+  float: left;
+  width: 256px;
+  height: 100%;
+}
+
+.right {
+  height: 100%;
+  background-color: #E5E5E5;
+  overflow: auto;
+  min-width: 824px;
+}

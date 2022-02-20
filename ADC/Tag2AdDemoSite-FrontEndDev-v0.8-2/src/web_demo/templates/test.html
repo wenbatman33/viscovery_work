@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+<body>
+  <button id="btn">send</button>
+  <script>
+      document.getElementById("btn").addEventListener("click", function(){
+        closeWindow();
+      });
+      function closeWindow() {
+        window.opener.location.href="綁我填導入的網址";
+        window.close();
+      }
+    </script>
+  </head>
+</body>
+</html>

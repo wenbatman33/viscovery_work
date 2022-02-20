@@ -1,0 +1,92 @@
+@import './helpers/helpers';
+
+@import './vendor/bootstrap';
+
+@import './base/reset';
+@import './base/color';
+@import './base/fonts';
+@import './base/button';
+
+@import './commons/layout';
+@import './commons/header';
+@import './commons/footer';
+
+@import './view/index';
+@import './view/core';
+@import './view/solution';
+@import './view/news';
+@import './view/about';
+@import './view/round-plan';
+
+
+html, body {
+  width: 100%;
+  // height: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: 'GothamLight', PingFangTC,PingFangSC,Microsoft JhengHei,'微軟正黑體',Arial,sans-serif;
+}
+
+a{
+  text-decoration: none;
+
+  &:hover{
+    text-decoration: none;
+  }
+
+}
+
+.progress {
+  overflow: hidden;
+  height: 8px;
+  transition: opacity 0.2s;
+  transform: translate3d(0,0,0);
+  opacity: 0.8;
+
+  &--fade-out {
+    opacity: 0;
+  }
+
+  // inner progress bar
+  &__bar {
+    width: 100%;
+    height: 100%;
+    float: left;
+    box-sizing: border-box;
+    background-color: rgba(0, 97, 189, 0.8);
+    background-size: 20px 20px;
+    background-image: linear-gradient(
+      45deg,
+      transparent 25%,
+      rgba(255,255,255,0.5) 25%,
+      rgba(255,255,255,0.5) 50%,
+      transparent 50%,
+      transparent 75%,
+      rgba(255,255,255,0.5) 75%
+    );
+    animation: progress-bar-animate 0.5s linear infinite;
+  }
+
+}
+
+.visc-main{
+  position: relative;
+  margin-top: $visc-header-h;
+
+  @media only screen and (max-width: $win-screen-sm - 1){
+    margin-top: $visc-header-mobile-h;
+  }
+
+}
+
+.slick-area {
+  display: none;
+}
+
+.br-xs{
+
+  @media only screen and (max-width: $win-screen-sm - 1){
+    display: block;
+  }
+
+}

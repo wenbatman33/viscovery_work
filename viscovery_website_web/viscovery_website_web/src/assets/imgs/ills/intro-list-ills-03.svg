@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="172px" height="128px" viewBox="0 0 172 128" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>intro-list-photo-03</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="225" height="180"></rect>
+    </defs>
+    <g id="pc" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="1.0-首頁" transform="translate(-974.000000, -1649.000000)">
+            <g id="3大优势" transform="translate(0.000000, 1490.000000)">
+                <g id="Benefits_section">
+                    <g id="Group-3" transform="translate(70.000000, 132.000000)">
+                        <g id="intro-list-photo-03" transform="translate(868.000000, 0.000000)">
+                            <mask id="mask-2" fill="white">
+                                <use xlink:href="#path-1"></use>
+                            </mask>
+                            <g id="Rectangle"></g>
+                            <g id="icon_03" mask="url(#mask-2)">
+                                <g transform="translate(36.000000, 28.000000)">
+                                    <path d="M1,14.5 L145.939325,14.5" id="Path-2" stroke="#CDCDCD" stroke-width="1"></path>
+                                    <path d="M140.203149,9.05202493 L140.203149,126.231895" id="Path-2-Copy-2" stroke="#CDCDCD" stroke-width="0.96"></path>
+                                    <path d="M1,119 L145.939325,119" id="Path-2-Copy" stroke="#CDCDCD" stroke-width="1"></path>
+                                    <g id="Group-11" stroke="none" stroke-width="1" fill-rule="evenodd" transform="translate(25.944134, 46.444215)">
+                                        <path d="M0.436769934,35.4221132 L0.436769934,59.3207384" id="Path-2-Copy-3" stroke="#CDCDCD"></path>
+                                        <path d="M99.452514,0.0479366633 L99.452514,60.661573" id="Path-2-Copy-3" stroke="#CDCDCD"></path>
+                                        <path d="M130.113763,-2.84217094e-14 L130.113763,60.6136364" id="Path-2-Copy-4" stroke="#CDCDCD"></path>
+                                        <path d="M82.9862875,18.1045366 L82.9862875,59.3207384" id="Path-2-Copy-3" stroke="#CDCDCD"></path>
+                                        <path d="M66.476384,35.4221132 L66.476384,59.3207384" id="Path-2-Copy-3" stroke="#CDCDCD"></path>
+                                        <path d="M49.9664804,24.4019067 L49.9664804,59.3207384" id="Path-2-Copy-3" stroke="#CDCDCD"></path>
+                                        <path d="M33.4128999,0.0319835148 L33.4128999,60.6456199" id="Path-2-Copy-3" stroke="#CDCDCD"></path>
+                                        <path d="M16.9466734,18.8917105 L16.9466734,59.3207384" id="Path-2-Copy-3" stroke="#CDCDCD"></path>
+                                        <path d="M126.575927,0.393595041 L134.84317,0.393595041" id="Path-3" stroke="#CDCDCD"></path>
+                                        <path d="M126.575927,59.4328512 L134.84317,59.4328512" id="Path-3-Copy" stroke="#CDCDCD"></path>
+                                    </g>
+                                    <path d="M0.534360716,66.0886049 L31.6869763,35.3282299" id="Path-4" stroke="#CDCDCD" stroke-width="1"></path>
+                                    <polyline id="Path-5" stroke="#CDCDCD" stroke-width="1" points="26.0163035 34.9915217 31.9743703 34.9915217 31.9743703 40.0039494"></polyline>
+                                    <path d="M165.462953,72.2492898 L171.196611,77.9902718" id="Path-6" stroke="#CDCDCD" stroke-width="1"></path>
+                                    <path d="M165.462953,72.2492898 L171.196611,77.9902718" id="Path-6" stroke="#CDCDCD" stroke-width="1" transform="translate(168.329782, 75.119781) scale(-1, 1) translate(-168.329782, -75.119781) "></path>
+                                    <path d="M9.33333333,9.05202493 L9.33333333,126.231895" id="Path-2" stroke="#CDCDCD" stroke-width="1"></path>
+                                    <polyline id="Path-9" stroke="#E14523" stroke-width="1" points="136.913043 0.347470622 157.357635 0.347470622 157.357635 20.6567895"></polyline>
+                                    <polyline id="Path-8" stroke="#E14523" stroke-width="1" points="10.1144656 80.6839085 61.8384332 28.4464666 94.280885 62.0496433 156.437171 0.68417888"></polyline>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

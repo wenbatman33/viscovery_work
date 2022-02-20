@@ -1,0 +1,58 @@
+@import 'coreVariables';
+
+:global{
+  *, *:before, *:after {
+    box-sizing: border-box;
+  }
+  h1 {
+   font-size: 2rem;
+   line-height: 1.5;
+   font-weight: 600;
+   margin: 0;
+  }
+
+  h2 {
+   font-size: 1.5rem;
+   line-height: 1.5;
+   font-weight: normal;
+   margin: 0;
+  }
+
+  h3 {
+   font-size: 1.125rem;
+   line-height: 1.5;
+   font-weight: normal;
+   margin: 0;
+  }
+
+  p {
+   font-size: 0.875rem;
+   line-height: 1.5;
+   font-weight: normal;
+   margin: 0;
+   display: inline-block;
+   white-space: nowrap;
+  }
+
+  small {
+   font-size: 0.75rem;
+   line-height: 1.5;
+   font-weight: normal;
+   margin: 0;
+  }
+
+  html{
+    height: 100%;
+    font-size: 100%;
+  }
+
+  body {
+    min-width: 1080px;
+    min-height: 100%;
+  }
+
+  #app {
+    width: 100%;
+    height: 100%;
+  }
+}

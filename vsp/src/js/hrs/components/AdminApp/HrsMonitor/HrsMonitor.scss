@@ -1,0 +1,12 @@
+.container {
+  height: 100%;
+}
+
+.top-area {
+  height: 70px;
+}
+
+.table {
+  height: calc(100% - 70px);
+  overflow-y: scroll;
+}

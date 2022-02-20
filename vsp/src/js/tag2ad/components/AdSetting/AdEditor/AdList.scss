@@ -1,0 +1,26 @@
+@import 'coreVariables';
+
+.ad {
+  display: flex;
+  flex-direction: row;
+  padding: $padding-tiny;
+  background: white;
+  border: 1px solid $color-sand;
+
+  .start {
+    flex: 3;
+  }
+
+  .category{
+    flex: 3;
+  }
+
+  .form {
+    flex: 3;
+  }
+
+  .action {
+    flex: 1;
+    color: $color-boulder;
+  }
+}

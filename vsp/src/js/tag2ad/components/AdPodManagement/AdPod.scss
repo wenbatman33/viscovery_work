@@ -1,0 +1,128 @@
+@import 'coreVariables';
+
+$page-horizontal-margin : 10%;
+
+.shadow-block {
+  background: white;
+  border: 1px solid rgba(26, 10, 10, 0.1);
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  margin: 0 $page-horizontal-margin;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.container-overlay {
+  composes: container;
+}
+.container-overlay:before {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index : 15;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255,255,255,0.6);
+}
+
+$empty-text-lineheight : 200px;
+.empty-container {
+  composes: shadow-block;
+  height: $empty-text-lineheight;
+  text-align: center;
+}
+
+.empty-text {
+  line-height: $empty-text-lineheight;
+  color : $color-boulder;
+}
+
+.ad-num {
+  background: rgba(26, 10, 10, 0.1);
+  border-radius: 50px;
+  padding : 0 $padding-tiny;
+}
+
+.action-btn-container {
+  display : flex;
+  justify-content: space-between;
+  margin : $padding-small $page-horizontal-margin;
+}
+
+.result-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  > *:last-child {
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+}
+
+.result-container-w-dock {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: calc(100% - 105px);
+
+  > *:last-child {
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+}
+
+.header-container {
+  background: $color-fog;
+  display : flex;
+  height: $padding-medium;
+  padding : 0 $padding-small;
+  align-items: center;
+}
+
+.header-name {
+  @include single-line-ellipsis;
+  color: $color-blackhole;
+  width : calc(70% - 16px);
+  padding : 0 $padding-tiny 0 30px;
+}
+
+.header-time {
+  color: $color-blackhole;
+  width : 30%;
+}
+
+.page-container {
+  display : flex;
+  justify-content: center;
+  margin-bottom : 5rem;
+}
+
+.action-btn-container button {
+  margin-left : $padding-tiny;
+}
+
+.summary-paging-container {
+  display: flex;
+  justify-content: flex-end;
+  padding: 16px 32px,
+}
+
+.summary {
+  display: flex;
+  align-items: center;
+  > span {
+    font-size: 18px;
+    padding-right: $padding-tiny;
+  }
+}

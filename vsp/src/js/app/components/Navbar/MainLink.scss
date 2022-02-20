@@ -1,0 +1,23 @@
+@import "coreVariables";
+
+.container {
+  display: flex;
+  color: $color-boulder;
+  user-select: none;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    color: $color-midnight;
+  }
+}
+
+.active {
+  composes: container;
+  color: $color-brand;
+
+  &:hover {
+    color: $color-brand;
+  }
+}

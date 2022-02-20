@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" data-page="solution">
+<head>
+  <meta charset="UTF-8">
+  <base href="<%= htmlWebpackPlugin.options.base %>">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+  <%= require("../../meta.ejs")() %>
+  <title>Viscovery</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <%= require("../commons/vendorJS.ejs")() %>
+  <%= require("../../ga.ejs")() %>
+</head>
+<body>
+  <%= require("../commons/header.ejs")() %>
+  <div class='visc-main solution-main'>
+
+    <!-- Sub Menu -->
+    <div id="solutionSubMenu" data-select="5" class="solution-main__sub-menu">
+      <%= require("../commons/solution-sub-menu.ejs")() %>
+    </div>
+
+    <!-- Hero Block [start] -->
+    <div class="hero-block">
+
+      <div class="hero-block__bg hidden-xs" style="background-image:url('./imgs/photo/solution-hero-photo-05.jpg')"></div>
+      <div class="hero-block__bg visible-xs" style="background-image:url('./imgs/photo/solution-hero-photo-05.jpg')"></div>
+
+      <div class="container-med">
+
+        <!-- Intro Block -->
+        <div class="middle-block">
+          <section class="solution-main__intro">
+            <h1 class="solution-main__intro__title color-green">客製化</h1>
+            <h2 class="solution-main__intro__subtitle font-h2 color-white">專屬識別服務<br/>需求客制影音服務解決方案</h2>
+            <!-- <a href="https://sdkdemo.viscovery.com" target="_blank" class="ghost-dark-button">Demo</a> -->
+          </section>
+        </div>
+
+      </div>
+    </div>  <!-- Hero Block [end] -->
+
+
+
+
+
+    <!-- Case List Block [start] -->
+    <section class="solution-main__case-list-block">
+      <div class="container-med">
+
+        <ul class="case-list">
+
+          <li class="case-list__list col-sm-6 col-md-4">
+            <section class="case-list__list__content">
+
+              <div class="content-main">
+                <img class="content-main__logo" src="./imgs/solution/solution-case-logo-17.jpg" />
+                <h3 class="content-main__title">搜狐</h3>
+                <h4 class="content-main__sub-title">中國領先的新媒體、通信及移動增值服務公司</h4>
+                <h5 class="content-main__intro-title">網紅經濟《女神 TV》KEY MOMENT投放 Viscovery創影音行業新平衡</h5>
+                <p class="content-main__intro-txt">網紅一族的產生和爆發是整個新經濟力量的體現，是網路全面滲透新經濟帶來的無窮活力。在網紅經濟迅速發展的現今，與網紅相關的一舉一動都備受矚目，網紅孵化平台《女神TV》的廣告投放也就成了各位行銷人所關注的熱點。在影音廣告領域，《女神TV》嘗試了Viscovery獨創的KEY MOMENT的投放，即情境式廣告，通過預先分析影音情境與廣告素材，以無縫中插的形式在關聯情境下插入廣告。</p>
+              </div>
+
+              <a href="http://viscovery.com/zh-tw/news-article?id=205" class="content-main__nav">瀏覽新聞</a>
+
+            </section>
+          </li>
+
+          <li class="case-list__list col-sm-6 col-md-4">
+            <section class="case-list__list__content">
+
+              <div class="content-main">
+                <img class="content-main__logo" src="./imgs/solution/solution-case-logo-18.jpg" />
+                <h3 class="content-main__title">傲播工作室</h3>
+                <h4 class="content-main__sub-title">在這裡改變著綜藝節目的觀看方式。</h4>
+                <h5 class="content-main__intro-title">《花漾夢工廠2》明星「挑戰自我」  影音觀看花式玩法</h5>
+                <p class="content-main__intro-txt">Viscovery與《花漾夢工廠2》進行創意合作，通過人工智慧自動識別節目內容中的相關情境、物件，用戶通過點擊畫面中的互動熱點，彈出關聯性廣告進行購買。這種趣味性、互動性更強的影音廣告模式，不僅提升用戶的觀看體驗，同時也滿足了迷妹的購買需求，讓綜藝節目更有互動性，賦予更多的商業價值。此前，Viscovery已經與江蘇衛視熱播綜藝節目《我們戰鬥吧》合作，可見越來越多的綜藝節目會青睞這樣的廣告形式，成為影音廣告行銷的新趨勢。</p>
+              </div>
+
+              <a href="http://viscovery.com/zh-tw/news-article?id=207" class="content-main__nav">瀏覽新聞</a>
+
+            </section>
+          </li>
+
+          <li class="case-list__list col-sm-6 col-md-4">
+            <section class="case-list__list__content">
+
+              <div class="content-main">
+                <img class="content-main__logo" src="./imgs/solution/solution-case-logo-01.jpg" />
+                <h3 class="content-main__title">udn買東西</h3>
+                <h4 class="content-main__sub-title">台灣聯合報系旗下電商</h4>
+                <h5 class="content-main__intro-title">無需受QR-code限制 隨時拍攝比價shopping</h5>
+                <p class="content-main__intro-txt">udn行動購物App結合Viscovery技術，消費者可藉由手機，拍攝刊載在報紙或雜誌上感興趣的商品，App會自動辨識出同款物品。免去消費者手機鍵入的繁瑣，只要有手機有網路就能拍攝比價，解決了「貨比三家」的購物痛點。</p>
+              </div>
+
+              <a href="http://www.viscovery.co/zh-tw/news-article?id=214" class="content-main__nav">瀏覽新聞</a>
+
+            </section>
+          </li>
+
+          <li class="case-list__list col-sm-6 col-md-4">
+            <section class="case-list__list__content">
+
+              <div class="content-main">
+                <img class="content-main__logo" src="./imgs/solution/solution-case-logo-02.jpg" />
+                <h3 class="content-main__title">第27屆台灣燈會</h3>
+                <h4 class="content-main__sub-title">台灣傳統元宵燈會</h4>
+                <h5 class="content-main__intro-title">圖像識別驚艷燈展，科技與文化撞出奇妙火花</h5>
+                <p class="content-main__intro-txt">活動設置專屬APP——「台灣燈會樂桃游」，只需對準「活力猴」小提燈的正面拍照，上傳識別成功後有神秘刮刮卡來刮開元宵佳節大禮！抓拍動作不僅使遊客與燈會展品發生強烈的趣味互動，圖像識別的新科技更會成為台灣燈會這一傳統旅遊品牌走向現代化，煥發新生機的契機。</p>
+              </div>
+
+              <a href="http://www.viscovery.co/zh-tw/news-article?id=215" class="content-main__nav">瀏覽新聞</a>
+
+            </section>
+          </li>
+
+          <li class="case-list__list col-sm-6 col-md-4">
+            <section class="case-list__list__content">
+
+              <div class="content-main">
+                <img class="content-main__logo" src="./imgs/solution/solution-case-logo-03.jpg" />
+                <h3 class="content-main__title">生活月刊</h3>
+                <h4 class="content-main__sub-title">高品味生活美學雜誌</h4>
+                <h5 class="content-main__intro-title">智慧辨識突破觀展障礙 助藝術展回歸大眾</h5>
+                <p class="content-main__intro-txt">影像辨識新技術與北京大型敦煌影像藝術展的新碰撞，創造新鮮而充滿探求慾望的藝術展體驗，吸引更多非專業的普通民眾觀賞文化展。在展區的九處地方，拍攝相應展品，便可對其一一揭秘。無論是隨時拍攝展品知曉更多歷史，或是全程拍照解密關卡遊戲，都賦予傳統藝術展更多趣味。不僅還原真實的敦煌，更喚起對民族遺產的保護。</p>
+              </div>
+
+              <a href="http://v.youku.com/v_show/id_XMTQ1MDM0OTY2NA==.html?from=y1.7-1.2" target="_blank" class="content-main__nav">瀏覽新聞</a>
+
+            </section>
+          </li>
+
+          <li class="case-list__list col-sm-6 col-md-4">
+            <section class="case-list__list__content">
+
+              <div class="content-main">
+                <img class="content-main__logo" src="./imgs/solution/solution-case-logo-04.jpg" />
+                <h3 class="content-main__title">全家便利商店</h3>
+                <h4 class="content-main__sub-title">亞洲最大國際連鎖便利店之一</h4>
+                <h5 class="content-main__intro-title">地鐵廣告新玩法</h5>
+                <p class="content-main__intro-txt">全家在江滬浙百餘地鐵站投放視頻，抓拍到大螢幕的雞腿畫面，辨識成功即可免費得便當。活動吸引一天23萬人參與，新奇小遊戲使產品形象深入人心。注入頂尖科技後，地鐵影音廣告不再限於單向度信息傳遞，趣味互動令傳播價值倍增。</p>
+              </div>
+
+              <a href="http://www.viscovery.co/zh-tw/news-article?id=226" class="content-main__nav">瀏覽新聞</a>
+
+            </section>
+          </li>
+
+          <li class="case-list__list col-sm-6 col-md-4">
+            <section class="case-list__list__content">
+
+              <div class="content-main">
+                <img class="content-main__logo" src="./imgs/solution/solution-case-logo-05.jpg" />
+                <h3 class="content-main__title">燦坤</h3>
+                <h4 class="content-main__sub-title">台灣最大3C零售連鎖零售店</h4>
+                <h5 class="content-main__intro-title">拍照辨識搶佔移動購物商機</h5>
+                <p class="content-main__intro-txt">「燦坤黃金傳說2.0」App全新改版，加入影像辨識、實時比價及行動支付等功能，將手機變成線下比價、購物工具，除提供更好消費體驗外，也強化行動商務佈局。</p>
+              </div>
+
+              <a href="http://www.viscovery.co/zh-tw/news-article?id=224" class="content-main__nav">瀏覽新聞</a>
+
+            </section>
+          </li>
+
+          <li class="case-list__list col-sm-6 col-md-4">
+            <section class="case-list__list__content">
+
+              <div class="content-main">
+                <img class="content-main__logo" src="./imgs/solution/solution-case-logo-06.jpg" />
+                <h3 class="content-main__title">小沃科技</h3>
+                <h4 class="content-main__sub-title">中國聯通子公司</h4>
+                <h5 class="content-main__intro-title">科技創意突破線上行銷瓶頸</h5>
+                <p class="content-main__intro-txt">沃商店聯合影像辨識技術，設計拍照送手機上網流量活動。拍照辨識互動闖關，完成關卡，miss沃將變身真人美少女並送上上網大禮包。開創社會化互動全新方式，雲端資料庫亦可記錄互動行為，深化二次行銷。</p>
+              </div>
+
+              <!-- <a href="#" class="content-main__nav">瀏覽新聞</a> -->
+
+            </section>
+          </li>
+
+          <li class="case-list__list col-sm-6 col-md-4">
+            <section class="case-list__list__content">
+
+              <div class="content-main">
+                <img class="content-main__logo" src="./imgs/solution/solution-case-logo-07.jpg" />
+                <h3 class="content-main__title">寧波印象城</h3>
+                <h4 class="content-main__sub-title">時尚精品購物中心</h4>
+                <h5 class="content-main__intro-title">創商場運用影像技術之先河</h5>
+                <p class="content-main__intro-txt">與《蔡康永·秘密書房》輕藝術展跨界合作，在展區內通過拍照就能與展品互動，瞭解晚清書刊、海報等背後的歷史故事，還有拍照識別解密九宮格有獎活動，將觀展與逛街巧妙結合，進行品牌加值。同時發起拍照辨識書籍「為偏鄉孩童獻愛心」活動，助力公益發展。</p>
+              </div>
+
+              <a href="http://www.viscovery.co/zh-tw/news-article?id=228" class="content-main__nav">瀏覽新聞</a>
+
+            </section>
+          </li>
+
+          <li class="case-list__list col-sm-6 col-md-4">
+            <section class="case-list__list__content">
+
+              <div class="content-main">
+                <img class="content-main__logo" src="./imgs/solution/solution-case-logo-08.jpg" />
+                <h3 class="content-main__title">鉅景科技</h3>
+                <h4 class="content-main__sub-title">亞洲智慧眼鏡領導品牌</h4>
+                <h5 class="content-main__intro-title">識別＋智慧硬體突破觀展體驗</h5>
+                <p class="content-main__intro-txt">透過智慧眼鏡觀看展品，通過及時識別，在觀看的過程中結合視覺及聽覺上的解說更了解歷史館藏的意義。智慧眼鏡與故宮博物院首次合作，成為2015年數位典藏計畫下最創新的科技突破。</p>
+              </div>
+
+              <a href="http://viscovery.com/zh-tw/news-article?id=12" class="content-main__nav">瀏覽新聞</a>
+
+            </section>
+          </li>
+
+          <li class="case-list__list col-sm-6 col-md-4">
+            <section class="case-list__list__content">
+
+              <div class="content-main">
+                <img class="content-main__logo" src="./imgs/solution/solution-case-logo-09.jpg" />
+                <h3 class="content-main__title">兩岸漢字藝術節</h3>
+                <h4 class="content-main__sub-title">台灣大陸海峽兩岸首次針對漢字藝術共同策展。</h4>
+                <h5 class="content-main__intro-title">超越紙面的想像讓觀展更有意思</h5>
+                <p class="content-main__intro-txt">透過漢字辨識，系統能即時掃描辨識並提供展品資訊。同時並不侷限語音講解的方式，可以串接影片、互動遊戲等方式，讓作品不再生澀，民眾更能在手機上了解漢字背後的精髓。</p>
+              </div>
+
+              <a href="http://viscovery.co/zh-tw/news-article?id=10" class="content-main__nav">瀏覽新聞</a>
+
+            </section>
+          </li>
+
+          <li class="case-list__list col-sm-6 col-md-4">
+            <section class="case-list__list__content">
+
+              <div class="content-main">
+                <img class="content-main__logo" src="./imgs/solution/solution-case-logo-10.jpg" />
+                <h3 class="content-main__title">讀冊生活</h3>
+                <h4 class="content-main__sub-title">TAZZE讀冊生活是台灣最大的電子零售書商之一，與一般線上書商不同的是，除了販賣新書之外，有絕大部分的使用者都使用讀冊提供的C2C二手書籍交易平台。</h4>
+                <h5 class="content-main__intro-title">掃描封面，快速搜尋，購買上架更容易</h5>
+                <p class="content-main__intro-txt">Viscovery視覺辨識技術與讀冊二手平台緊密合作，打造最適合使用者的二手書交易平台手機端。在視覺辨識技術加入之後，透過掃描書籍封面，即可知道該書籍的販賣狀況，再也不需要一本本鍵入書籍名稱、擔心版本不對等問題，解決了二手商品交易中的商品分類不便利性。</p>
+              </div>
+
+              <a href="http://viscovery.com/zh-tw/news-article?id=8" class="content-main__nav">瀏覽新聞</a>
+
+            </section>
+          </li>
+
+          <li class="case-list__list col-sm-6 col-md-4">
+            <section class="case-list__list__content">
+
+              <div class="content-main">
+                <img class="content-main__logo" src="./imgs/solution/solution-case-logo-11.jpg" />
+                <h3 class="content-main__title">安麗Amway</h3>
+                <h4 class="content-main__sub-title">全球知名營養保健品</h4>
+                <h5 class="content-main__intro-title">產品自己來說話</h5>
+                <p class="content-main__intro-txt">過去消費者必須聯繫產品服務員來購買商品，現在只需要掃描使用完的商品包裝即能線上購買，並且當中老年有老花眼的消費者忘記使用方式時，不用翻看細小的產品說明，只需要簡單一拍，就能連結到產品的介紹、影片等，更能讓消費者全面的了解和安心使用。</p>
+              </div>
+
+              <a href="http://www.viscovery.co/zh-tw/news-article?id=234" class="content-main__nav">瀏覽新聞</a>
+
+            </section>
+          </li>
+
+          <li class="case-list__list col-sm-6 col-md-4">
+            <section class="case-list__list__content">
+
+              <div class="content-main">
+                <img class="content-main__logo" src="./imgs/solution/solution-case-logo-12.jpg" />
+                <h3 class="content-main__title">格蘭利威</h3>
+                <h4 class="content-main__sub-title">全球知名酒品</h4>
+                <h5 class="content-main__intro-title">圖像識別＋AR擴增實境＋行動品酩車＝全新數位互動新體驗！</h5>
+                <p class="content-main__intro-txt">開啟APP對著活動海報拍照進行圖像識別，成功後將出現翻頁的精裝書翻頁AR動畫，介紹格蘭利威的創始故事，也能觀賞格蘭利威遠赴歐洲拍攝的質感影片，消費者更可進一步透過LBS尋香地圖尋找離使用者最近的指定店家，換取造型可愛值得珍藏的迷你酒。</p>
+              </div>
+
+              <a href="http://www.viscovery.co/zh-tw/news-article?id=230" class="content-main__nav">瀏覽新聞</a>
+
+            </section>
+          </li>
+
+          <li class="case-list__list col-sm-6 col-md-4">
+            <section class="case-list__list__content">
+
+              <div class="content-main">
+                <img class="content-main__logo" src="./imgs/solution/solution-case-logo-13.jpg" />
+                <h3 class="content-main__title">台灣精品 深植妮心</h3>
+                <h4 class="content-main__sub-title">台灣製造品牌的全球活動</h4>
+                <h5 class="content-main__intro-title">戶外廣告OOH也能如此生動</h5>
+                <p class="content-main__intro-txt">Viscovery的圖像辨識技術讓戶外廣告不再是單向的訊息傳達媒介，而原本躲在看板後訊息都能透過手機掃描全部呈現，讓更多精彩的影片、故事、內容一次傳達，跨越了傳統戶外廣告單一傳播性的障礙</p>
+              </div>
+
+              <a href="http://viscovery.com/zh-tw/news-article?id=11" class="content-main__nav">瀏覽新聞</a>
+
+            </section>
+          </li>
+
+          <!-- <li class="case-list__list col-sm-6 col-md-4">
+            <section class="case-list__list__content">
+
+              <div class="content-main">
+                <img class="content-main__logo" src="./imgs/solution/solution-case-logo-14.jpg" />
+                <h3 class="content-main__title">樂視</h3>
+                <h4 class="content-main__sub-title">影音平台行業內先驅</h4>
+                <h5 class="content-main__intro-title">“平台+內容+終端+應用”的生態圈</h5>
+                <p class="content-main__intro-txt">基於影音內全人臉、場景、商品識別與分析技術，通過專利深度學習與邏輯分析技術，抓取影音內價值訊息。</p>
+              </div>
+
+              <a href="#" class="content-main__nav">瀏覽新聞</a>
+
+            </section>
+          </li> -->
+
+          <li class="case-list__list col-sm-6 col-md-4">
+            <section class="case-list__list__content">
+
+              <div class="content-main">
+                <img class="content-main__logo" src="./imgs/solution/solution-case-logo-15.jpg" />
+                <h3 class="content-main__title">阿貍</h3>
+                <h4 class="content-main__sub-title">國內知名虛擬偶像，呆萌個性擁有動畫、表情包及週邊遊戲，受廣大粉絲歡迎與喜愛。</h4>
+                <h5 class="content-main__intro-title">未來智慧商店體驗</h5>
+                <p class="content-main__intro-txt">透過圖像識別技術，參觀者可以直接透過手機端APP掃描玩偶及各類角色商品，快速查找角色介紹，購買渠道等資訊。體驗O2O趨勢下智能零售的驚人魅力。對於商家而言，能簡單透過手機掃描即能了解詳細的商品信息，也能輕易應用在內部員工訓練上。</p>
+              </div>
+
+              <!-- <a href="#" class="content-main__nav">瀏覽新聞</a> -->
+
+            </section>
+          </li>
+
+          <li class="case-list__list col-sm-6 col-md-4">
+            <section class="case-list__list__content">
+
+              <div class="content-main">
+                <img class="content-main__logo" src="./imgs/solution/solution-case-logo-16.jpg" />
+                <h3 class="content-main__title">Oreno法義餐廳</h3>
+                <h4 class="content-main__sub-title">上海小南國引進之日本熱門法意餐廳，平價米其林餐廳，震撼上海新天地。</h4>
+                <h5 class="content-main__intro-title">智慧餐廳的全新佈局</h5>
+                <p class="content-main__intro-txt">邀請參與開幕會的媒體朋友及嘉賓，開啟一封「來自摯友的禮物」，透過開啟相機掃瞄Oreno品牌標誌、主廚及品酒師本人，品牌故事、名廚介紹立現。在一邊等待佳肴的同時能了解到Oreno的利他精神，及用最頂級的食材，平民的價格，成功征服香港、日本人的味蕾。</p>
+              </div>
+
+              <!-- <a href="#" class="content-main__nav">瀏覽新聞</a> -->
+
+            </section>
+          </li>
+
+        </ul>
+
+
+      </div>
+    </section>  <!-- Case List Block [end] -->
+
+
+  </div>
+  <%= require("../commons/footer.ejs")() %>
+</body>
+</html>

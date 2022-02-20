@@ -1,0 +1,15 @@
+.container{
+  justify-content: space-between;
+  margin: 2rem 0;
+}
+
+.element {
+  height: 100px;
+  width: 300px;
+  padding: 10px 10px;
+}
+
+.black {
+  composes: element;
+  background: black;
+}

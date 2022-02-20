@@ -1,0 +1,18 @@
+@import "coreVariables";
+
+.container {
+  background: white;
+  width: 100px;
+  color: $color-midnight;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.button {
+  padding: 10px 16px;
+  cursor: pointer;
+  &:hover {
+    background: #E9EDEF;
+  }
+}

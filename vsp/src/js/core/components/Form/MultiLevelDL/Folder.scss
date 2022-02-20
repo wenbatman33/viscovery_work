@@ -1,0 +1,25 @@
+@import "coreVariables";
+@import "base";
+
+.container {
+  @extend .item;
+}
+
+.items__area {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.icon {
+  margin-right: 4px;
+  text-indent: 0;
+  transition: transform 200ms;
+}
+
+.display__icon {
+  composes: icon;
+  transform: rotate(90deg);
+}

@@ -1,0 +1,29 @@
+@import 'coreVariables';
+
+.info-action-group {
+  display : flex;
+  padding : $padding-small;
+}
+
+.video-name{
+  @include single-line-ellipsis;
+  color : $color-chocolate;
+  width : 50%;
+  padding : 0 $padding-tiny 0 30px;
+}
+
+.ad-number {
+  color : $color-boulder;
+  width : 20%;
+  padding : 0 $padding-tiny 0 0;
+}
+
+.update-time{
+  color : $color-boulder;
+  width: 30%;
+  padding : 0 $padding-tiny 0 0;
+}
+
+.block-container {
+  padding : 0 $padding-small 0 50px;
+}

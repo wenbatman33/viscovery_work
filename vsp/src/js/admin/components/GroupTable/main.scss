@@ -1,0 +1,15 @@
+@import 'coreVariables';
+
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+.top {
+  position: fixed;
+  padding: 12px 2% 12px 2%;
+  width: calc(100% - 256px);
+  background-color: #E5E5E5;
+  display: flex;
+  justify-content: space-between;
+}

@@ -1,0 +1,71 @@
+@import 'coreVariables';
+@mixin flex{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+.container {
+  @include flex;
+  flex-direction: column;
+  position : relative;
+  width : 100%;
+  height : 100%;
+  overflow-y: hidden;
+}
+.HeadSubNav{
+  @include flex;
+  width: 100%;
+  height: 50px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10%;
+  background: #fff;
+  border: 1px solid #E7E7E7;
+  ul{
+    margin: 0;
+    height: 50px;
+    line-height:47px;
+    li{
+      cursor: pointer;
+      height: 50px;
+      display: inline-block;
+      position: relative;
+      margin-right: 10px;
+      list-style: none;
+      padding: 0 1em;
+      span{
+        cursor: pointer;
+        color: rgba(26,10,10,.2);
+        text-decoration: none;
+      }
+    }
+    li:after, li.active:after {
+      content: '';
+      display: block;
+      line-height:45px;
+      margin: auto;
+      height: 3px;
+      width: 0px;
+      background: transparent;
+      transition: width .3s ease, background-color .3s ease;
+    }
+    li.active {
+      span{
+        color: rgba(26,10,10,1);
+      }
+    }
+    li:hover {
+      span {
+        color: rgba(26,10,10,1);
+      }
+    }
+    li:hover:after, li.active:after {
+      width: 100%;
+      background: #F31F00;
+      span{
+        color: rgba(26,10,10,1);
+      }
+    }
+  }
+}

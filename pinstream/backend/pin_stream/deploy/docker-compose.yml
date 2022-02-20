@@ -1,0 +1,14 @@
+version: '2'
+services:
+  hrsapi:
+    build: .
+    image: pinstream_img
+    container_name: pinstream
+    privileged: true
+    ports:
+     - "1092:8085"
+    volumes:
+      - ${PWD}/..:/opt/pinstream
+      - /var/log:/opt/var
+    restart: always
+    command: "gunicorn -c gunicorn_config.py flask_app:app"

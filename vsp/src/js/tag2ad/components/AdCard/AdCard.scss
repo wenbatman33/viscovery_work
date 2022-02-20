@@ -1,0 +1,112 @@
+@import 'coreVariables';
+
+$img-width : 192px;
+$img-height : 108px;
+
+.ad-card {
+  position: relative;
+  width: $img-width;
+  margin-left : $padding-small;
+  box-sizing : content-box;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 2px;
+}
+.overlay {
+  background: rgba(26, 10, 10, 0.5);
+  opacity: 1.00;
+  border-radius: 2px;
+  width : $img-width;
+  height : $img-height;
+  position : absolute;
+  z-index : 5;
+}
+
+.overlay-show {
+  composes: overlay;
+  visibility: visible;
+}
+
+.overlay-hidden {
+  composes: overlay;
+  visibility: hidden;
+}
+
+.thumbnail {
+  position: absolute;
+  width: $img-width;
+  height: $img-height;
+  z-index : 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.selected {
+  border : 5px solid $color-river;
+}
+.checkbox-container {
+  position: absolute;
+  left : 6px;
+  top : 6px;
+  z-index : 10;
+}
+
+.overlap-container {
+  position: relative;
+  width: $img-width;
+  height: $img-height;
+}
+
+.time{
+  font-size : 10px;
+  position : absolute;
+  background: $color-blackhole;
+  color : $color-ivory;
+  z-index : 3;
+  bottom:0;
+  left:0px;
+  padding: 0 $padding-tiny;
+  cursor : default;
+}
+
+.checked-icon {
+  position : absolute;
+  width : 20px;
+  height : 20px;
+  top : 0;
+  left : 0;
+  z-index : 7;
+  background : $color-river;
+  color : white;
+}
+
+.fake-checkbox {
+  position: absolute;
+  left : 6px;
+  top : 6px;
+  z-index : 10;
+  width : 1.5em;
+  height: 1.5em;
+  background: white;
+  border : none;
+  &:hover {
+    border: 1px solid $color-river;
+  }
+}
+
+.info-container {
+  width : 100%;
+  font-size : 12px;
+  padding: $padding-tiny;
+}
+
+.tags {
+  @include single-line-ellipsis;
+  color : $color-boulder;
+  padding-top : 3px;
+}
+
+.disabled {
+  filter: opacity(60%);
+  pointer-events: none;
+}

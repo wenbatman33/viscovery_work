@@ -1,0 +1,62 @@
+.base{
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(74, 74, 74, 0);
+  opacity: 0;
+  z-index: -1;
+  transition: z-index 0s 0.2s, background 0.2s ease 0.4s, opacity 0.2s ease;
+}
+
+.baseShow{
+  composes: base;
+  background: rgba(74, 74, 74, 0.8);
+  opacity: 1;
+  z-index: 1000;
+  transition: background 0.2s ease, opacity 0.2s ease;
+}
+
+.box{
+  z-index: 900;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fefefe;
+  border-radius: 10px;
+}
+
+.boxShow{
+  composes: box;
+  transform: translate(-50%, -50%);
+}
+
+.header{
+  position: relative;
+  display: none;
+}
+
+.headerShow{
+  composes: header;
+  display: block;
+}
+
+.content{
+  padding: 3rem;
+}
+
+.contentShow{
+  composes: content;
+}
+
+.close{
+  position: absolute;
+  z-index: 950;
+  right: 0;
+}
+
+.closeShow{
+  composes: close;
+}

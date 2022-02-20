@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="8px" height="5px" viewBox="0 0 8 5" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-arrow-down-xs-white</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="mobile" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="mbi-3.1-解決方案_Fixed-menu" transform="translate(-207.000000, -70.000000)" fill="#FFFFFF">
+            <g id="menu" transform="translate(0.000000, 50.000000)">
+                <g id="Group-2" transform="translate(123.000000, 10.000000)">
+                    <path d="M89.8560854,12.846536 L86.8388493,15.8563313 C86.6469167,16.0478896 86.3357307,16.0478896 86.1438913,15.8563313 C85.9520362,15.6649436 85.9520362,15.354531 86.1438913,15.1631587 L88.8136794,12.4999497 L86.1439689,9.8368336 C85.9521139,9.64536834 85.9521139,9.33498673 86.1439689,9.14359894 C86.3358239,8.95213369 86.6469943,8.95213369 86.838927,9.14359894 L89.8561631,12.1534408 C89.9520906,12.2491811 90,12.3745267 90,12.4999342 C90,12.6254036 89.9519974,12.7508421 89.8560854,12.846536 L89.8560854,12.846536 Z" id="icon-arrow-down-xs-white" transform="translate(88.000000, 12.500000) scale(-1, 1) rotate(90.000000) translate(-88.000000, -12.500000) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

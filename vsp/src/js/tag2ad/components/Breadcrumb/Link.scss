@@ -1,0 +1,18 @@
+@import 'coreVariables';
+$font-size : 0.875rem;
+.link {
+  display : block;
+  width : auto;
+  line-height : 3rem;
+  padding : 0 $padding-small;
+  cursor: pointer;
+  color : $color-mild;
+  font-size : $font-size;
+}
+
+.selected {
+  border-bottom: solid;
+  border-color: $color-brand;
+  color : $color-blackhole;
+  font-size : $font-size;
+}

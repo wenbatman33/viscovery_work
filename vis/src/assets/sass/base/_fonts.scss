@@ -1,0 +1,168 @@
+// font face
+@font-face {
+    font-family: 'GothamXlight';
+    src:url('../fonts/GOTHAM-XLIGHT.eot') format('eot'),
+    /* Pretty Modern Browsers */
+    url('../fonts/GOTHAM-XLIGHT.woff') format('woff'),
+    /* Pretty Modern Browsers */
+    url(  '../fonts/GOTHAM-XLIGHT.ttf') format('truetype');
+    /* Pretty Modern Browsers */
+}
+@font-face {
+    font-family: 'GothamLight';
+    src:url('../fonts/Gotham-Light.eot') format('eot'),
+    /* Pretty Modern Browsers */
+    url('../fonts/Gotham-Light.woff') format('woff'),
+    /* Pretty Modern Browsers */
+    url(  '../fonts/Gotham-Light.ttf') format('truetype');
+    /* Pretty Modern Browsers */
+}
+@font-face {
+    font-family: 'GothamThin';
+    src:url('../fonts/GOTHAM-THIN.eot') format('eot'),
+    /* Pretty Modern Browsers */
+    url('../fonts/GOTHAM-THIN.woff') format('woff'),
+    /* Pretty Modern Browsers */
+    url(  '../fonts/GOTHAM-THIN.ttf') format('truetype');
+    /* Pretty Modern Browsers */
+}
+@font-face {
+    font-family: 'Gotham';
+    src:url('../fonts/Gotham-Regular.eot') format('eot'),
+    /* Pretty Modern Browsers */
+    url('../fonts/Gotham-Regular.woff') format('woff'),
+    /* Pretty Modern Browsers */
+    url(  '../fonts/Gotham-Regular.ttf') format('truetype');
+    /* Pretty Modern Browsers */
+}
+@font-face {
+    font-family: 'GothamMed';
+    src:url('../fonts/Gotham-Medium.eot') format('eot'),
+    /* Pretty Modern Browsers */
+    url('../fonts/Gotham-Medium.woff') format('woff'),
+    /* Pretty Modern Browsers */
+    url(  '../fonts/Gotham-Medium.ttf') format('truetype');
+    /* Pretty Modern Browsers */
+}
+@font-face {
+    font-family: 'GothamBold';
+    src:url('../fonts/Gotham-Bold.eot') format('eot'),
+    /* Pretty Modern Browsers */
+    url('../fonts/Gotham-Bold.woff') format('woff'),
+    /* Pretty Modern Browsers */
+    url(  '../fonts/Gotham-Bold.ttf') format('truetype');
+    /* Pretty Modern Browsers */
+}
+@font-face {
+    font-family: 'GothamBlack';
+    src:url('../fonts/GOTHAM-BLACK.eot') format('eot'),
+    /* Pretty Modern Browsers */
+    url('../fonts/GOTHAM-BLACK.woff') format('woff'),
+    /* Pretty Modern Browsers */
+    url(  '../fonts/GOTHAM-BLACK.TTF') format('truetype');
+    /* Pretty Modern Browsers */
+}
+// font family
+
+.ff-Gotham-Reglular {
+    font-family: 'Gotham' !important;
+}
+
+.ff-Gotham-Bold {
+    font-family: 'GothamBold' !important;
+}
+// font size
+
+.font-h1-xxl {
+    letter-spacing: 1px;
+    font-size: $font-s-70;
+    font-weight: 800;
+}
+
+.font-h1-xl {
+    letter-spacing: 1px;
+    font-size: $font-s-46;
+    font-weight: 500;
+}
+
+.font-h1-lg {
+    letter-spacing: 1px;
+    font-size: $font-s-36;
+    font-weight: 500;
+}
+
+.font-h1 {
+    letter-spacing: 1px;
+    font-size: $font-s-32;
+    font-weight: 500;
+}
+
+.font-h2-lg {
+    letter-spacing: 1px;
+    font-size: $font-s-30;
+    font-weight: 400;
+}
+
+.font-h2 {
+    letter-spacing: 1px;
+    font-size: $font-s-24;
+    font-weight: 500;
+}
+
+.font-h3 {
+    letter-spacing: 1px;
+    font-size: $font-s-22;
+    font-weight: 500;
+}
+
+.font-h6 {
+    letter-spacing: 1px;
+    font-size: $font-s-18;
+    font-weight: 600;
+}
+
+.font-h6-sm {
+    letter-spacing: 1px;
+    font-size: $font-s-16;
+    font-weight: 600;
+}
+
+.font-p-lg {
+    letter-spacing: 1px;
+    font-size: $font-s-15;
+    font-weight: 400;
+}
+
+.font-p-md {
+    letter-spacing: 1px;
+    font-size: $font-s-14;
+    font-weight: 400;
+}
+
+.font-p {
+    letter-spacing: 1px;
+    font-size: $font-s-13;
+    font-weight: 400;
+}
+
+.font-p-sm {
+    letter-spacing: 1px;
+    font-size: $font-s-12;
+    font-weight: 400;
+}
+
+.font-p-xs {
+    letter-spacing: 1px;
+    font-size: $font-s-11;
+    -webkit-transform: scale(0.92);
+    /*12×0.92=11.04*/
+    font-weight: 500;
+}
+
+.font-small {
+    letter-spacing: 1px;
+    font-size: $font-s-10;
+    -webkit-transform: scale(0.84);
+    /*12×0.84=10.08*/
+    font-weight: 500;
+}

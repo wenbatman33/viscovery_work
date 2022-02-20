@@ -1,0 +1,91 @@
+@import 'coreVariables';
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  > .header {
+    flex: initial;
+    width: 100%;
+    padding-right: 15%;
+    background: white;
+    border: 1px solid $color-sand;
+  }
+
+  > .body {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    padding: $padding-medium;
+
+    > .left {
+      flex: initial;
+      flex-direction: column;
+      display: flex;
+      margin-right: $padding-medium;
+
+      > .player {
+        flex: initial;
+        width: 510px;
+        height: 287px;
+        margin-bottom: $padding-medium;
+      }
+
+      > .chart {
+        flex: initial;
+        width: 510px;
+        height: 360px;
+      }
+    }
+
+    > .right {
+      flex: initial;
+
+      > .tags {
+        width: 510px;
+        height: 680px;
+      }
+    }
+  }
+}
+
+.header {
+  display: flex;
+  width: 100%;
+
+  .back {
+    flex: initial;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 100%;
+    margin-right: $padding-tiny;
+    font-size: 24px;
+    border-right: 1px solid $color-sand;
+  }
+
+  .videos {
+    flex: initial;
+    display: flex;
+    align-items: center;
+    width: 240px;
+    height: 100%;
+  }
+
+  .placeholder {
+    flex: 1;
+  }
+
+  .model {
+    flex: initial;
+    height: 100%;
+    padding: $padding-small $padding-tiny $padding-small $padding-tiny;
+    cursor: pointer;
+  }
+
+  .model.selected {
+    border-bottom: 2px solid $color-brand;
+  }
+}

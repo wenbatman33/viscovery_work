@@ -1,0 +1,21 @@
+@import 'coreVariables';
+
+.form {
+  width: 300px;
+
+  > .message {
+    text-align: center;
+    margin-bottom: $padding-medium;
+  }
+
+  > .actions {
+    text-align: center;
+
+    > * {
+      margin-right: $padding-small;
+    }
+    > *:last-child {
+      margin-right: 0;
+    }
+  }
+}

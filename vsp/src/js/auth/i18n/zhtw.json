@@ -1,0 +1,15 @@
+{
+  "contactLabel": "聯絡管理員",
+  "contactPrompt": "請尋求管理員協助來恢復密碼",
+  "loginPrompt": "返回登入",
+  "rolePrompt": "選擇登入角色",
+  "loginPrompt": "登入至VSP",
+  "expirePrompt": "登入已過期，請重新登入。",
+  "incorrectPrompt": "帳號或密碼輸入錯誤，請重新嘗試!",
+  "accountLabel": "帳號",
+  "accountPrompt": "輸入帳號",
+  "passwordLabel": "密碼",
+  "passwordPrompt": "輸入密碼",
+  "forgetPassword": "忘記密碼",
+  "submit": "確定"
+}

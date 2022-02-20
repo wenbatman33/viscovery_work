@@ -1,0 +1,21 @@
+@import 'coreVariables';
+
+.option {
+  display: flex;
+  align-items: center;
+  margin-bottom: $padding-tiny;
+
+  [type=checkbox] {
+    margin: 0 $padding-tiny 0 0;
+  }
+}
+
+.option:last-child {
+  margin-bottom: 0;
+}
+
+.select {
+  width: 100%;
+  height: 60px;
+  padding: 12px 24px;
+}

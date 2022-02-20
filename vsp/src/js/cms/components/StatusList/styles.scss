@@ -1,0 +1,115 @@
+@import 'coreVariables';
+
+.panel {
+  padding: $padding-large;
+  margin-bottom: $padding-medium;
+  background-color: white;
+  border-color: $color-boulder;
+  border-radius: 5px;
+  text-align: center;
+  color: $color-boulder;
+
+  > div {
+    margin-bottom: $padding-small;
+  }
+}
+
+.list {
+  margin-bottom: $padding-medium;
+  background-color: white;
+  border-color: $color-boulder;
+  border-radius: 5px;
+
+  hr {
+    margin: 0;
+    background-color: $color-boulder;
+  }
+}
+
+.list:last-child {
+  margin-bottom: 0;
+}
+
+.header {
+  display: flex;
+  padding: $padding-small;
+}
+
+.content {
+  padding: $padding-small $padding-medium;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+
+  > * {
+    padding-right: $padding-small;
+  }
+
+  > *:last-child {
+    padding-right: 0;
+  }
+}
+
+$name-col-width : 40%;
+$job-col-width : 20%;
+$time-col-width: 30%;
+$action-col-width: 10%;
+
+.name {
+  display: inline-block;
+  width: $name-col-width;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.job {
+  display: flex;
+  width: $job-col-width;
+  align-items: center;
+}
+
+.timestamp {
+  display: inline-block;
+  width: $time-col-width;
+}
+
+.action {
+  display: inline-block;
+  width: $action-col-width;
+
+  > a {
+    color: $color-river;
+    cursor: pointer;
+  }
+}
+
+.header-row {
+  padding: $padding-small $padding-medium;
+  background : $color-fog;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.header-name {
+  width: $name-col-width;
+}
+
+.header-job {
+  width: $job-col-width;
+}
+
+.header-time {
+  width: $time-col-width;
+}
+
+.header-action {
+  width: $action-col-width;
+}
+
+.length {
+  color: $color-river;
+}

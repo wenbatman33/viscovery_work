@@ -1,0 +1,42 @@
+@import "coreVariables";
+
+.container {
+  width: 100%;
+  position: relative;
+  background: white;
+}
+
+.hide {
+  @extend .options__area;
+  display: none;
+}
+
+.display__area {
+  display: block;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 8px 0 8px 8px;
+  color: $color-blackhole;
+}
+
+.placeholder {
+  color: $color-boulder;
+}
+
+.options__area {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  position: absolute;
+  width: 100%;
+  max-height: 200px;
+  overflow-y: scroll;
+  z-index: 10;
+  background: white;
+}
+
+.icon {
+  display: inline-block;
+  height: 100%;
+  padding: 10px 14px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}

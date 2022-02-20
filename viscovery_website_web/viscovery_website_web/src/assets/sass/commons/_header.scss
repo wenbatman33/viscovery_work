@@ -1,0 +1,300 @@
+$menu-mobile-min-h: 400px;
+$logo-w: 180px;
+
+.visc-header{
+  position: fixed;
+  width: 100%;
+  height: $visc-header-h;
+  left: 0;
+  top: 0;
+  text-align: right;
+  z-index: $z-index-top;
+  background-color: $color-white;
+  // @extend .box-shadow-s;
+
+  @media only screen and (max-width: $win-screen-sm - 1){
+    height: $visc-header-mobile-h;
+  }
+
+  .container-med{
+
+    &:before{
+      content:'';
+      width: 0px;
+      height: inherit;
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    @media only screen and (max-width: $win-screen-sm - 1){
+      width: 100%;
+    }
+
+  }
+
+  /* logo [start] */
+  &__logo{
+    font-size: 1px;
+    line-height: 9999;
+    color: $color-white-5a;
+    display: block;
+    width: $logo-w;
+    height: $visc-logo-h;
+    overflow: hidden;
+    position: absolute;
+    left: $container-padding-w;
+    top: calc( #{$visc-header-h/2 - $visc-logo-h/2 } );
+    background-image: url('../imgs/logo.svg');
+    @extend .bg-contain;
+
+    @media only screen and (max-width: $win-screen-sm - 1){
+      height: $visc-logo-mobile-h;
+      left: calc( 50vw - #{$logo-w/2} );
+      top: calc( #{$visc-header-mobile-h/2 - $visc-logo-mobile-h/2 } );
+    }
+
+    .nav-block{
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      cursor: pointer;
+    }
+
+  }  /* logo [end] */
+
+
+  /* Menu Block [start] */
+  &__menu-block{
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    right: 0;
+    top: 0;
+    @extend .animation-m;
+
+    @media only screen and (max-width: $win-screen-sm - 1){
+      position: fixed;
+      z-index: $z-index-high;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      min-height: $menu-mobile-min-h;
+      overflow-y: auto;
+      background-color: $color-dark-90a;
+
+      &--hide{
+        top: -100vh;
+        opacity: 0;
+      }
+
+    }
+
+    .lan-select{
+      display: inline-block;
+      position: absolute;
+      width: 100%;
+      height: 50px;
+      line-height: 50px;
+      bottom: 20px;
+      text-align: center;
+      color: $color-white;
+      font-size: $font-s-18;
+
+      &__selected-title{
+        display: inline-block;
+        margin-right: 10px;
+      }
+
+      &__arrow{
+        display: inline-block;
+        @extend .animation-s;
+      }
+
+      &--open{
+
+        .lan-select__arrow{
+          transform: rotate(180deg);
+        }
+
+      }
+
+    }
+
+  }  /* Menu Block [end] */
+
+  .mobile-menu{
+    display: block;
+    width: $visc-header-mobile-h;
+    height: $visc-header-mobile-h;
+    position: absolute;
+    z-index: $z-index-high;
+    top: 0;
+    left: 0;
+    background-position: center;
+    background-size: 18px 14px;
+    background-repeat: no-repeat;
+    background-image: url('../imgs/icons/icon-m-menu.svg');
+    @extend .animation-s;
+
+    &--hide{
+      opacity: 0;
+      transform: rotate(45deg);
+      z-index: $z-index-low;
+    }
+
+  }
+
+  .mobile-btn-close{
+    display: block;
+    width: $visc-header-mobile-h;
+    height: $visc-header-mobile-h;
+    position: absolute;
+    z-index: $z-index-high;
+    top: 0;
+    left: 0;
+    background-position: center;
+    background-size: 16px 16px;
+    background-repeat: no-repeat;
+    background-image: url('../imgs/icons/icon-close-white.svg');
+    @extend .animation-s;
+
+    &--hide{
+      opacity: 0;
+      transform: rotate(-45deg);
+      z-index: $z-index-low;
+    }
+
+  }
+
+
+  /* Language Menu [start] */
+  .lang-menu{
+    display: block;
+    margin-bottom: 13px;
+    line-height: $font-s-12;
+    margin-right: -6px;
+    position: relative;
+    z-index: $z-index-med;
+    @extend .animation-s;
+
+    $nav-padding: 10px;
+
+    &__nav{
+      font-weight: 500;
+      cursor: pointer;
+      margin-right: -4px;
+      padding-left: $nav-padding;
+      padding-right: $nav-padding;
+      border-left: 1px solid $color-grey;
+      color: $color-dark-40a;
+      font-family: PingFangTC,PingFangSC,Microsoft JhengHei,'微軟正黑體',Arial,sans-serif !important;
+
+      &:first-child{
+        border-left: none;
+      }
+
+      &:hover{
+        color: $color-dark-40a;
+      }
+
+      &--on{
+        // color: $color-green;
+        color: $color-dark-60a;
+        font-weight: 800;
+
+        .lang-en & {
+          font-family: 'GothamBold';
+        }
+
+      }
+
+    }
+
+    @media only screen and (max-width: $win-screen-sm - 1){
+      display: inline-block;
+      position: absolute;
+      width: 200px;
+      bottom: 50px;
+      left: calc(50% - 100px);
+      overflow: hidden;
+      border-radius: $border-r-s;
+      background-color: $color-white;
+
+      &__nav{
+        display: block;
+        padding: 15px;
+        font-size: $font-s-16;
+        margin-right: 0px;
+        text-align: left;
+        border-bottom: 1px solid $color-grey-light;
+      }
+
+      &--hide{
+        height: 0px;
+        opacity: 0;
+        bottom: 40px;
+      }
+
+    }
+
+  }  /* Language Menu [end] */
+
+
+  /* Main Menu [start] */
+  .main-menu{
+    display: block;
+    line-height: $font-s-15;
+
+    &__nav{
+      display: inline-block;
+      letter-spacing: 1px;
+      font-weight: 300;
+      cursor: pointer;
+      padding-left: 35px;
+
+      .lang-en & {
+        padding-left: 38px;
+
+        @media only screen and (max-width: $win-screen-sm - 1){
+          padding-left: 0px;
+        }
+
+      }
+
+      &:hover{
+        color: $color-main-red;
+      }
+
+      &--on{
+        font-weight: 400;
+        color: $color-main-red !important;
+      }
+
+    }
+
+    @media only screen and (max-width: $win-screen-sm - 1){
+      padding-top: 40px;
+      min-height: calc( #{$menu-mobile-min-h} + 80px );
+
+      &__nav{
+        position: relative;
+        text-align: center;
+        display: block;
+        margin:0 auto;
+        padding: 20px 0px;
+        color: $color-white;
+        font-weight: 500;
+        font-size: $font-s-18;
+        line-height: $font-s-28;
+
+      }
+
+    }
+
+  }  /* Main Menu [end] */
+
+
+}

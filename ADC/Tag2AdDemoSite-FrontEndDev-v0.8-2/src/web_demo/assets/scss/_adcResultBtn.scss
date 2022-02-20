@@ -1,0 +1,174 @@
+.adCategoyBtn {
+    cursor: pointer;
+    border: 0;
+    box-sizing: border-box;
+    padding-left: 10px;
+    box-shadow: inset 0 0 0 1px $blueBlack20;
+    color: $blueBlack50;
+    vertical-align: middle;
+    height: 60px;
+    line-height: 60px;
+    margin: 10px 0;
+    font-weight: 300;
+    background: #fff; // transition: background .6s;
+    &:hover {
+        background: $blueBlack10;
+        color: $blueBlack80;
+        .svgIcon {
+            .keyPoint {
+                opacity: 0;
+                animation: Anim_Flash .2s;
+                animation-fill-mode: forwards;
+            }
+            .tag {
+                position: absolute;
+                opacity: 0;
+                animation: Anim_GoTopLeft .2s;
+                animation-delay: .2s;
+                animation-fill-mode: forwards;
+            }
+        }
+    }
+    .svgIcon {
+        vertical-align: middle;
+        margin: 0 6px 0 0;
+        position: relative;
+        .keyPoint {
+            animation: Anim_fadeIn 0s;
+            opacity: 1;
+            animation-fill-mode: forwards;
+        }
+        .Rectangle {
+            position: absolute;
+            animation: Anim_fadeIn 0s;
+            animation-fill-mode: forwards;
+        }
+        .tag {
+            position: absolute;
+            opacity: 1;
+            transform: translate(0px, 0px);
+            animation-fill-mode: forwards;
+        }
+    }
+}
+
+.adKeyPointList {
+    // @include breakpoint(xs) {
+    //     display: none;
+    // }
+    // @include breakpoint(sm) {
+    //     display: none;
+    // }
+}
+
+.adKeyPointBtn {
+    cursor: pointer;
+    float: left;
+    border: 0;
+    box-sizing: border-box;
+    padding-left: 10px;
+    box-shadow: inset 0 0 0 1px $blueBlack60;
+    color: $blueBlack30;
+    vertical-align: middle;
+    height: 60px;
+    width: auto;
+    padding: 0 10px;
+    line-height: 60px;
+    margin: 5px;
+    font-weight: 300;
+    background: $blueBlack80;
+    transition: background 0s, color 0s;
+    &:hover {
+        background: $blueBlack70;
+        color: $white;
+        .svgIcon {
+            .keyPoint {
+                opacity: 0;
+                animation: Anim_Flash .2s;
+                animation-fill-mode: forwards;
+            }
+            .tag {
+                position: absolute;
+                opacity: 0;
+                animation: Anim_GoBottomRight .2s;
+                animation-delay: .2s;
+                animation-fill-mode: forwards;
+            }
+        }
+    }
+    .svgIcon {
+        vertical-align: middle;
+        margin: 0 6px 0 0;
+        position: relative;
+        .keyPoint {
+            animation: Anim_fadeIn .3s;
+            opacity: 0;
+            animation-fill-mode: forwards;
+        }
+        .Rectangle {
+            position: absolute;
+            animation: Anim_fadeIn .3s;
+            animation-delay: .3s;
+            animation-fill-mode: forwards;
+        }
+        .tag {
+            position: absolute;
+            opacity: 0;
+            animation: Anim_fadeIn .2s;
+            transform: translate(0px, 0px);
+            animation-fill-mode: forwards;
+        }
+    }
+}
+
+.adKeyPointBtnActive {
+    background: #000;
+    color: #fff;
+    transition: background 0s, color 0s;
+}
+
+@keyframes Anim_fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes Anim_GoTopLeft {
+    0% {
+        transform: translate(10px, 10px);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(0px, 0px);
+        opacity: 1;
+    }
+}
+
+@keyframes Anim_GoBottomRight {
+    0% {
+        transform: translate(-10px, -10px);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(0px, 0px);
+        opacity: 1;
+    }
+}
+
+@keyframes Anim_Flash {
+    0% {
+        opacity: 0;
+    }
+    33% {
+        opacity: 1;
+    }
+    66% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

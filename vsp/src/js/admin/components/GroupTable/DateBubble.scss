@@ -1,0 +1,31 @@
+@import "coreVariables";
+
+.container {
+  &:hover > .container_box {
+    display: block;
+  }
+}
+
+.container_box {
+  position: relative;
+  display: none;
+}
+
+.container_trigger {
+  position: absolute;
+  border-radius: 4px;
+  padding: 8px 16px;
+  box-shadow: 0px 5px 10px 2px $color-mild;
+  background: white;
+  z-index: 10;
+  width: 220px;
+}
+
+.statusWording {
+  text-decoration: underline;
+  color: $color-brand;
+}
+
+.title {
+  text-align: left;
+}

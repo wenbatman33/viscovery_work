@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" data-page="index">
+<head>
+  <meta charset="UTF-8">
+  <base href="<%= htmlWebpackPlugin.options.base %>">
+  <meta name="viewport" content="width=device-width, user-scalable=0, initial-scale=1">
+  <%= require("../../meta.ejs")() %>
+  <title>Viscovery</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <%= require("../commons/vendorJS.ejs")() %>
+  <%= require("../../ga.ejs")() %>
+</head>
+<body>
+  <%= require("../commons/header.ejs")() %>
+  <div class='visc-main index-main'>
+
+    <!-- Hero Block -->
+    <div class="hero-block hero-block__no-msk">
+      <div id="waves" class="index-main__waves"></div>
+      <div class="recognition" id="recognition-area">
+        <canvas id="recognition" class="recognition__man"></canvas>
+      </div>
+      <div class="recognition__info">
+        <div class="container-med recognition__area">
+          <div class="recognition__description">
+            <h3 class="recognition__title">智慧影音搜索的無限可能</h3>
+            <p class="recognition__sub ff-Gotham-Reglular">Visual Search, Simply Smarter </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Round Plan -->
+    <div class="round-plan">
+      <div class="container-med">
+        <div class="round-plan__title">
+          <img class="round-plan__title__logo" src="imgs/round-plan/VDS.svg" />
+          <h3 class="color-white round-plan__title__text">Video Discovery Service<br/>智能影音探索平台<br/>五大應用解決方案</h3>
+        </div>
+      </div>
+
+      <div class="round-plan__box">
+        <div class="round-plan__container">
+          <div class="round-plan__plan">
+            <h4 class="round-plan__plan-text round-plan__plan-text--position-1">影音大數據<br/>搜索</h4>
+            <h4 class="round-plan__plan-text round-plan__plan-text--position-2">IoT<br/>解決方案</h4>
+            <h4 class="round-plan__plan-text round-plan__plan-text--position-3">客制化<br/>服務</h4>
+            <h4 class="round-plan__plan-text round-plan__plan-text--position-4">影音內容<br/>互動</h4>
+            <h4 class="round-plan__plan-text round-plan__plan-text--position-5">情境式<br/>廣告</h4>
+
+            <div class="round-plan__tip round-plan__tip--position-1">
+              <img class="tip-line-1" src="imgs/round-plan/tip-line-1.svg" />
+              <p class="tip-title">V-SEARCH</p>
+              <p class="tip-description tip-description--zh-hant">搜尋影音關鍵畫面 提升搜索準確度</p>
+            </div>
+            <div class="round-plan__tip round-plan__tip--position-2">
+              <img class="tip-line-2" src="imgs/round-plan/tip-line-2.svg" />
+              <p class="tip-title">IoT</p>
+              <p class="tip-description">大數據分析消費者行為<br/>智慧零售 智慧家居 全方位應用</p>
+            </div>
+            <div class="round-plan__tip round-plan__tip--position-3">
+              <img class="tip-line-3" src="imgs/round-plan/tip-line-3.svg" />
+              <p class="tip-title">客制化</p>
+              <p class="tip-description">專屬識別服務<br/>需求客制影音服務解決方案</p>
+            </div>
+            <div class="round-plan__tip round-plan__tip--position-4">
+              <img class="tip-line-4" src="imgs/round-plan/tip-line-4.svg" />
+              <p class="tip-title">V-BUY</p>
+              <p class="tip-description">解讀影音內容 分析用戶行為<br/>產品精準推薦 實現內容變現</p>
+            </div>
+            <div class="round-plan__tip round-plan__tip--position-5">
+              <img class="tip-line-5" src="imgs/round-plan/tip-line-5.svg" />
+              <p class="tip-title">KEY<br/>MOMENT</p>
+              <p class="tip-description">情境式廣告投放<br/>最大化投放效果</p>
+            </div>
+
+          </div>
+          <canvas id="round-plan" class="round-plan__canvas" height="540"></canvas>
+        </div>
+      </div>
+
+      <!-- mobile tip -->
+      <div class="round-plan__mobile font-h6 color-white">
+        <span class="round-plan__mobile-tip"><p class="tip-1"><span class="color-green">V-SEARCH</span> 搜尋影音關鍵畫面 提升搜索準確度</p></span>
+        <span class="round-plan__mobile-tip"><p class="tip-2"><span class="color-green">IoT</span> 大數據分析消費者行為 智慧零售 智慧家居 全方位應用</p></span>
+        <span class="round-plan__mobile-tip"><p class="tip-3"><span class="color-green">定制化</span> 專屬識別服務 需求客制影音服務解決方案</p></span>
+        <span class="round-plan__mobile-tip"><p class="tip-4"><span class="color-green">V-BUY</span> 解讀影音內容 分析用戶行為 產品精準推薦 實現內容變現</p></span>
+        <span class="round-plan__mobile-tip"><p class="tip-5"><span class="color-green">KEY MOMENT</span> 情境式廣告投放 最大化投放效果</p></span>
+
+        <ol class="round-plan__dots-container">
+          <li class="round-plan__dots"></li>
+          <li class="round-plan__dots"></li>
+          <li class="round-plan__dots"></li>
+          <li class="round-plan__dots"></li>
+          <li class="round-plan__dots"></li>
+        </ol>
+      </div>
+    </div>
+
+
+    <!-- Advantage Block -->
+    <div class="adv-block">
+      <h3 class="adv-block__title font-h1 color-dark">VDS平台3大優勢</h3>
+      <%= require("../commons/intro-list.ejs")() %>
+    </div>
+
+
+    <!-- Partner Block -->
+    <%= require("../commons/partner-list.ejs")() %>
+
+
+  </div>
+  <%= require("../commons/footer.ejs")() %>
+
+  <script src="scripts/three-js/three.min.js"></script>
+  <script src="scripts/three-js/renderers/Projector.js"></script>
+  <script src="scripts/three-js/renderers/CanvasRenderer.js"></script>
+  <script src="scripts/three-js/Detector.js"></script>
+</body>
+</html>

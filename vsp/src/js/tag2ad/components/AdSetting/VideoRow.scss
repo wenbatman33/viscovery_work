@@ -1,0 +1,40 @@
+@import 'coreVariables';
+
+.root-container {
+  padding-bottom: $padding-small;
+}
+.blocks-container {
+  width: 100%;
+  height: auto;
+  box-sizing: content-box;
+}
+
+.info-container {
+  display : flex;
+  padding : $padding-small;
+}
+
+.video-name{
+  @include single-line-ellipsis;
+  color : $color-chocolate;
+  width : 30%;
+  padding-right : 8px;
+  margin-left : 30px;
+}
+
+.video-status {
+  color : $color-boulder;
+  flex-grow : 1;
+  &:before {
+    content : '';
+    padding-right : 5px;
+  }
+}
+
+.block-container {
+  padding : 0 $padding-small 0 50px;
+}
+
+.info-container > button {
+  margin-left : 0.5em;
+}

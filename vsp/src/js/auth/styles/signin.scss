@@ -1,0 +1,51 @@
+.signinContainer {
+  background: white;
+  margin: 64px auto 0px;
+  padding: 10px;
+  width: 424px;
+  height: 383px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 0px 9px 1px #888888;
+
+  > .errorTitleRow {
+    width: 90%;
+    margin: 10px auto 2px;
+  }
+
+  > .titleRow {
+    width: 90%;
+    margin: 10px auto 0 auto;
+  }
+
+  > .bannerRow {
+    width: 90%;
+    margin: 0 auto;
+    height: 40px;
+  }
+
+  .accountRow {
+    width: 90%;
+    margin: 3px auto 20px;
+  }
+
+  > .row {
+    width: 90%;
+    margin: 0 auto 20px auto;
+  }
+
+  > .pwdRow {
+    width: 90%;
+    margin: 15px auto 25px;
+    > .forgetLink {
+      margin-top: 8px;
+      margin-left: 0px;
+    }
+  }
+
+  > .btnRow {
+    width: 90%;
+    text-align: center;
+    margin: 16px auto 0px;
+  }
+}

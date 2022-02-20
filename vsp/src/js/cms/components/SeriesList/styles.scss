@@ -1,0 +1,24 @@
+@import 'coreVariables';
+
+.list {
+  padding: 0;
+  list-style-type: none;
+}
+
+.item {
+  display: table;
+  margin-bottom: $padding-small;
+  cursor: pointer;
+
+  .action {
+    display: inline-block;
+    margin-left: $padding-tiny;
+  }
+}
+
+.item:before {
+  display: inline-block;
+  margin-right: $padding-tiny;
+  font-family: FontAwesome;
+  content: '\f07b';
+}

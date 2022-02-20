@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<script type="text/javascript">
+    function openModal(url,website) {
+        document.getElementById('modal-iframe').src=url;
+        document.querySelector('body').className='noscroll';
+        document.getElementById('myModal').style.display = "block";
+    }
+
+    function closeModal() {
+        document.querySelector('body').className=''
+        document.getElementById('modal-iframe').src='';
+        document.getElementById('myModal').style.display = "none";
+    }
+</script>
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
+<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>-->
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="/static/base.css" >
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<body>
+    <h1>Your Saved</h1>
+    <div style="display:none">{{uid}}</div>
+    <!--<ol>-->
+    <!--    {% for videoinfo in videos %}-->
+    <!--    <li><a target="_blank" title="{{videoinfo.website_vid}}" href="{{videoinfo.url}}">{{videoinfo.title}}</a></li>-->
+    <!--    {% endfor %}-->
+    <!--</ol>-->
+    <div class="container">
+        <div class="row">
+            {% for videoinfo in videos %}
+              <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                  <img src="{{videoinfo.imgurl}}" alt="...">
+                  <div class="caption">
+                    <h3>{{videoinfo.website}}</h3>
+                    <p title="{{videoinfo.title}}">{{videoinfo.title}}</p>
+                    <p>
+                        <!--<a target="_blank" href="{{videoinfo.url}}" class="btn btn-primary" role="button" >View</a>-->
+                        <button onclick="openModal('{{videoinfo.url}}','{{videoinfo.website}}');" class="btn btn-primary" >View</button>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            {% endfor %}
+        </div>
+    </div>
+
+
+<div id="myModal" class="my-modal">
+  <span class="modal-close cursor" onclick="closeModal()">&times;</span>
+  <div class="my-modal-content">
+    <div class="embed-responsive embed-responsive-4by3 embed-responsive-68">
+        <iframe id="modal-iframe" class="embed-responsive-item" src="#" width="480" height="270" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+</div>
+
+    {% for error in errors %}
+        <h4>{{ error }}</h4>
+    {% endfor %}
+</body>
+
+</html>

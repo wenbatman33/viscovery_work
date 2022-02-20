@@ -1,0 +1,409 @@
+@import 'coreVariables';
+.main {
+  display: flex;
+  width : 100%;
+  flex: 1;
+}
+.PriorityList{
+  display: flex;
+  flex-direction:column;
+  width: 320px;
+  background: #fff;
+  border-right:1px solid #E7E7E7;
+  h3{
+    line-height: 49px;
+    padding: 0px 10px;
+    border-bottom: 1px solid #E7E7E7;
+  }
+  ul{
+    padding: 5px 10px;
+    li{
+      color: #000;
+      background-color:#fff;
+      transition:color .3s ease,  background-color .3s ease;
+      list-style: none;
+      padding: 8px 12px;
+      cursor: pointer;
+      &:hover{
+        color: #fff;
+        background: #ccc;
+      }
+    }
+    li.onActive{
+      color: #fff;
+      background-color:#000;
+    }
+    li.w{
+      color: #fff;
+      background-color:#f90;
+    }
+  }
+}
+.contentWapper {
+  display: flex;
+  position: relative;
+  flex-direction:column;
+  width : calc(100% - 300px);
+  width : -moz-calc(100% - 300px);
+  overflow : auto;
+  white-space: nowrap;
+  .PriorityStatus{
+    display: flex;;
+    flex-direction:column;
+    height: 100px;
+    width : 100%;
+    line-height: 50px;
+    background: #fff;
+    .status{
+      display: flex;
+      background: #fff;
+      height: 50px;
+      padding: 0 15px;
+      border-bottom: 1px solid #E7E7E7;
+      justify-content: space-between;
+      .status_panelR{
+        line-height: 40px;
+        vertical-align: middle;
+        padding: 5px;
+        display: flex;
+      }
+      .status_panelL{
+        line-height: 40px;
+        vertical-align: middle;
+        padding: 5px;
+        display: flex;
+        .Pages{
+          display: flex;
+        }
+        .PagesBtn{
+          display: flex;
+        }
+      }
+      .Title{
+        display: inline-block;
+        font-size: 1.125rem;
+        line-height: 50px;
+        padding-right: 8px;
+      }
+      .Time{
+        display: inline-block;
+        font-size: .8em;
+        line-height: 50px;
+        padding-right: 8px;
+        color: rgba(26, 10, 10, 0.5);
+      }
+      .Link{
+        position: relative;
+        cursor: pointer;
+        display: inline-block;
+        font-size: .8em;
+        line-height: 50px;
+        color: rgba(26, 10, 10, 0.5);
+        text-decoration: underline;
+      }
+      .tooltip {
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+        display: inline-block;
+        text-decoration: underline;
+        font-size: .8em;
+        line-height: 50px;
+        color: rgba(26, 10, 10, 0.5);
+        .tooltiptext {
+          visibility: hidden;
+          width:200px;
+          height: auto;
+          background-color: #555;
+          color: #fff;
+          text-align: center;
+          border-radius: 6px;
+          padding: 5px 0;
+          position: absolute;
+          z-index: 1;
+          top: 100%;
+          left: 50%;
+          margin-left: -60px;
+          opacity: 0;
+          white-space:normal;
+          line-height: 1.5;
+          font-size: 14px;
+          text-align: left;
+          padding: 10px;
+          transition: opacity .3s;
+        }
+        &:hover .tooltiptext {
+          visibility: visible;
+          opacity: 1;
+        }
+      }
+    }
+    .filterTool{
+      display: flex;
+      flex-direction:row;
+      width: 100%;
+      height: 50px;
+      line-height: 50px;
+      padding: 5px 15px;
+      border-bottom: 1px solid #E7E7E7;
+      background: #fff;
+      vertical-align: middle;
+      input{
+        padding: 5px;
+        height: 32px;
+        margin-right: 5px;
+        outline: none;
+        border: 1px solid #ccc;
+        &:focus{
+          padding: 5px;
+          border: 1px solid #000;
+        }
+      }
+      button{
+        height: 32px;
+      }
+    }
+
+  }
+  .Tasks{
+    display: flex;
+    flex: 1;
+    flex-direction:row;
+    width: 100%;
+    padding: 10px;
+    overflow: auto;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    &::-webkit-scrollbar {
+      width: 3px;
+    }
+    &::-webkit-scrollbar-thumb:vertical {
+      background-color:#ccc;
+    }
+    &::-webkit-scrollbar-thumb:horizontal {
+      width: 3px;
+      height: 3px;
+      background-color:#ccc;
+    }
+    &::-webkit-scrollbar-track {
+      background-color:rgba(0,0,0,0);;
+    }
+    table{
+      width: 100%;
+      background: #fff;
+      border: 1px solid #ccc;
+      padding: 5px;
+      border-collapse:collapse;
+      @for $i from 0 to 20{
+        tr:nth-child(#{$i}) {
+          animation: fadeIn 0.1s * $i linear;
+        }
+      }
+      tr.onActive{
+        background: #FEFFCA !important;
+      }
+      tr.fadeOut{
+        animation: fadeOut 0.1s  linear;
+      }
+      tr{
+        min-height: 48px;
+        &:nth-child(even){
+          background: #f9f9f9;
+        }
+      }
+      th{
+        height: 32px;
+        background: #E9E7E7;
+        padding: 5px;
+        color: #666;
+        text-align: left;
+        font-size: 14px;
+        font-weight: normal;
+      }
+      th.center{
+        text-align: center;
+      }
+      td{
+        height: 40px;
+        padding: 5px;
+        border: none;
+        color: #666;
+        font-size: 14px;
+        font-weight: normal;
+      }
+      td.center{
+        text-align: center;
+      }
+      td.series_name{
+        color: #4AB9FF;
+      }
+    }
+  }
+  .TasksFuncBar{
+    display: flex;
+    height: 50px;
+    line-height:50px;
+    padding: 0 15px;
+    flex-direction:row;
+    background: #fff;
+    border-top: 1px solid #E7E7E7;
+    justify-content: space-between;
+    .TasksStatus{
+      line-height: 50px;
+      .selectTasks{
+        width: auto;
+        font-size: 12px;
+        padding: 8px 12px;
+        line-height: 20px;
+        color:#fff;
+        background: #E24522;
+        border-radius: 24px 24px;
+      }
+      .status{
+        font-size: 14px;
+        line-height: 100%;
+        color: #1A0A0A;
+        opacity: 0.80;
+      }
+    }
+    .TasksSender{
+      width: auto;
+    }
+  }
+  .TasksAdjustConfirm{
+    position: fixed;
+    width: 288px;
+    height: 288px;
+    bottom: 55px;
+    right: 20px;
+    background: #fff;
+    border: 1px solid #000;
+    box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19) !important;
+    animation: rotTasksAdjustConfirmate .35s ease;
+    .title{
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+    p{
+      padding: 10px;
+    }
+    .btn-ConfirmGroup{
+      position: absolute;
+      bottom: 0;
+      padding: 5px 10px;
+      height: 50px;
+      width: 100%;
+      text-align: right;
+      border-top: 1px solid #000;
+    }
+  }
+}
+
+.btn-group{
+  margin: 10px;
+  border: 2px solid #000;
+}
+
+.button{
+  cursor: pointer;
+  background-color: #fff;
+  border: 2px solid #000;
+  height: 40px;
+  padding: 0 15px;
+  vertical-align: middle;
+  color: #000;
+  font-size: 16px;
+  font-weight: 300;
+  margin: 0 5px;
+  outline: none;
+  &:hover{
+    color: #fff;
+    background-color: #000;
+  }
+}
+
+.btn{
+  composes: button;
+  width: 20%;
+  margin: 0;
+  border: none;
+}
+
+.active{
+  composes: button;
+  width: 20%;
+  background-color: #000;
+  color: #fff;
+  cursor: default;
+  margin: 0;
+}
+.selected{
+  width: 20%;
+  background-color: #F21F00;
+  border: 2px solid #F21F00;
+  color: #fff;
+  cursor: default;
+  margin: 0;
+}
+
+@keyframes fadeIn {
+  0%    { opacity: 0; }
+  100%  { opacity: 1; }
+}
+@keyframes fadeOut {
+  0%  { opacity: 1; }
+  100%    { opacity: 0; }
+}
+.btn__default{
+  composes: button;
+  color: #ccc;
+  background-color: #fff;
+  border: 2px solid #ccc;
+
+  &:hover{
+    color: #fff;
+    background-color: #ccc;
+  }
+}
+.btn__primary{
+  composes: button;
+  color: #fff;
+  background-color: #F21F00;
+  border: 2px solid #F21F00;
+  &:hover{
+    color: #F21F00;
+    background-color: #fff;
+    border: 2px solid #F21F00;
+  }
+}
+.model_id_Icon {
+  position: relative;
+  background: #fff;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  border: 3px solid #ccc;
+  background: rgba(26, 10, 10, 0.2);
+  color: #fff;
+  text-align: center;
+  font-size: 0.875rem;
+  // line-height: 1.5;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
+@keyframes rotTasksAdjustConfirmate {
+  0% {
+    bottom: -1200px;
+  }
+  100% {
+    bottom: 55px;
+  }
+}

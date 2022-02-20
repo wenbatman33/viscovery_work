@@ -1,0 +1,59 @@
+@import 'coreVariables';
+
+.container {
+  width: 100%;
+  background-color: white;
+  padding: 1.5% 0 1.5% 0;
+  font-size: 12pt;
+  border-bottom: thin solid $color-boulder;
+}
+
+.base {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  word-wrap: break-word;
+}
+
+.userId {
+  composes: base;
+  width: 10%;
+}
+
+.account {
+  composes: base;
+  width: 19%;
+}
+
+.username {
+  composes: base;
+  width: 10%;
+}
+
+.company {
+  composes: base;
+  width: 18%;
+}
+
+.tel_number {
+  composes: base;
+  width: 18%;
+  color: $color-boulder;
+}
+
+.creator {
+  composes: base;
+  width: 18%;
+  color: $color-boulder;
+}
+
+.manipulate {
+  composes: base;
+  width: 7%;
+}
+
+.subContent {
+  display: block;
+  text-align: center;
+}
+

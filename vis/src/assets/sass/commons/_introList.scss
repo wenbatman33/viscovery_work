@@ -1,0 +1,44 @@
+.intro-list{
+  position: relative;
+  overflow: hidden;
+
+  &__block{
+    text-align: center;
+    margin-bottom: 30px;
+
+    &__ills{
+      display: inline-block;
+      margin-bottom: 30px;
+      height: 140px;
+
+      @media only screen and (max-width: $win-screen-sm - 1){
+        height: 120px;
+      }
+
+    }
+
+    &__title{
+      font-weight: 300;
+      margin-bottom: 10px;
+      line-height: $font-s-32;
+    }
+
+    &__text{
+      font-weight: 400;
+      line-height: $font-s-24;
+      // text-align: justify;
+      // text-justify:inter-ideograph;
+    }
+
+  }
+
+}
+
+/* Language English Fix [start] */
+.lang-en{
+
+  .intro-list__block__title{
+    font-size: $font-s-18;
+  }
+
+}  /* Language English Fix [end] */

@@ -1,0 +1,47 @@
+.nav{
+  height: 60px;
+  background: #fff;
+  line-height: 60px;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.20);
+  vertical-align: middle;
+  
+  .searchBar{
+    display: inline-block;
+    height: 40px;
+    width: 400px;
+    line-height: 60px;
+    float: right;
+    margin-top: 10px;
+    border: #F42323 2px solid;
+    vertical-align: top;
+    input{
+      height: 38px;
+      line-height: 30px;
+      width: 300px;
+      outline: 0;
+      margin: 0;
+      padding: 0 10px;
+      border: none;
+      vertical-align: top;
+      background: none;
+    }
+  }
+  button{
+    float: right;
+    height: 38px;
+    margin: 0;
+    line-height: 38px;
+    vertical-align: top;
+    margin: 0;
+    background: #F42323;
+    color: #fff;
+    outline: none;
+    text-decoration: none;
+    padding: 0 20px;
+    border-style: none;
+    border: #F42323 1px solid;
+    &:hover{
+      background: #D0021B;
+    }
+  }
+}

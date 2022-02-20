@@ -1,0 +1,7 @@
+.container {
+  width : 100%;
+  padding : 8px 16px;
+  > div:not(:first-child) {
+    margin-top: 11px;
+  }
+}

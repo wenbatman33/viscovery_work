@@ -1,0 +1,42 @@
+{
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true,
+    "node": true,
+    "mocha": true
+  },
+  "extends": "airbnb",
+  "rules": {
+    "no-console":0,
+    "linebreak-style": 0,
+    "comma-dangle": ["off"],
+    "no-unused-vars": ["warn"],
+    "object-curly-spacing": ["off"],
+    "padded-blocks": ["off"],
+    "react/jsx-closing-bracket-location": ["off"],
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "react/jsx-space-before-closing": ["off"],
+    "react/prefer-stateless-function": ["off"],
+    "jsx-a11y/no-static-element-interactions": ["off"],
+    "no-underscore-dangle": [ "error", { "allowAfterThis": true }],
+    "import/no-unresolved": ["error", {
+        "ignore": [
+          "components/",
+          "config/",
+          "containers/",
+          "locale",
+          "redux_flow/",
+          "static/",
+          "theme/",
+          "utils/"
+        ]
+    }],
+    "import/no-extraneous-dependencies": ["off"],
+    "import/extensions": "off",
+    "global-require": "off",
+    "no-debugger":"off",
+    "spaced-line-comment":"off",
+    "spaced-comment":"off",
+    "no-alert":"off"
+  }
+}

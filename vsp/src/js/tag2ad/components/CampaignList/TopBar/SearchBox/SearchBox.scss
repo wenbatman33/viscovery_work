@@ -1,0 +1,30 @@
+@import 'coreVariables';
+@import '../../../../../core/components/Form/formBase';
+
+$font-size : 0.875rem;
+
+.search-form {
+  display: inline-block;
+  border: 1px solid lighten(#999, 15%);
+}
+
+.search-input {
+  @extend %base;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  width: 200px;
+}
+
+.search-input:focus {
+  outline: none;
+}
+
+.submit-btn {
+  border: none;
+  background: none;
+}
+
+.submit-btn:focus {
+  outline: none;
+}

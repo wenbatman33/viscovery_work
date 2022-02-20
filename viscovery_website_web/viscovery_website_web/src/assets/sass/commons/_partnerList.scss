@@ -1,0 +1,64 @@
+/* partner block [start] */
+.partner-block{
+  position: relative;
+  padding: 60px 0px;
+  background-color: $color-white;
+
+  &__title{
+    text-align: center;
+    font-weight: 300;
+    position: relative;
+    margin-bottom: 30px;
+    padding-top: 5px;
+
+    @media only screen and (max-width: $win-screen-sm - 1){
+      font-size: $font-s-24;
+    }
+
+  }
+
+
+  @media only screen and (max-width: $win-screen-sm - 1){
+
+    .container-med{
+      width: 100%;
+      padding: 0;
+    }
+
+  }
+
+  &__area {
+    position: relative;
+    left: 0px;
+    transform: rotateZ(0);
+  }
+
+  /* partner logo block [start] */
+  &__logo{
+    float: left;
+
+    &__list{
+      display: inline-block;
+      width: 20%;
+      position: relative;
+      margin-right: -4px;
+      margin-bottom: 30px;
+      padding: 0;
+
+      .logo-img{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: auto;
+      }
+
+      @media only screen and (max-width: $win-screen-sm - 1){
+        width: 33.33%;
+      }
+
+    }
+
+  }  /* partner logo block [end] */
+
+
+}  /* partner block [end] */

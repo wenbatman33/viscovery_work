@@ -1,0 +1,51 @@
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+  <title>SDKTest</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link type="text/css" rel="stylesheet" href="https://vsp.viscovery.com/visSDK/static/style.css" />
+  <script src="https://imasdk.googleapis.com/js/sdkloader/ima3.js"></script>
+  <!--<script type="text/javascript" src="/static/sdktest.js"></script>-->
+  <!--<script type="text/javascript" src="https://vsp.viscovery.com/visSDK/lib/js/visSDK.1.2.js"></script>-->
+  <script type="text/javascript" src="https://vsp-test.viscovery.com/visSDK/lib/js/visSDK.2.0.js"></script>
+  <script src="https://api.dmcdn.net/all.js"></script>
+</head>
+<body>
+    <div id="container">
+        <div id="content">
+            <div id="player"></div>
+        </div>
+        <div id="adContainer"></div>
+    </div>
+</body>
+<script type="text/javascript">
+    var player = DM.player(document.getElementById("player"), {
+      video: 'x5nlei4',
+      width: '800',
+      height: '400',
+      params: {
+        autoplay: false,
+        mute: false,
+        controls: true,
+      }
+    });
+
+    window.onload = function() {
+      document.querySelector('#adContainer').style['z-index'] = '-1';
+      /* init viscoveryAd sdk after dailymotion preroll ad done */
+      player.addEventListener('video_start', function(event) {
+        document.querySelector('#adContainer').style['z-index'] = '0';
+
+        viscoveryAd.init('#player', '#adContainer', {
+          api_key: 'c2a5756a-f5c4-374f-8af8-498447924d2a',
+          video_url: "https%3A%2F%2Fwww.dailymotion.com%2Fembed%2Fvideo%2Fx5nlei4",
+          debug_mode: 0,
+          playerControl: {
+            currentTime: player.currentTime
+          }
+        });
+      });
+    }
+</script>
+</html>

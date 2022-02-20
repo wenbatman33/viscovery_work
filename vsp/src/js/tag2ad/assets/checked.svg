@@ -1,0 +1,12 @@
+<svg width="12" height="9" viewBox="0 0 12 9" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:figma="http://www.figma.com/figma/ns">
+<title>&#239;&#128;&#140;</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(-6212 -1095)" figma:type="canvas">
+<g id="&#239;&#128;&#140;" style="mix-blend-mode:normal;" figma:type="text">
+<use xlink:href="#path0_fill" transform="translate(6211.87 1093.5)" fill="#FFFFFF" style="mix-blend-mode:normal;"/>
+</g>
+</g>
+<defs>
+<path id="path0_fill" d="M 11.0022 3.33482C 11.1272 3.45982 11.1897 3.61161 11.1897 3.79018C 11.1897 3.96875 11.1272 4.12054 11.0022 4.24554L 6.15402 9.09375L 5.2433 10.0045C 5.1183 10.1295 4.96652 10.192 4.78795 10.192C 4.60938 10.192 4.45759 10.1295 4.33259 10.0045L 3.42188 9.09375L 0.997768 6.66964C 0.872768 6.54464 0.810268 6.39286 0.810268 6.21429C 0.810268 6.03571 0.872768 5.88393 0.997768 5.75893L 1.90848 4.84821C 2.03348 4.72321 2.18527 4.66071 2.36384 4.66071C 2.54241 4.66071 2.6942 4.72321 2.8192 4.84821L 4.78795 6.82366L 9.1808 2.42411C 9.3058 2.29911 9.45759 2.23661 9.63616 2.23661C 9.81473 2.23661 9.96652 2.29911 10.0915 2.42411L 11.0022 3.33482Z"/>
+</defs>
+</svg>

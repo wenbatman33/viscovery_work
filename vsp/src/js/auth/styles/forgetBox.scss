@@ -1,0 +1,21 @@
+.container {
+  background: white;
+  margin: 64px auto 0px; 
+  width: 424px;
+  height: 234px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  box-shadow: 0px 0px 9px 1px #888888;
+}
+
+.midRow {
+  margin: 20px auto;
+  text-align: center;  
+}
+
+.row {
+  text-align: center;
+  width: 80%;
+  margin: 10px auto;
+}

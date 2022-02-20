@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="295px" height="321px" viewBox="0 0 295 321" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 23</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M0,2.99689865 C0,1.34175723 1.25113207,0.463276711 2.81339836,1.04176207 L292.186602,108.192613 C293.740399,108.767962 295,110.574325 295,112.231274 L295,318.237476 C295,319.892618 293.748868,320.771098 292.186602,320.192613 L2.81339836,213.041762 C1.25960135,212.466413 0,210.66005 0,209.003101 L0,2.99689865 Z" id="path-1"></path>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="295" height="319.506843" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="pc" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="2.0-核心技術-" transform="translate(-749.000000, -272.000000)" stroke="#FFFFFF">
+            <g id="Group" transform="translate(644.000000, 202.000000)">
+                <g id="Group-19" transform="translate(105.000000, 70.000000)">
+                    <g id="Group-16">
+                        <g id="Group-23">
+                            <use id="Rectangle-11" mask="url(#mask-2)" stroke-width="2" fill="#00b280" xlink:href="#path-1"></use>
+                            <path d="M0.5,25.5 L294.5,133.5" id="Line" stroke-linecap="square" fill="#3675FF"></path>
+                            <path d="M66.5,79.5 L207.300464,131.222619" id="Line" stroke-linecap="square" fill="#3675FF"></path>
+                            <path d="M66.5,89.5 L141.593581,117.085397" id="Line" stroke-linecap="square" fill="#3675FF"></path>
+                            <path d="M66.5,199.5 L207.300464,251.222619" id="Line" stroke-linecap="square" fill="#3675FF"></path>
+                            <path d="M66.5,129.5 L235.460557,191.567143" id="Line" stroke-linecap="square" fill="#3675FF"></path>
+                            <path d="M66.5,119.5 L235.460557,181.567143" id="Line" stroke-linecap="square" fill="#3675FF"></path>
+                            <path d="M66.5,139.5 L141.593581,167.085397" id="Line" stroke-linecap="square" fill="#3675FF"></path>
+                            <path d="M66.5,179.5 L235.460557,241.567143" id="Line" stroke-linecap="square" fill="#3675FF"></path>
+                            <path d="M66.5,169.5 L235.460557,231.567143" id="Line" stroke-linecap="square" fill="#3675FF"></path>
+                            <path d="M66.5,159.5 L141.593581,187.085397" id="Line" stroke-linecap="square" fill="#3675FF"></path>
+                            <path d="M14.8050001,21.7633762 C16.9064436,22.363984 18.6100001,21.1473164 18.6100001,19.0458729 C18.6100001,16.9444293 16.9064436,14.7539839 14.8050001,14.153376 C12.7035566,13.5527681 11,14.7694358 11,16.8708793 C11,18.9723228 12.7035566,21.1627683 14.8050001,21.7633762 Z" id="Oval-7" fill="#00b280"></path>
+                            <path d="M28.8050001,26.7633762 C30.9064436,27.363984 32.6100001,26.1473164 32.6100001,24.0458729 C32.6100001,21.9444293 30.9064436,19.7539839 28.8050001,19.153376 C26.7035566,18.5527681 25,19.7694358 25,21.8708793 C25,23.9723228 26.7035566,26.1627683 28.8050001,26.7633762 Z" id="Oval-7" fill="#00b280"></path>
+                            <path d="M42.8050001,31.7633762 C44.9064436,32.363984 46.6100001,31.1473164 46.6100001,29.0458729 C46.6100001,26.9444293 44.9064436,24.7539839 42.8050001,24.153376 C40.7035566,23.5527681 39,24.7694358 39,26.8708793 C39,28.9723228 40.7035566,31.1627683 42.8050001,31.7633762 Z" id="Oval-7" fill="#00b280"></path>
+                            <path d="M39.5,39.5 L39.5,225.5" id="Line" stroke-linecap="square"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

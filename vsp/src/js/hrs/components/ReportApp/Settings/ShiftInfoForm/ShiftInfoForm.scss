@@ -1,0 +1,13 @@
+@import "coreVariables";
+
+.container {
+  height: calc(100% - 60px);
+  overflow-y: scroll;
+  padding: 43px 32px;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 16px;
+}

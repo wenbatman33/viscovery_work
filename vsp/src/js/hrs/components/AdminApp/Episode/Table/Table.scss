@@ -1,0 +1,60 @@
+@import "./Row.scss";
+
+.container {
+  height: calc(100% - 80px);
+}
+
+.row-container-header {
+  @extend .row-container;
+  height: 36px;
+  background: #F6F7F7;
+  margin-bottom: 0;
+}
+
+.pure-row-area {
+  overflow-y: scroll;
+  height: calc(100% - 36px);
+}
+
+.pure-row-area__short {
+  composes: pure-row-area;
+  max-height: calc(100% - 36px - 69px);
+}
+
+.checkbox-header {
+  @extend .checkbox;
+}
+
+.number-header {
+  @extend .number;
+}
+
+.seriesName-header {
+  @extend .seriesName;
+  color: $color-blackhole;
+}
+
+.videoName-header {
+  @extend .videoName;
+  color: $color-blackhole;
+}
+
+.account-header {
+  @extend .account;
+  color: $color-blackhole;
+}
+
+.source-header {
+  @extend .source;
+  color: $color-blackhole;
+}
+
+.tagCount-header {
+  @extend .tagCount;
+  color: $color-blackhole;
+}
+
+.priority-header {
+  @extend .priority;
+  color: $color-blackhole;
+}

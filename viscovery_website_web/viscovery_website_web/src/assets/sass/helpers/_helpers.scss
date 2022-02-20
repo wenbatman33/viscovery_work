@@ -1,0 +1,90 @@
+// Screen
+$win-screen-lg: 1200px;
+$win-screen-md: 992px;
+$win-screen-sm: 768px;
+$win-screen-xs: 320px;
+
+$pad-screen-w: 1024px;
+$pad-screen-h: 768px;
+
+// Layout
+$visc-header-h: 90px;
+$visc-header-mobile-h: 50px;
+
+$visc-logo-h: 43px;
+$visc-logo-mobile-h: 25px;
+
+$visc-footer-logo-h: 37px;
+$visc-footer-logo-mobile-h: 33px;
+
+$container-padding-w: 10px;
+
+
+// Colors
+$color-alpha: rgba(0,0,0,0);
+
+$color-white: #fff;
+$color-white-90a: rgba(255,255,255,.9);
+$color-white-80a: rgba(255,255,255,.8);
+$color-white-60a: rgba(255,255,255,.6);
+$color-white-40a: rgba(255,255,255,.4);
+$color-white-20a: rgba(255,255,255,.2);
+$color-white-10a: rgba(255,255,255,.1);
+$color-white-5a: rgba(255,255,255,.05);
+
+$color-dark: #000;
+$color-dark-90a: rgba(0,0,0,.9);
+$color-dark-80a: rgba(0,0,0,.8);
+$color-dark-60a: rgba(0,0,0,.6);
+$color-dark-40a: rgba(0,0,0,.4);
+$color-dark-20a: rgba(0,0,0,.2);
+$color-dark-10a: rgba(0,0,0,.1);
+$color-dark-5a: rgba(0,0,0,.05);
+
+$color-grey: #DADADA;
+$color-grey-light: #F4F4F4;
+$color-grey-dark: #262626;
+
+$color-main: #E14523;
+$color-main-red: #f02314;
+$color-main-light: #F06547;
+// $color-main-red: #DC3122;
+$color-main-bright: #FF5A37;
+
+$color-green: #00b280;
+
+
+// Border Radius
+$border-r-s: 2px;
+$border-r-m: 4px;
+$border-r-l: 8px;
+
+
+// Z-Index
+$z-index-low: 0;
+$z-index-upper: 1;
+$z-index-med: 333;
+$z-index-high: 666;
+$z-index-top: 999;
+
+// FontSize
+$font-s-10: 10px;
+$font-s-11: 11px;
+$font-s-12: 12px;
+$font-s-13: 13px;
+$font-s-14: 14px;
+$font-s-15: 15px;
+$font-s-16: 16px;
+$font-s-18: 18px;
+$font-s-22: 22px;
+$font-s-20: 20px;
+$font-s-24: 24px;
+$font-s-28: 28px;
+$font-s-30: 30px;
+$font-s-32: 32px;
+$font-s-36: 36px;
+$font-s-38: 38px;
+$font-s-46: 46px;
+$font-s-54: 54px;
+$font-s-60: 60px;
+$font-s-70: 70px;

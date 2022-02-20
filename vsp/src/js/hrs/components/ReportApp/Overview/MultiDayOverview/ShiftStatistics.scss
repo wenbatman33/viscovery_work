@@ -1,0 +1,21 @@
+@import 'coreVariables';
+
+.header {
+  display: inline-block;
+  color: $color-boulder;
+}
+
+.content {
+  display: inline-block;
+  color: $color-midnight;
+}
+
+.content__text {
+  font-size: 3rem;
+  font-weight: lighter;
+}
+
+.detail__link {
+  composes: content;
+  color: $color-river;
+}

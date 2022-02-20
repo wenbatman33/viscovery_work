@@ -1,0 +1,66 @@
+@import 'coreVariables';
+@import '../../../core/components/Form/formBase';
+
+$font-size : 0.875rem;
+
+.rims-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 70px;
+  background: white;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+.tabs-container {
+  display: flex;
+  background: white;
+}
+
+.tab {
+  display : block;
+  width : auto;
+  line-height : 3rem;
+  padding : 0 $padding-small;
+  cursor: pointer;
+  color : $color-mild;
+  font-size : $font-size;
+}
+
+.tab-active {
+  composes: tab;
+  border-bottom: solid;
+  border-color: $color-brand;
+  color : $color-blackhole;
+  font-size : $font-size;
+}
+
+.search-form {
+  display: inline-block;
+  border: 1px solid lighten(#999, 15%);
+}
+
+.search-input {
+  @extend %base;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  width: 280px;
+}
+
+.search-input:focus {
+  outline: none;
+}
+
+.submit-btn {
+  border: none;
+  background: none;
+}
+
+.submit-btn:focus {
+  outline: none;
+}
+
+.hide-input {
+  display: none;
+}

@@ -1,0 +1,22 @@
+@import 'coreVariables';
+
+.container {
+  border: 1px solid $color-mild;
+  border-radius: 3px;
+  padding: 8px 12px;
+  user-select: none;
+  margin-bottom: 16px;
+
+  &:hover {
+    border-color: $color-river;
+
+    & .icon {
+      visibility: visible;
+    }
+  }
+}
+
+.icon {
+  visibility: hidden;
+  color: $color-boulder;
+}

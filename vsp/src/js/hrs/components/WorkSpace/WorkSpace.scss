@@ -1,0 +1,28 @@
+@import "coreVariables";
+
+.container {
+  background: #E5E5E5;
+  height: 100%;
+  overflow-y: scroll;
+  vertical-align: top;
+  display: inline-block;
+  width: 80%;
+  position: absolute;
+  top: 0;
+  transition: transform 0.2s linear;
+}
+
+.normal {
+  composes: container;
+}
+
+.wholeWindow {
+  composes: container;
+  width: 100%;
+  transform: translateX(-20%);
+}
+
+.fixed-height {
+  height: calc(100% - 50px);
+  overflow-y: scroll;
+}

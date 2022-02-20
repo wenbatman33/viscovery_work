@@ -1,0 +1,46 @@
+@import "coreVariables";
+
+%link{
+  box-sizing: border-box;
+}
+
+.current {
+  @extend %link;
+  background: $color-river;
+}
+
+.non-current {
+  @extend %link;
+  background: $color-midnight;
+}
+
+.navArea{
+  display: flex;
+  flex-direction: column;
+}
+
+.model-title {
+  height: 40px;
+  padding-left: 16px;
+  background: $color-midnight;
+  display: flex;
+  align-items: center;
+}
+
+.model-name {
+  color: white;
+  margin-right: 8px;
+}
+
+.model-progress {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.check-icon {
+  color: $color-wasabi;
+  margin-left: 8px;
+}
+
+.hidden {
+  visibility: hidden;
+}

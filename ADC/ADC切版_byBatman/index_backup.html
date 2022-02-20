@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Viscovery ADC Inference Demo">
+		<title>Viscovery ADC Inference</title>
+		<link rel="stylesheet" href="/js_css/bootstrap.min.css">
+		<script src="/js_css/jquery-2.0.3.min.js"></script>
+		<script src="/js_css/bootstrap.min.js"></script>
+		<link href="/js_css/node_modules/videojs-overlay/node_modules/video.js/dist/video-js.css" rel="stylesheet">
+		<script src="/js_css/node_modules/videojs-overlay/node_modules/video.js/dist/video.js"></script>
+		<script src="/js_css/d3.v4.min.js"></script>
+		<link href="/js_css/bootstrap-toggle.min.css" rel="stylesheet">
+		<script src="/js_css/bootstrap-toggle.min.js"></script>
+		<link href="/js_css/node_modules/videojs-overlay/dist/videojs-overlay.css" rel="stylesheet">
+		<script src="/js_css/node_modules/videojs-overlay/dist/videojs-overlay.js"></script>
+    <!--link href="https://run.plnkr.co/plunks/dc2lJ0oqqSQF7nqcA4UD/style.css" rel="stylesheet" -->
+		<!-- Script to instantly classify an image once it is uploaded. -->
+		<script type="text/javascript">
+		  $(document).ready(
+			function(){
+			  $('#classifyfile').attr('disabled',true);
+			  $('#inputfile').change(
+				function(){
+				  if ($(this).val()){
+					$('#formupload').submit();
+				  }
+				}
+			  );
+			}
+		  );
+		</script>
+
+
+        <style>
+            body {
+                font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+                line-height:1.5em;
+                color: #232323;
+                -webkit-font-smoothing: antialiased;
+            }
+            h1, h2, h3 {
+                font-family: Times, serif;
+                line-height:1.5em;
+                border-bottom: 1px solid #ccc;
+            }
+            
+            .axis--x path {
+			  display: none;
+			}
+			.line {
+			  fill: none;
+			  stroke: steelblue;
+			  stroke-width: 1.5px;
+			}
+
+            .imbg {
+			  position: relative;
+              width: 360px;
+              height: 240px;
+            }
+			.imbg .imoverlay {
+			  position: absolute;
+			  bottom: 0;
+			  left: 0;
+              outline: 1px solid blue;
+              outline-offset: -1px;
+			}
+
+            .linear_ad{position:relative; width:320px}
+            .linear_text{position:absolute; font-size:20px; font-family:"vedana"; font-weight:"bold"; padding:10px 20px; width:100%; top:30px; color:#FEFEFE;}
+        </style>
+
+    </head>
+
+
+
+    <body>
+        <div class="container">
+            
+            <div class="page-header">
+                <h1><a href="/">Viscovery Demos</a></h1>
+            </div>
+
+            <div>
+                <h2>ADC Inference ({{version}})</h2>
+                {% if not liteVersion %}
+                <div style="height:25px;float:right;">
+                    <p> Debug Mode
+                    <input id="toggle_debug" type="checkbox" checked data-toggle="toggle" data-size="mini" data-on="ON" data-off="OFF">
+                    </p>
+                </div>
+                {% endif %}
+                <div style="height:25px;">
+                <p><a href="#" id="example_img">Click for a Quick Image Example</a>, <a href="#" id="example_vid">Click for a Quick Video Example</a></p>
+                </div>
+                {% if not liteVersion %}
+                <p id="notice_input" style="text-align:right"></p>
+                {% endif %}
+                <form>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <input type="text" class="form-control" name="targeturl" id="targeturl" 
+                              placeholder="Provide an Image(.jpg/.jpeg) or Video(https://v.qq.com/x/page/XXX.html; https://www.youtube.com/watch?v=XXX; http://v.youku.com/v_show/id_XXX.html) URL">
+                            <span class="input-group-btn">
+                                <input class="btn btn-primary" type="button" value="Classify URL" id="classifyurl"></input>
+                            </span>
+                        </div>
+                    </div>
+                </form>
+            </div> 
+
+            <p id="result"></p>
+
+            <script src="{{ notifier_url }}/socket.io/socket.io.js"></script>
+			<script>
+				var resultElement = document.getElementById('result'),
+					client = io('{{ notifier_url }}'),
+                    clientid = null;
+
+                client.on('register', function(id) {
+                    // obtain current browser's client id
+                    clientid = id;
+                });
+
+				client.on('notify', function(result) {
+                    // display text received from notifier
+                    var r_list = result.split("\n");
+                    resultElement.innerHTML = '';
+                    for (var r=0; r<r_list.length; r++)
+                        resultElement.innerHTML += r_list[r] + '<br/>';
+                    // if it's task done, redirect to result page
+                    if( r_list[0] == "Task done." )
+                        window.location.href = window.location.origin + '/inspect_job?targetid=' + r_list[1];
+				});
+
+                // on clicking the "classify" button, send a POST to server.py
+                document.getElementById("classifyurl").onclick = function() {
+					var request = new XMLHttpRequest();
+					request.open('POST', '/classify_url', true);
+					request.setRequestHeader(
+						'Content-Type',
+						'application/x-www-form-urlencoded; charset=utf-8');
+					request.onload = function() {
+						resultElement.textContent = request.responseText;
+					};
+                    {% if not liteVersion %}
+					request.send('clientid=' + clientid + '&targeturl=' + encodeURIComponent(document.getElementById("targeturl").value) + '&debugMode=' + $('#toggle_debug').prop('checked').toString());
+                    {% else %}
+					request.send('clientid=' + clientid + '&targeturl=' + encodeURIComponent(document.getElementById("targeturl").value) + '&debugMode=false');
+                    {% endif %}
+                };
+
+                // on clicking examples
+                document.getElementById("example_img").onclick = function() {
+                    document.getElementById("targeturl").value = 'http://twimg.edgesuite.net/images/ReNews/20140828/640_71d0c16c7ff2546d64bf471e68e4d37c.jpg';
+                    document.getElementById("classifyurl").click();
+                }
+                document.getElementById("example_vid").onclick = function() {
+                    document.getElementById("targeturl").value = 'https://v.qq.com/x/page/m03878gky0y.html';
+                    document.getElementById("classifyurl").click();
+                }
+
+                // trigger the enter key as a click event
+                document.getElementById("targeturl")
+					.addEventListener("keypress", function(event) {
+    					if (event.keyCode == 13) {
+                            event.preventDefault();
+        					document.getElementById("classifyurl").click();
+    					}
+				});
+			</script>
+
+            {% if not liteVersion %}
+            <script>
+            // while toggle button changes
+            $(function() {
+                funcNoticeInput();
+                $('#toggle_debug').change(funcNoticeInput)
+            });
+            function funcNoticeInput()  {
+                if( $('#toggle_debug').prop('checked') )
+                    document.getElementById("notice_input").innerHTML = "<b>開啟Debug模式:</b> 分析完成後將儲存所有資訊. 若影片長度超過三分鐘, 可能造成網頁當機, 需等待較長時間";
+                else
+                    document.getElementById("notice_input").innerHTML = "<b>使用Minimal模式:</b> 分析完成後僅儲存Ad Category資訊. 降低網頁讀取時間.";
+            }
+            </script>
+            {% endif %}
+
+            {% if has_result %}
+            {% if not liteVersion %}
+            <p id="notice_result" style="text-align:center">
+                {% if content_type == "minimal" %}
+                Job執行模式為Minimal, 僅能看到Ad Category.
+                {% else %}
+                Job執行模式為Debug. <font color="Blue">若網頁讀取不順, 可關閉右上方debug開關, 僅顯示Ad Category結果</font>
+                {% endif %}
+            </p>
+            {% endif %}
+
+            <div class="media">
+                <div class="pull-left">
+                    {% if file_type == "video" %}
+                        <!--div class="media-wrapper" -->
+                            <video id="demo_video" class="video-js vjs-default-skin" controls preload="auto" 
+                              width="360" height="240" data-setup='{ "asdf": true }'>
+                                <source src="dummy.mp4" type='video/mp4'>
+                            </video>
+                        <!--/div-->
+                        {% if not liteVersion %}
+                        <svg width="360" height="240"></svg>
+                        <h3> 更多資訊 </h3>
+                        <div id="demo_details"></div>
+                        <p> Url2Frames took: {{'%0.2f'| format(proc_time[0]|float)}} seconds <br/> Frames2Tags took: {{'%0.2f'| format(proc_time[1]|float)}} seconds </p>
+                        {% endif %}
+                        <h3> 廣告範例 </h3>
+                        <p><i>點擊下方廣告可跳至該時間段</i></p>
+                        <div id="demo_snapshot"></div>
+                    {% elif file_type == "image" %}
+                        <img id="demo_image" class="media-object" width="360" height="240"></img>
+                        {% if not liteVersion %}
+                        <p> Url2Frames took: {{'%0.2f'| format(proc_time[0]|float)}} seconds <br/> Frames2Tags took: {{'%0.2f'| format(proc_time[1]|float)}} seconds </p>
+                        {% endif %}
+                        <h3> 廣告範例 </h3>
+                        <p><i>預設顯示 最合適廣告<br/>點擊其他廣告類型可預覽</i></p>
+                        <div id="demo_snapshot"></div>
+                    {% endif %}
+                </div>
+                <div class="media-body">
+                    <div class="bs-example bs-example-tabs">
+                        <ul id="myTab" class="nav nav-tabs">
+                            <li class="active"><a href="#adpred" data-toggle="tab">Ad Category</a></li>
+                            
+                            {% if content_type == "detail" %}
+
+                            <!--
+                            <li id="scene_tab"><a href="#scenepred" data-toggle="tab">Scene</a></li>
+                            -->
+                            <li id="overall_tab"><a href="#overallpred" data-toggle="tab">Overall</a></li>
+                            <li id="predict_tab"><a href="#pred" data-toggle="tab">Predicted</a></li>
+
+                            {% endif %}
+                        </ul>
+                        <div id="myTabContent" class="tab-content">
+                            <div class="tab-pane fade in active" id="adpred">
+                                <ul class="list-group"></ul>
+                            </div>
+                            {% if content_type == "detail" %}
+                            <!--
+                            <div class="tab-pane fade" id="scenepred">
+                                <ul class="list-group"></ul>
+                            </div>
+                            -->
+                            <div class="tab-pane fade" id="overallpred">
+                                <ul class="list-group"></ul>
+                            </div>
+                            <div class="tab-pane fade" id="pred">
+                                <ul class="list-group"></ul>
+                            </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {% endif %}
+
+
+        </div>
+
+        <hr>
+        <div id="footer">
+            <div class="container">
+                <p>&copy; Viscovery 2017</p>
+            </div>
+        </div>
+    
+    </body>
+
+	<script>
+
+        ////////////////////////
+        /* Parse result file  */
+        ////////////////////////
+
+        function parseJSON( url ) {
+        	var resp = '' ;
+        	var xmlHttp = new XMLHttpRequest();
+        	if(xmlHttp != null)	{
+            	xmlHttp.open( "GET", url, false );
+            	xmlHttp.send( null );
+            	resp = xmlHttp.responseText;
+        	}
+        	return JSON.parse(resp) ;
+    	}
+
+        {% if has_result %}
+            {% if file_type == "image" %}
+                var rslt_detail = parseJSON("{{rsltpath[0]}}");
+            {% elif file_type == "video" %}
+                var rslt_detail = parseJSON("{{rsltpath[0]}}");
+            {% endif %}
+        {% endif %}
+
+
+        //////////////////////////////////
+        /* Define output Ad categories  */
+        //////////////////////////////////
+
+        /* Chinese to Creative Descriptions dictionary */
+        {% if has_result %}
+        var ad_ch2filename = {};
+        var ad_ch2displayname = {};
+        len_adList = rslt_detail.output.options.creative_filename.length;
+        var i=0;
+        for( i=0; i<len_adList; i++ )   {
+            ad_ch2filename[ rslt_detail.output.options.mask_ad_ch[i] ] = rslt_detail.output.options.creative_filename[i];
+            ad_ch2displayname[ rslt_detail.output.options.mask_ad_ch[i] ] = rslt_detail.output.options.creative_displayname[i];
+        }
+        {% endif %}
+
+        /////////////////////////
+		/* Display Input File  */
+        /////////////////////////
+
+        {% if file_type == "video" %}
+            // initialize video.js
+            var video = videojs('#demo_video');
+            // set video source
+            video.src(rslt_detail.info.filePath);
+            var duration = 0.000001;
+            video.one('loadedmetadata', function() {
+                duration = video.duration();
+            });
+
+            // link videojs player for videojs-overlay
+			var player = null;
+            (function(window, videojs) {
+			    player = window.player = videojs('#demo_video');
+			}(window, window.videojs));
+
+        {% elif file_type == "image" %}
+            document.getElementById("demo_image").src=rslt_detail.info.filePath;
+        {% endif %}
+
+        //////////////////////////////////
+		/* Overlay ADs on top of video  */
+        //////////////////////////////////
+        
+        {% if file_type == "video" %}
+            var rp = '{{rsltpath[0]}}';
+            var url_vmap = rp.substring(0, rp.length-11) + 'VMAP.json';
+            var vmap_json = null;
+            var linear_adbreaks = new Array();
+            var LINEAR_ADS_TRIGGER_RANGE = 0.3;
+            $.ajax({
+                url: url_vmap,      // check this url if file exists
+                type:'HEAD',
+                // if file doesn't exist
+                error: function()
+                {
+                    console.log('VMAP file not found: %s', url_vmap);
+                },
+                // if file exists
+                success: function()
+                {
+                    // read json file and structure it as an array
+                    vmap_json = parseJSON( url_vmap );
+                    var overlay_arr = new Array();
+                    for ( i=0; i<vmap_json.adbreak.length; i++ ) {
+                        // if it's nonlinear ads
+                        if(vmap_json.adbreak[i].type == 'non-linear')   {
+                            var temp_arr = new Array();
+                            temp_arr['start'] = vmap_json.adbreak[i].start;
+                            temp_arr['end'] = vmap_json.adbreak[i].end;
+                            temp_arr['content'] = '<p style="font-size:160%;">' + vmap_json.adbreak[i].text2display + '</p>';
+                            temp_arr['align'] = vmap_json.adbreak[i].align;
+                            overlay_arr.push( temp_arr );
+                        }
+                        // if it's linear ads
+                        else if(vmap_json.adbreak[i].type == 'linear')  {
+                            linear_adbreaks.push( vmap_json.adbreak[i].start );
+                            var temp_arr = new Array();
+                            temp_arr['start'] = vmap_json.adbreak[i].start - LINEAR_ADS_TRIGGER_RANGE;
+                            temp_arr['end'] = vmap_json.adbreak[i].start + LINEAR_ADS_TRIGGER_RANGE;
+                            temp_arr['content'] = '<div class="linear_ad"><img id="linear_img" src="/creative/black.jpg" width="" height=""/><p class="linear_text">'+ vmap_json.adbreak[i].text2display +'</p></div>';
+                            temp_arr['showBackground'] = false;
+                            overlay_arr.push( temp_arr );
+                        }
+                    }
+
+                    // call videojs-overlay
+                    player.overlay({
+                        showBackground: true,
+                        overlays: overlay_arr
+                    });
+                }
+            });
+
+        
+            // listen to input video source playing status
+            video.ready(function () {
+                this.on('timeupdate', function () {
+                    // pause if it played to the corresponding adbreak
+                    if (vmap_json != null)  {
+                        for ( i=0; i<linear_adbreaks.length; i++ )  {
+                            if( this.currentTime()-LINEAR_ADS_TRIGGER_RANGE<linear_adbreaks[i] &&  this.currentTime()+LINEAR_ADS_TRIGGER_RANGE>linear_adbreaks[i] ) {
+                                document.getElementById('linear_img').width = parseInt( getComputedStyle(player.el()).width ) -10 ;
+                                document.getElementById('linear_img').height = parseInt( getComputedStyle(player.el()).height ) -40 ;
+                                video.pause();
+                            }
+                        }
+                    }
+                })
+            });
+
+        {% endif %}
+        
+        ///////////////////////
+        /* Confidence Graph  */
+        ///////////////////////
+        
+        {% if not liteVersion %}
+        {% if file_type == "video" %}    
+            /* Draw Graph with D3 */
+            // export variables for confidence matrix coloring
+            var categories = [];
+            var colorscheme = d3.schemeCategory10;
+        
+            var svg = d3.select("svg").on("click", click),
+                margin = {top: 1, right: 0, bottom: 0, left: -1},
+                width = svg.attr("width") - margin.left - margin.right,
+                height = svg.attr("height") - margin.top - margin.bottom,
+                g = svg.append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+            var parseTime = d3.timeParse("%Y%m%d");
+
+            var x = d3.scaleTime().range([0, width]),
+                y = d3.scaleLinear().range([height, 0]),
+                z = d3.scaleOrdinal(colorscheme);
+
+            var line = d3.line()
+                .x(function(d) { return x(d.frame); })
+                .y(function(d) { return y(d.confidence); });
+
+            var tmp = d3.tsv("{{rsltpath[1]}}", type, function(error, data) {
+              if (error) throw error;
+
+              categories = data.columns.slice(1).map(function(id) {
+                return {
+                  id: id,
+                  values: data.map(function(d) {
+                    return {frame: d.frame, confidence: d[id]};
+                  })
+                };
+              });
+
+              x.domain(d3.extent(data, function(d) { return d.frame; }));
+
+              y.domain([
+                d3.min(categories, function(c) { return d3.min(c.values, function(d) { return d.confidence; }); }),
+                d3.max(categories, function(c) { return d3.max(c.values, function(d) { return d.confidence; }); })
+              ]);
+
+              z.domain(categories.map(function(c) { return c.id; }));
+
+              g.append("g")
+                  .attr("class", "axis axis--x")
+                  .attr("transform", "translate(0," + height + ")")
+                  .call(d3.axisBottom(x));
+
+              g.append("g")
+                  .attr("class", "axis axis--y")
+                  .call(d3.axisLeft(y))
+                .append("text")
+                  .attr("transform", "rotate(-90)")
+                  .attr("y", 6)
+                  .attr("dy", "0.71em")
+                  .attr("fill", "#000")
+                  .text("Confidence");
+
+              var cate = g.selectAll(".cate")
+                .data(categories)
+                .enter().append("g")
+                  .attr("class", "cate");
+
+              cate.append("path")
+                  .attr("class", "line")
+                  .attr("d", function(d) { return line(d.values); })
+                  .style("stroke", function(d) { return z(d.id); });
+
+            });
+
+            function type(d, _, columns) {
+              for (var i = 1, n = columns.length, c; i < n; ++i) d[c = columns[i]] = +d[c];
+              return d;
+            }
+            /* END of D3 graph drawing */
+
+            /* Timeline controls */
+            // draw vertical line on top
+            svg.append("line")
+            .attr("x1", 1)
+            .attr("y1", 0)
+            .attr("x2", 1)
+            .attr("y2", height - margin.top - margin.bottom)
+            .style("stroke-width", 2)
+            .style("stroke", "gray")
+            .style("fill", "none");
+
+            // listen to input video source playing status
+            video.ready(function () {
+                this.on('timeupdate', function () {
+                    // remove last element
+                    svg._groups[0][0].removeChild(svg._groups[0][0].lastElementChild);
+                    // add vertical line
+                    var xx = width * this.currentTime() / duration;
+                    svg.append("line")
+                    .attr("x1", xx)
+                    .attr("y1", 0)
+                    .attr("x2", xx)
+                    .attr("y2", height - margin.top - margin.bottom)
+                    .style("stroke-width", 2)
+                    .style("stroke", "gray")
+                    .style("fill", "none");
+                })
+            });
+
+            // listen to mouse position and change input video time position
+            function click(){
+                // Ignore the click event if it was suppressed
+                if (d3.event.defaultPrevented) return;
+                // Extract the click location\    
+                var point = d3.mouse(this) , p = {x: point[0], y: point[1] };
+                var tt = p.x * duration / width;
+                video.currentTime(tt);
+            }
+            /* END of timeline control */
+        {% endif %}
+        {% endif %}
+
+        ///////////////////////
+        /* Confidence Matrix */
+        ///////////////////////
+
+        function fillList_withJSON( selectedQuery, cls_field, score_field, jsondata )   {
+            const split_1 = '<li class="list-group-item"><span class="badge">';
+            const split_2 = '</span><h4 class="list-group-item-heading"><a href="http://www.baidu.com/s?ie=utf-8&wd=';
+            const split_3 = '" target="_blank">';
+            const split_4 = '</a></h4></li>';
+            var rows = '';
+            $.each(jsondata, function(index, item) {
+                rows += split_1;
+                {% if not liteVersion %}
+                rows += '<font size="+1">' + item[score_field] + '</font>';
+                {% endif %}
+                rows += split_2;
+                rows += item[cls_field];
+                rows += split_3;
+                rows += '<font color="black" id="' + item[cls_field] + '">' + item[cls_field] + '</font>';
+                rows += split_4;
+            });
+            selectedQuery.innerHTML = '';
+            selectedQuery.insertAdjacentHTML('beforeend', rows);
+        
+            // inpaint confidence matrix with graph colors
+            {% if not liteVersion %}
+            {% if file_type == "video" %}
+            for( var k=0; k<categories.length; k++ )
+                document.getElementById(categories[k].id).style.color = colorscheme[k];
+            {% endif %}
+            {% endif %}
+        }       
+        
+        // set toggle button to false by default
+        {% if content_type != "detail" %}
+            $('#toggle_debug').bootstrapToggle('off')
+        {% endif %}
+
+        {% if has_result %}
+        $(function() {
+            // while toggle button changes
+            $('#toggle_debug').change(function() {
+                // if debug mode in on
+                {% if content_type =="detail" %}
+                if( $(this).prop('checked') )   {
+                    // enable scene, overall, predict tab
+//                    $('#scene_tab').removeAttr('disabled');
+//                    $('#scene_tab').attr('class', '');
+                    $('#overall_tab').removeAttr('disabled');
+                    $('#overall_tab').attr('class', '');
+                    $('#predict_tab').removeAttr('disabled');
+                    $('#predict_tab').attr('class', '');
+
+                    {% if file_type == "image" %}
+                    frameIdx = 0;
+                    {% endif %}
+
+//                    el = document.querySelector('#scenepred > .list-group');
+//                    fillList_withJSON(el, 'cate', 'conf', rslt_detail.output.resultList_perFrame[frameIdx].scene);
+                    el = document.querySelector('#overallpred > .list-group');
+                    fillList_withJSON(el, 'cate', 'conf', rslt_detail.output.resultList_perFrame[frameIdx].overall);
+                    el = document.querySelector('#pred > .list-group');
+                    fillList_withJSON(el, 'cate', 'conf', rslt_detail.output.resultList_perFrame[frameIdx].predicted);
+                }
+                // if it's minimal display
+                else    {
+                    // disable scene, overall, predict tab
+//                    $('#scene_tab').attr('class', 'disabled');
+                    $('#overall_tab').attr('class', 'disabled');
+                    $('#predict_tab').attr('class', 'disabled');      
+                    // jump to ad tab
+                    $('.nav-tabs a[href="#adpred"]').tab('show');
+                }
+                {% endif %}
+            })
+            // while scene tab is clicked
+//            $('#scene_tab').click(function(event){
+//                if ($(this).hasClass('disabled')) {
+//                    return false;
+//                }
+//            });
+            // while overall tab is clicked
+            $('#overall_tab').click(function(event){
+                if ($(this).hasClass('disabled')) {
+                    return false;
+                }
+            });
+            // while predict tab is clicked
+            $('#predict_tab').click(function(event){
+                if ($(this).hasClass('disabled')) {
+                    return false;
+                }
+            });
+        })
+        {% endif %}
+
+        {% if file_type == "video" %}
+            var frameIdx;
+
+            // listen to input video source playing status
+            video.ready(function () {
+                this.on('timeupdate', function () {
+
+                    var fps = rslt_detail.output.options.fps;
+                    frameIdx = Math.round( this.currentTime() / fps ) + 1;
+                    
+                    if( frameIdx < rslt_detail.output.resultList_perFrame.length )	{
+                        var el = document.querySelector('#adpred > .list-group');
+                        fillList_withJSON(el, 'cate', 'conf', rslt_detail.output.resultList_perFrame[frameIdx].ad);
+                        
+                        // if it's debug mode
+                        {% if content_type =="detail" %}
+                        if($('#toggle_debug').prop('checked'))  { 
+//                            el = document.querySelector('#scenepred > .list-group');
+//                            fillList_withJSON(el, 'cate', 'conf', rslt_detail.output.resultList_perFrame[frameIdx].scene);
+                            el = document.querySelector('#overallpred > .list-group');
+                            fillList_withJSON(el, 'cate', 'conf', rslt_detail.output.resultList_perFrame[frameIdx].overall);
+                            el = document.querySelector('#pred > .list-group');
+                            fillList_withJSON(el, 'cate', 'conf', rslt_detail.output.resultList_perFrame[frameIdx].predicted);
+                        }
+                        {% endif %}
+                    }
+                    
+                    {% if not liteVersion %}
+                    // Display the exact thumbnail relative to the Confidence Matrix
+                    var rows = '';
+                    var img_exact = rslt_detail.output.resultList_perFrame[frameIdx].thumbnail;
+                    rows += 'File: <a href="/classify_url?targeturl=' + img_exact + '" target="_blank">' + img_exact + '</a>';
+                    rows += '<div class="imbg"><img src="' + img_exact + '" width="360" height="240" />';
+                    document.querySelector('#demo_details').innerHTML = rows;
+                    {% endif %}
+                })
+            });
+
+        {% elif file_type == "image" %}
+            var el = document.querySelector('#adpred > .list-group');
+            fillList_withJSON(el, 'cate', 'conf', rslt_detail.output.resultList_perFrame[0].ad);
+
+            // if it's debug mode
+            {% if content_type =="detail" %}
+            if( $('#toggle_debug').prop('checked') ) {
+//                el = document.querySelector('#scenepred > .list-group');
+//                fillList_withJSON(el, 'cate', 'conf', rslt_detail.output.resultList_perFrame[0].scene);
+                el = document.querySelector('#overallpred > .list-group');
+                fillList_withJSON(el, 'cate', 'conf', rslt_detail.output.resultList_perFrame[0].overall);
+                el = document.querySelector('#pred > .list-group');
+                fillList_withJSON(el, 'cate', 'conf', rslt_detail.output.resultList_perFrame[0].predicted);
+            }
+            {% endif %}
+
+            // click event for clicking list group items
+            $('#adpred >.list-group > .list-group-item').on('click', function(e) {
+
+                // find the selected ad text and change snapshots
+                var selected_ad = $(this)["0"].childNodes[1].childNodes["0"].innerText;
+                //TODO: modify for video version
+                var img_overlay = rslt_detail.output.snapshots.creativeDir + ad_ch2filename[selected_ad];
+                document.querySelector('#demo_snapshot > .imbg > .imoverlay').innerHTML = '<img src="'+img_overlay+'" />';
+            });
+        {% endif %}
+        ///////////////////////
+        ///* Ad Snapshots *////
+        ///////////////////////
+        {% if has_result %}
+        var rows = '';
+        for ( i=0; i<rslt_detail.output.snapshots.topK.length; i++ )    {
+            var img_bg_idx = rslt_detail.output.snapshots.topK[i].frameIdx;
+            var highest_ad = rslt_detail.output.snapshots.topK[i].Category;
+            var img_bg = rslt_detail.output.resultList_perFrame[img_bg_idx].thumbnail;
+            var img_overlay = rslt_detail.output.snapshots.creativeDir + ad_ch2filename[highest_ad];
+            var id_name = 'snapshot_' + i;
+            rows += '<div class="imbg" id="' + id_name + '">';
+            rows += '<img src="' + img_bg + '" width="360" height="240" />';
+            rows += '<div class="imoverlay"><img src="' + img_overlay + '" /></div></div>';
+            {% if file_type == "video" %}
+            rows += '<p>'+ ad_ch2displayname[highest_ad] +' 的最佳機會點</p>'
+            {% endif %}
+        }
+        document.querySelector('#demo_snapshot').innerHTML = rows;
+        
+        // if it's video type, add hyperlink to it (able to jump to specific )
+        {% if file_type == "video" %}
+        var sp = document.querySelectorAll('[id^="snapshot_"]');
+        for( var j=0; j<sp.length; j++ )    {
+            // while the specific snapshot is clicked
+            sp[j].onclick = function()  {
+                var idx = Number( this.id.split("snapshot_")[1] );
+                var f_idx = rslt_detail.output.snapshots.topK[idx].frameIdx;
+                var fps = rslt_detail.output.options.fps;
+                var tt = (f_idx - 1) * fps;
+                video.currentTime(tt);
+            }
+        }
+        {% endif %}
+        {% endif %}
+    </script>
+</html>

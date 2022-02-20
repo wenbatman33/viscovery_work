@@ -1,0 +1,21 @@
+@import 'coreVariables';
+
+.container {
+  height: 100%;
+  background-color: $color-midnight;
+  padding-top: $padding-small;
+}
+
+.row {
+  height: 48px;
+  padding-top: 15px;
+  padding-left: 27px;
+  cursor: pointer;
+  color: $color-ivory;
+  font-size: 14px;
+}
+
+.selectedRow {
+  composes: row;
+  background-color: $color-midnight;
+}

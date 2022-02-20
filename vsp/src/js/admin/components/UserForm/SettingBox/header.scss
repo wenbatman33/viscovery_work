@@ -1,0 +1,34 @@
+.container {
+  padding: 2px 2%;
+  width: 100%;
+  background-color: #F6F7F7;
+  font-size: 12pt;
+}
+
+.base {
+  display: inline-block;
+  text-align: left;
+  vertical-align: left;
+  word-wrap: break-word;
+}
+
+.group {
+  composes: base;
+  width: 25%;
+}
+
+.role {
+  composes: base;
+  width: 25%;
+}
+
+.doUpload {
+  composes: base;
+  width: 36%;
+}
+
+.manipulate {
+  composes: base;
+  width: 10%;
+}
+

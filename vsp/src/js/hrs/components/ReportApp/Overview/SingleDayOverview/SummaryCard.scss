@@ -1,0 +1,22 @@
+@import "coreVariables";
+
+.container {
+  background: white;
+  margin-bottom: 16px;
+  padding: 32px;
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+}
+
+.block__title {
+  color: $color-boulder;
+}
+
+.block__number {
+  font-size: 48px;
+  color: $color-midnight;
+  font-weight: lighter;
+}

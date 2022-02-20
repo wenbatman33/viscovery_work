@@ -1,0 +1,16 @@
+@import 'coreVariables';
+
+.container {
+  display : flex;
+  flex-direction: column;
+  justify-content: center;
+  padding : $padding-medium;
+}
+
+.btn-group {
+  margin-top : $padding-medium;
+  align-self: center;
+  > button:nth-child(1){
+    margin-right : $padding-small;
+  }
+}

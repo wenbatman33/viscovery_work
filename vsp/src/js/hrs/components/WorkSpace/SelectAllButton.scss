@@ -1,0 +1,10 @@
+@import "coreVariables";
+
+.selectAllIcon {
+  margin-right: 8px;
+}
+
+.river {
+  composes: selectAllIcon;
+  color: $color-river;
+}

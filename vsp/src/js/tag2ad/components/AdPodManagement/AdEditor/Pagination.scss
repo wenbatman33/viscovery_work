@@ -1,0 +1,9 @@
+@import 'coreVariables';
+.container{
+  display : flex;
+  align-items: center;
+}
+.number {
+  color : $color-blackhole;
+  margin : 0 $padding-small;
+}

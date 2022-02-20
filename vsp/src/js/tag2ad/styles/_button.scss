@@ -1,0 +1,10 @@
+.link-btn-grey{
+  font-size: 14px;
+  text-decoration-line: underline;
+  color: rgba(26, 10, 10, 0.5);
+  cursor: pointer;
+
+  &:hover {
+    color: rgba(26, 10, 10, 0.2);
+  }
+}
